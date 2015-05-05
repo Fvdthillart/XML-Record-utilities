@@ -1,0 +1,2 @@
+Transactiegegevens;namespace:gitra;http://www.able.eu/epp/interfaces/generic/transaction
+Transactiegegevens;//number;Text
