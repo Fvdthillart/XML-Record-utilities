@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<GenericDoc>
+	<XMLRecords>
+		<Constructorparm name="file">
+			<param name="file">The XML file to be processed</param>
+		</Constructorparm>
+		<Constructorparm name="containerTag">
+			<param name="containerTag">The 'tag' that defines the root element of the XML record. It's supposed to be an element directly under the root element of the file but it can be any element since the processing will not break when this is the case</param>
+		</Constructorparm>
+		<ConstructorText name="summary">
+			<summary>
+				Initializes the instance. All checking of parameters is done by the calling class so no checking is done inside the constructor
+			</summary>
+		</ConstructorText>
+		<Main>
+			<summary>
+				Main method that's called when the executable is called from the command prompt
+			</summary>
+		</Main>
+	</XMLRecords>
+</GenericDoc>

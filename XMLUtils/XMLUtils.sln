@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XMLRecords", "XMLRecords\XMLRecords.csproj", "{E3D5E4E5-7B28-4A0D-91AA-E9B95B961ECB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "compareXMLRecords", "compareXMLRecords\compareXMLRecords.csproj", "{D749F5C8-2794-4E31-BA71-E6C24FEF30C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "extractXMLRecord", "extractXMLRecord\extractXMLRecord.csproj", "{49ACE85F-BC0A-4C97-A139-10E680B2B074}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnonymizeCSV", "AnonymizeCSV\AnonymizeCSV.csproj", "{129271BC-5391-4549-B3A7-F8900B5EC11A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anonymization", "Anonymization\Anonymization.csproj", "{3B161E39-F8E4-4820-8C13-608100D9B9E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnonymizeXML", "AnonymizeXML\AnonymizeXML.csproj", "{74C2DE23-0027-4CE2-AAA3-554F1F6457BC}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E3D5E4E5-7B28-4A0D-91AA-E9B95B961ECB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3D5E4E5-7B28-4A0D-91AA-E9B95B961ECB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3D5E4E5-7B28-4A0D-91AA-E9B95B961ECB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3D5E4E5-7B28-4A0D-91AA-E9B95B961ECB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D749F5C8-2794-4E31-BA71-E6C24FEF30C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D749F5C8-2794-4E31-BA71-E6C24FEF30C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D749F5C8-2794-4E31-BA71-E6C24FEF30C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D749F5C8-2794-4E31-BA71-E6C24FEF30C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49ACE85F-BC0A-4C97-A139-10E680B2B074}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49ACE85F-BC0A-4C97-A139-10E680B2B074}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49ACE85F-BC0A-4C97-A139-10E680B2B074}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49ACE85F-BC0A-4C97-A139-10E680B2B074}.Release|Any CPU.Build.0 = Release|Any CPU
+		{129271BC-5391-4549-B3A7-F8900B5EC11A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{129271BC-5391-4549-B3A7-F8900B5EC11A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{129271BC-5391-4549-B3A7-F8900B5EC11A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{129271BC-5391-4549-B3A7-F8900B5EC11A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B161E39-F8E4-4820-8C13-608100D9B9E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B161E39-F8E4-4820-8C13-608100D9B9E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B161E39-F8E4-4820-8C13-608100D9B9E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B161E39-F8E4-4820-8C13-608100D9B9E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74C2DE23-0027-4CE2-AAA3-554F1F6457BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74C2DE23-0027-4CE2-AAA3-554F1F6457BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74C2DE23-0027-4CE2-AAA3-554F1F6457BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74C2DE23-0027-4CE2-AAA3-554F1F6457BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
