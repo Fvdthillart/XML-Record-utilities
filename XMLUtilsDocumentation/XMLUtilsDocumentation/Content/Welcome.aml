@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="ff34d9fe-b836-4af4-8b61-8967901db97b" revisionNumber="1">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+		<introduction>
+			<title>XML Records utilities</title>
+			<content>
+				<para>
+				The XML Record utilities project encompasses all the utilities that were developed to deal with large XML files that have one defining characteristic:
+				They consist of a collection of the same child element directly under the root element. A child element and its subtree, identified uniquely by a combination of elements in the subtree, define an XML Record.
+				</para><para>
+				For example: &lt;summaries&gt;&lt;summary&gt;&lt;ID&gt;1&lt;/ID&gt;...&lt;/summary&gt;&lt;summary&gt;&lt;ID&gt;2&lt;/ID&gt;...&lt;/summary&gt;&lt;summary&gt;&lt;ID&gt;n&lt;/ID&gt;...&lt;/summary&gt;&lt;/summaries&gt;
+				</para><para>
+          An XMLRecord is the term used for describing the XML subtrees of the repeating element like paragraphs in a document or records in a database table. It's named an record because it has a key part, namely a combination of element values that uniqely identify the subtree, and a descriptive part, the XML sub tree itself.
+        </para>
+        <para>
+          In the example above each summary subtree is identified by the ID element.
+        </para>
+			</content>
+    </introduction>
+    <section>
+			<title>Processing</title>
+			<content>
+				<para>
+          
+        </para><para>
+          An XMLReader instance is used to process the original large XML file. The XMLReader instance reads the file node by node and doesn't try to load it in memory. When the node is an element with the name that's specified as the containertag (summary in the example above), it loads the subtree in memory in an XMLDocument object and extracts all the values of the elements identified by the identifying tags string array and stores the extracted values as a string array with the XML subtree in an XMLRecord instance.
+        </para><para>
+Thus the algoritm still capitalizes on the speed of in memory XML processing of the XML Document class while using the resource efficiency of the XML reader class to keep its resource hunger to a minimum.
+				</para>
+			</content>
+		</section>
+<!--
+		<section>
+			<title>Getting Started</title>
+			<content>
+				<para>To get started, add a documentation source to the project (a Visual Studio solution, project, or
+assembly and XML comments file).  See the <legacyBold>Getting Started</legacyBold> topics in the Sandcastle Help
+File Builder's help file for more information.  The following default items are included in this project:</para>
+
+				<list class="bullet">
+					<listItem>
+						<para><localUri>ContentLayout.content</localUri> - Use the content layout file to manage the
+conceptual content in the project and define its layout in the table of contents.</para>
+					</listItem>
+
+					<listItem>
+						<para>The <localUri>.\Media</localUri> folder - Place images in this folder that you will reference
+from conceptual content using <codeInline>medialLink</codeInline> or <codeInline>mediaLinkInline</codeInline>
+elements.  If you will not have any images in the file, you may remove this folder.</para>
+					</listItem>
+
+					<listItem>
+						<para>The <localUri>.\icons</localUri> folder - This contains a default logo for the help file.  You
+may replace it or remove it and the folder if not wanted.  If removed or if you change the file name, update
+the <ui>Transform Args</ui> project properties page by removing or changing the filename in the
+<codeInline>logoFile</codeInline> transform argument.  Note that unlike images referenced from conceptual topics,
+the logo file should have its <legacyBold>BuildAction</legacyBold> property set to <codeInline>Content</codeInline>.</para>
+					</listItem>
+
+					<listItem>
+						<para>The <localUri>.\Content</localUri> folder - Use this to store your conceptual topics.  You may
+name the files and organize them however you like.  One suggestion is to lay the files out on disk as you have
+them in the content layout file as shown in this project but the choice is yours.  Files can be added via the
+Solution Explorer or from within the content layout file editor.  Files must appear in the content layout file
+in order to be compiled into the help file.</para>
+					</listItem>
+				</list>
+
+				<para>See the <legacyBold>Conceptual Content</legacyBold> topics in the Sandcastle Help File Builder's
+help file for more information.  See the <legacyBold> Sandcastle MAML Guide</legacyBold> for details on Microsoft
+Assistance Markup Language (MAML) which is used to create these topics.</para>
+			</content>
+		</section>
+
+		<relatedTopics>
+			<link xlink:href="570d2f16-f0c0-47eb-afae-44f5d018c85f" />
+		</relatedTopics>
+		-->
+	</developerConceptualDocument>
+</topic>

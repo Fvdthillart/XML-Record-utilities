@@ -1,0 +1,475 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpKI>
+  <HelpKINode Title="addToXMLRecord method" Url="html/57b7839f-1c2e-9395-bc2f-08af2d1f2989.htm" />
+  <HelpKINode Title="Allowed property" Url="html/fd2dcf39-00e7-4f76-4bb0-b23c8cd9fb82.htm" />
+  <HelpKINode Title="AllTrue method" Url="html/1feef85d-b58c-bf12-ca1a-43f71eb358cf.htm" />
+  <HelpKINode Title="Anonymize enumeration member" Url="html/02aa21a8-874a-4a2c-bbdc-adbe5d07cc68.htm" />
+  <HelpKINode Title="Anonymize method" Url="html/b4a3827f-5862-e691-8bdf-666832e481a6.htm" />
+  <HelpKINode Title="AnonymizeCache class">
+    <HelpKINode Title="AnonymizeCache Class" Url="html/da115f55-76fc-13de-13f6-46aef3869d55.htm" />
+    <HelpKINode Title="about AnonymizeCache class" Url="html/da115f55-76fc-13de-13f6-46aef3869d55.htm" />
+    <HelpKINode Title="constructor" Url="html/58503292-c218-c8af-ae80-8ab2a7b587c6.htm" />
+    <HelpKINode Title="fields" Url="html/f0332761-0d60-ee03-76df-5ee4afce5d9d.htm" />
+    <HelpKINode Title="methods" Url="html/e1c95987-a5ce-ab58-51b5-937eeeadf04d.htm" />
+    <HelpKINode Title="properties" Url="html/8b0cac8d-c5ae-bf23-d817-6a9d430c9d48.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AnonymizeCache.AnonymizeCache constructor" Url="html/58503292-c218-c8af-ae80-8ab2a7b587c6.htm" />
+  <HelpKINode Title="AnonymizeCache.Anonymous_value property" Url="html/29852074-d1f3-aeef-e0d0-838a4140b845.htm" />
+  <HelpKINode Title="AnonymizeCache.CompareTo method" Url="html/d7a1507b-b242-9451-c52c-0d38fe9fff44.htm" />
+  <HelpKINode Title="AnonymizeCache.Equals method" Url="html/4c3ee971-e880-06e1-1bdd-9bf6e1c63847.htm" />
+  <HelpKINode Title="AnonymizeCache.GetHashCode method" Url="html/d691441e-8122-83e4-88fd-0abbd030826c.htm" />
+  <HelpKINode Title="AnonymizeCache.Original_value property" Url="html/a88aa293-36c3-2462-9e6c-92ef97c262ad.htm" />
+  <HelpKINode Title="AnonymizeCache._anonymous_value field" Url="html/ef4bcfb1-e1d8-aae6-ed03-1ac5cb5e64ca.htm" />
+  <HelpKINode Title="AnonymizeCache._original_value field" Url="html/999cd959-705f-01ec-a772-ab39fa6e2564.htm" />
+  <HelpKINode Title="AnonymizeCacheDB class">
+    <HelpKINode Title="AnonymizeCacheDB Class" Url="html/0a0f30e7-7646-18c0-e0ac-5a6f606ea4b6.htm" />
+    <HelpKINode Title="about AnonymizeCacheDB class" Url="html/0a0f30e7-7646-18c0-e0ac-5a6f606ea4b6.htm" />
+    <HelpKINode Title="constructor" Url="html/854c334d-9a9a-0e17-7a29-b696853219d8.htm" />
+    <HelpKINode Title="fields" Url="html/2ba00ea6-25aa-30da-e8d6-f3bbbfbd29f2.htm" />
+    <HelpKINode Title="methods" Url="html/05ba6baa-01f5-df03-2494-e95b8f074ffc.htm" />
+    <HelpKINode Title="properties" Url="html/190e92a4-9104-c47b-4336-62d52f7cca0c.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AnonymizeCacheDB.AnonymizeCacheDB constructor" Url="html/854c334d-9a9a-0e17-7a29-b696853219d8.htm" />
+  <HelpKINode Title="AnonymizeCacheFile class">
+    <HelpKINode Title="AnonymizeCacheFile Class" Url="html/935776df-69cf-60ab-a69d-33add96371ec.htm" />
+    <HelpKINode Title="about AnonymizeCacheFile class" Url="html/935776df-69cf-60ab-a69d-33add96371ec.htm" />
+    <HelpKINode Title="constructor" Url="html/638eb926-acf6-763b-8257-7fba853040cf.htm" />
+    <HelpKINode Title="fields" Url="html/3d43c1a5-dcf4-69cb-ae69-7090d0c94e9e.htm" />
+    <HelpKINode Title="methods" Url="html/a0ecc13b-fb0e-e350-2d4e-9b8dbc30ea4d.htm" />
+    <HelpKINode Title="properties" Url="html/9b5582b8-8312-58b9-2c54-e4b85df5a95d.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AnonymizeCacheFile.AnonymizeCacheFile constructor" Url="html/638eb926-acf6-763b-8257-7fba853040cf.htm" />
+  <HelpKINode Title="AnonymizeCSV class">
+    <HelpKINode Title="AnonymizeCSV Class" Url="html/a3c1388f-a07b-bb3c-6fb4-ebdc2cef0d23.htm" />
+    <HelpKINode Title="about AnonymizeCSV class" Url="html/a3c1388f-a07b-bb3c-6fb4-ebdc2cef0d23.htm" />
+    <HelpKINode Title="constructor" Url="html/eef3e216-9531-af4c-7afc-64829e6ef400.htm" />
+    <HelpKINode Title="fields" Url="html/816d36af-2e63-4624-b608-589280da7db9.htm" />
+    <HelpKINode Title="methods" Url="html/8e5c210f-7290-2ef1-158d-95039374c7b4.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AnonymizeCSV.AnonymizeCSV constructor" Url="html/eef3e216-9531-af4c-7afc-64829e6ef400.htm" />
+  <HelpKINode Title="AnonymizeCSV.anonymizeFile field" Url="html/08d40b50-80e8-0f45-25bf-ce688f42b0d2.htm" />
+  <HelpKINode Title="AnonymizeCSV.anonymizePostfix field" Url="html/95847a42-f5be-e4f5-d95d-6273983503bb.htm" />
+  <HelpKINode Title="AnonymizeCSV.getHelpMessage method" Url="html/c7d04e7c-1e9c-db7b-f96b-7ba6915e9ccc.htm" />
+  <HelpKINode Title="AnonymizeCSV.Main method" Url="html/989fdd86-3c1f-d9d7-12f7-e8d91c07473a.htm" />
+  <HelpKINode Title="AnonymizeCSV.parmheaderRowIndicator field" Url="html/9dcf6231-4ceb-5551-5607-297147c308a2.htm" />
+  <HelpKINode Title="AnonymizeCSV.parmSeperator field" Url="html/26cbebd5-5207-b41f-3714-de0b90c9a470.htm" />
+  <HelpKINode Title="AnonymizeCSV.parmTextIndicator field" Url="html/0c863de2-95c8-25d7-6c41-772e01be6800.htm" />
+  <HelpKINode Title="AnonymizeCSV.throwException method" Url="html/66da3ef4-6742-ccc6-abf6-33553d6d6b46.htm" />
+  <HelpKINode Title="AnonymizeDate method" Url="html/3d9f491b-a9fb-952a-1af7-65bb2c40d270.htm" />
+  <HelpKINode Title="Anonymized_filename property" Url="html/67e68324-9c27-2773-d290-6a5ac7de342a.htm" />
+  <HelpKINode Title="anonymizeFile field">
+    <HelpKINode Title="AnonymizeCSV.anonymizeFile Field" Url="html/08d40b50-80e8-0f45-25bf-ce688f42b0d2.htm" />
+    <HelpKINode Title="AnonymizeXML.anonymizeFile Field" Url="html/1daea555-5469-39c1-3b8c-f69157b54b86.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AnonymizeHouseAidVnr method" Url="html/9f89811b-2812-ec05-38f9-dfd21bb895c8.htm" />
+  <HelpKINode Title="AnonymizeMD5Decimal method" Url="html/2e46b0b0-15a0-2b12-9ec3-907f5fbdb0e6.htm" />
+  <HelpKINode Title="AnonymizeMD5Integer method" Url="html/248c806b-6baf-2c1e-036f-286686795346.htm" />
+  <HelpKINode Title="AnonymizeNumEqLen method" Url="html/bfaec3b8-e4b8-ef70-12f5-4a40df687ede.htm" />
+  <HelpKINode Title="anonymizePostfix field" Url="html/95847a42-f5be-e4f5-d95d-6273983503bb.htm" />
+  <HelpKINode Title="Anonymizer class">
+    <HelpKINode Title="Anonymizer Class" Url="html/aa09c2a7-d136-255d-d344-4016d5052174.htm" />
+    <HelpKINode Title="about Anonymizer class" Url="html/aa09c2a7-d136-255d-d344-4016d5052174.htm" />
+    <HelpKINode Title="constructor" Url="html/921b9c2a-5601-9e44-90a0-d7f07aea5aae.htm" />
+    <HelpKINode Title="fields" Url="html/4a2c0426-98a5-6b4d-5472-e10ec3e3d1dd.htm" />
+    <HelpKINode Title="methods" Url="html/a4e8e5df-d859-050e-8e7a-02f8e9c0c066.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Anonymizer.Anonymize method" Url="html/b4a3827f-5862-e691-8bdf-666832e481a6.htm" />
+  <HelpKINode Title="Anonymizer.AnonymizeDate method" Url="html/3d9f491b-a9fb-952a-1af7-65bb2c40d270.htm" />
+  <HelpKINode Title="Anonymizer.AnonymizeHouseAidVnr method" Url="html/9f89811b-2812-ec05-38f9-dfd21bb895c8.htm" />
+  <HelpKINode Title="Anonymizer.AnonymizeMD5Decimal method" Url="html/2e46b0b0-15a0-2b12-9ec3-907f5fbdb0e6.htm" />
+  <HelpKINode Title="Anonymizer.AnonymizeMD5Integer method" Url="html/248c806b-6baf-2c1e-036f-286686795346.htm" />
+  <HelpKINode Title="Anonymizer.AnonymizeNumEqLen method" Url="html/bfaec3b8-e4b8-ef70-12f5-4a40df687ede.htm" />
+  <HelpKINode Title="Anonymizer.Anonymizer constructor" Url="html/921b9c2a-5601-9e44-90a0-d7f07aea5aae.htm" />
+  <HelpKINode Title="Anonymizer.AnonymizeSHA1Integer method" Url="html/71fbfe8f-28ec-426d-1ccc-e4ec485f800b.htm" />
+  <HelpKINode Title="Anonymizer.AnonymizeSHA512Integer method" Url="html/9ee9f77b-818b-ed0f-1a94-72a65316c3e5.htm" />
+  <HelpKINode Title="Anonymizer.AnonymizeText method" Url="html/242f43b2-f5a4-1f98-cf6a-bdf70ff2aa88.htm" />
+  <HelpKINode Title="Anonymizer.AnonymizeTrueFalse method" Url="html/b33bc7ba-0173-f79a-c0bb-21a5521b772b.htm" />
+  <HelpKINode Title="Anonymizer.common_constructor method" Url="html/5c502561-a2df-cb96-12ce-a14b3ad13aee.htm" />
+  <HelpKINode Title="Anonymizer.GetHash method" Url="html/6cb06e0c-4126-0e6b-8fd6-d799850cd451.htm" />
+  <HelpKINode Title="Anonymizer.RNDGen field" Url="html/2a5ec550-ac08-1d15-880f-a3c2d99bd16f.htm" />
+  <HelpKINode Title="Anonymizer._dateCache field" Url="html/3aa21fc2-b247-12b6-e6c6-b03266667cae.htm" />
+  <HelpKINode Title="AnonymizerCSV class">
+    <HelpKINode Title="AnonymizerCSV Class" Url="html/038dfca4-5026-d700-3e15-9d37306ebdd8.htm" />
+    <HelpKINode Title="about AnonymizerCSV class" Url="html/038dfca4-5026-d700-3e15-9d37306ebdd8.htm" />
+    <HelpKINode Title="constructor" Url="html/4594396e-db60-0b7a-408f-cd8280f6a1cd.htm" />
+    <HelpKINode Title="fields" Url="html/252ecf23-68ad-1bff-e42a-1ccc5d213f4d.htm" />
+    <HelpKINode Title="methods" Url="html/662ba233-eed4-31d5-118f-f940a2194c1c.htm" />
+    <HelpKINode Title="properties" Url="html/642f99ad-fe55-5ac2-d6f3-1a9c87f64607.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AnonymizerCSV.AnonymizerCSV constructor" Url="html/4594396e-db60-0b7a-408f-cd8280f6a1cd.htm" />
+  <HelpKINode Title="AnonymizerCSV.Seperator property" Url="html/0fa7ffc8-dde6-51e7-b564-c7ae85c7021e.htm" />
+  <HelpKINode Title="AnonymizerCSV.split method" Url="html/22c908e7-434a-8295-a0e4-4c2e914622a4.htm" />
+  <HelpKINode Title="AnonymizerCSV.TextIndicator property" Url="html/30d524a2-4b47-bf1f-6a97-89bf58d83227.htm" />
+  <HelpKINode Title="AnonymizerCSV.whitespace field" Url="html/cbe45b11-a4b5-68cd-ef12-6e5fff455a82.htm" />
+  <HelpKINode Title="AnonymizerCSV._seperator field" Url="html/67dbd489-8c4b-2a5c-0352-45a063bf7354.htm" />
+  <HelpKINode Title="AnonymizerCSV._textIndicator field" Url="html/42f9d86d-5cea-a970-e01d-5f10fa6b9a01.htm" />
+  <HelpKINode Title="AnonymizerRules property" Url="html/4f4d1018-03fd-6f7c-24c6-ca1a21a45226.htm" />
+  <HelpKINode Title="AnonymizerRulesFilename property" Url="html/b69d85c5-6a7f-0531-4178-e4d294f9349a.htm" />
+  <HelpKINode Title="AnonymizeRule class">
+    <HelpKINode Title="AnonymizeRule Class" Url="html/427f0e94-46c3-159f-a003-a384dca5a793.htm" />
+    <HelpKINode Title="about AnonymizeRule class" Url="html/427f0e94-46c3-159f-a003-a384dca5a793.htm" />
+    <HelpKINode Title="constructor" Url="html/9e176c4c-de94-391d-2413-0a3e7b92d0ea.htm" />
+    <HelpKINode Title="fields" Url="html/96b0ead8-db19-c16f-1d7b-bd35f695bd29.htm" />
+    <HelpKINode Title="methods" Url="html/198b7e6b-4c0f-2cfe-5a0c-3998ea23488d.htm" />
+    <HelpKINode Title="properties" Url="html/cbe269b8-51f1-ef52-279e-1abf2533e514.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AnonymizeRule.Allowed property" Url="html/fd2dcf39-00e7-4f76-4bb0-b23c8cd9fb82.htm" />
+  <HelpKINode Title="AnonymizeRule.AnonymizeRule constructor" Url="html/9e176c4c-de94-391d-2413-0a3e7b92d0ea.htm" />
+  <HelpKINode Title="AnonymizeRule.CompareTo method" Url="html/3e0861b7-afb4-6b51-5d22-4ab2b5773114.htm" />
+  <HelpKINode Title="AnonymizeRule.Equals method" Url="html/805b5df9-a064-2715-9664-d03f13201917.htm" />
+  <HelpKINode Title="AnonymizeRule.Filter property" Url="html/2b05d7b3-38bd-376e-d092-3a7ef497aa0f.htm" />
+  <HelpKINode Title="AnonymizeRule.FilterLocation property" Url="html/a46dbb96-5af4-ce59-82be-dce1a5afc5ea.htm" />
+  <HelpKINode Title="AnonymizeRule.FilterOperator property" Url="html/735f4cab-3227-6102-7cb3-b0b4764449b7.htm" />
+  <HelpKINode Title="AnonymizeRule.FilterValue property" Url="html/27848d53-ec50-1a51-adce-5871a9e0b3fa.htm" />
+  <HelpKINode Title="AnonymizeRule.GetHashCode method" Url="html/e2d45d60-0245-81fb-1bfb-fbd3de922a7a.htm" />
+  <HelpKINode Title="AnonymizeRule.getMethod method" Url="html/62cf11e6-a7a7-84fe-a91f-cea3eb4d6abd.htm" />
+  <HelpKINode Title="AnonymizeRule.IsFiltered property" Url="html/eeb4ac67-1582-b520-654a-db1d253919e8.htm" />
+  <HelpKINode Title="AnonymizeRule.Location property" Url="html/b2e707dd-5188-0401-81b2-f10a7f03c624.htm" />
+  <HelpKINode Title="AnonymizeRule.Method property" Url="html/2bb3b7ae-ee2e-f1cb-c1b7-aa7f47997c07.htm" />
+  <HelpKINode Title="AnonymizeRule.MethodType enumeration" Url="html/71c7dc6c-c627-b2b3-7aac-21886b92dc18.htm" />
+  <HelpKINode Title="AnonymizeRule.ToString method" Url="html/15dcc2b4-81b8-fafd-7f0a-ac18be407514.htm" />
+  <HelpKINode Title="AnonymizeRule._allowed field" Url="html/79677846-511d-1bf0-4c9c-92cd193c41f5.htm" />
+  <HelpKINode Title="AnonymizeRule._filterLocation field" Url="html/a1f93083-67f5-02e4-1475-a0e45ff65ae6.htm" />
+  <HelpKINode Title="AnonymizeRule._filterOperator field" Url="html/2796aa4c-6c15-f7ed-16ce-43bd38e0c89b.htm" />
+  <HelpKINode Title="AnonymizeRule._filterValue field" Url="html/9d127395-489a-01c8-c0b2-4c7947997f0e.htm" />
+  <HelpKINode Title="AnonymizeRule._location field" Url="html/d5fc05ce-8f2a-4edd-7350-108ea2d1f102.htm" />
+  <HelpKINode Title="AnonymizeRule._method field" Url="html/4e97e2e3-b103-5418-b09b-e178f003f4f5.htm" />
+  <HelpKINode Title="AnonymizerWithRules class">
+    <HelpKINode Title="AnonymizerWithRules Class" Url="html/fe89a95c-9d48-da6f-6ae0-2a20db977c28.htm" />
+    <HelpKINode Title="about AnonymizerWithRules class" Url="html/fe89a95c-9d48-da6f-6ae0-2a20db977c28.htm" />
+    <HelpKINode Title="constructor" Url="html/39368750-cc16-e662-184f-c86536295488.htm" />
+    <HelpKINode Title="fields" Url="html/1eacc018-283d-c61a-c935-4df70533f79e.htm" />
+    <HelpKINode Title="methods" Url="html/32cc8398-c9f0-2a74-a0d4-2164515cf1b3.htm" />
+    <HelpKINode Title="properties" Url="html/b207682a-ef77-1f9f-711a-3d0275c0387b.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AnonymizerWithRules.AnonymizerRules property" Url="html/4f4d1018-03fd-6f7c-24c6-ca1a21a45226.htm" />
+  <HelpKINode Title="AnonymizerWithRules.AnonymizerRulesFilename property" Url="html/b69d85c5-6a7f-0531-4178-e4d294f9349a.htm" />
+  <HelpKINode Title="AnonymizerWithRules.AnonymizerWithRules constructor" Url="html/39368750-cc16-e662-184f-c86536295488.htm" />
+  <HelpKINode Title="AnonymizerWithRules.common_constructor method" Url="html/89e9e106-f12b-e1e0-57b0-a280a7c07e6b.htm" />
+  <HelpKINode Title="AnonymizerWithRules.Filename property" Url="html/ea294ac4-78ec-51d8-b422-04bcf7b37cc2.htm" />
+  <HelpKINode Title="AnonymizerWithRules.File_to_be_anonymized property" Url="html/4e296ffd-09f6-d9d5-5d8b-1d9c8da131db.htm" />
+  <HelpKINode Title="AnonymizerWithRules.fnIndicator field" Url="html/2f525354-c1d1-5e03-2132-3f810fb79c09.htm" />
+  <HelpKINode Title="AnonymizerWithRules.ProcessAnonymizerFile method" Url="html/5115e1ae-3599-5952-c6e1-50cfa20dc03c.htm" />
+  <HelpKINode Title="AnonymizerWithRules.ProcessFilter method" Url="html/da363464-3b32-1b08-d469-374260d8bec9.htm" />
+  <HelpKINode Title="AnonymizerWithRules.ProcessRule method" Url="html/09045766-f9a8-22a4-c0f6-ab16efb17d06.htm" />
+  <HelpKINode Title="AnonymizerWithRules.setAnonymizerFile method" Url="html/e34165a8-ad7a-8b19-0d69-1ed997f032d2.htm" />
+  <HelpKINode Title="AnonymizerWithRules._anonymizerFile field" Url="html/5607609b-402e-7055-a910-3ebb030c8b76.htm" />
+  <HelpKINode Title="AnonymizerWithRules._AnonymizerRules field" Url="html/8b3dde4b-07d8-68e2-73b8-30c4af8c8ae3.htm" />
+  <HelpKINode Title="AnonymizerWithRules._anonymizerRulesFilename field" Url="html/eea0c328-f740-3895-6942-ec8c2f8d9380.htm" />
+  <HelpKINode Title="AnonymizerWithRules._filename field" Url="html/c9e1dd77-1825-8f8e-a1cc-34d319e1fa20.htm" />
+  <HelpKINode Title="AnonymizerWithRules._filepath field" Url="html/8ac63521-c983-8096-a76e-a83b57d4e0a2.htm" />
+  <HelpKINode Title="AnonymizerXML class">
+    <HelpKINode Title="AnonymizerXML Class" Url="html/6cd3a338-29dd-d6c2-0bef-c9025d431033.htm" />
+    <HelpKINode Title="about AnonymizerXML class" Url="html/6cd3a338-29dd-d6c2-0bef-c9025d431033.htm" />
+    <HelpKINode Title="constructor" Url="html/2476480a-5fc9-357f-bc2d-8af548b50f6c.htm" />
+    <HelpKINode Title="fields" Url="html/f0a2aa2e-6131-9e64-7766-0c491b7f6d62.htm" />
+    <HelpKINode Title="methods" Url="html/38ef073c-2d6e-567d-f360-f698c63fb56f.htm" />
+    <HelpKINode Title="properties" Url="html/0e5ed286-5935-5a48-0022-933be98bbb86.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AnonymizerXML.AnonymizerXML constructor" Url="html/2476480a-5fc9-357f-bc2d-8af548b50f6c.htm" />
+  <HelpKINode Title="AnonymizerXML.common_constructor method" Url="html/7a031add-636e-66e2-3c58-6a5e51f1f1b7.htm" />
+  <HelpKINode Title="AnonymizerXML.Namespaces property" Url="html/2c71de67-1361-d556-d098-ba98a4543ede.htm" />
+  <HelpKINode Title="AnonymizerXML.nsIndicator field" Url="html/26efbd03-12f2-8928-0544-8ba044f38a74.htm" />
+  <HelpKINode Title="AnonymizerXML.ProcessRule method" Url="html/7da4a4cd-4048-7018-b0b2-a38a928a3da3.htm" />
+  <HelpKINode Title="AnonymizerXML._namespaces field" Url="html/80e2b808-18d1-4612-8e6e-68b06d0f437a.htm" />
+  <HelpKINode Title="AnonymizeSHA1Integer method" Url="html/71fbfe8f-28ec-426d-1ccc-e4ec485f800b.htm" />
+  <HelpKINode Title="AnonymizeSHA512Integer method" Url="html/9ee9f77b-818b-ed0f-1a94-72a65316c3e5.htm" />
+  <HelpKINode Title="AnonymizeText method" Url="html/242f43b2-f5a4-1f98-cf6a-bdf70ff2aa88.htm" />
+  <HelpKINode Title="AnonymizeToFiles enumeration member" Url="html/02aa21a8-874a-4a2c-bbdc-adbe5d07cc68.htm" />
+  <HelpKINode Title="AnonymizeTrueFalse method" Url="html/b33bc7ba-0173-f79a-c0bb-21a5521b772b.htm" />
+  <HelpKINode Title="AnonymizeXML class">
+    <HelpKINode Title="AnonymizeXML Class" Url="html/f373d053-b4eb-8ed1-ec72-3add21b67da5.htm" />
+    <HelpKINode Title="about AnonymizeXML class" Url="html/f373d053-b4eb-8ed1-ec72-3add21b67da5.htm" />
+    <HelpKINode Title="constructor" Url="html/ed2d6f8b-4e8b-532a-4607-264f5ec965b3.htm" />
+    <HelpKINode Title="fields" Url="html/cc8c84ff-69d9-922f-24a8-f1e2742b03d9.htm" />
+    <HelpKINode Title="methods" Url="html/08ecc60a-2adf-4a55-5c26-cce2ae77b34a.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AnonymizeXML.anonymizeFile field" Url="html/1daea555-5469-39c1-3b8c-f69157b54b86.htm" />
+  <HelpKINode Title="AnonymizeXML.AnonymizeXML constructor" Url="html/ed2d6f8b-4e8b-532a-4607-264f5ec965b3.htm" />
+  <HelpKINode Title="AnonymizeXML.getHelpMessage method" Url="html/71c02f8b-5e3c-f474-ce87-2ccca7e790a0.htm" />
+  <HelpKINode Title="AnonymizeXML.Main method" Url="html/4e0fbb99-c184-32cb-385c-32efa7ee113b.htm" />
+  <HelpKINode Title="Anonymous_value property" Url="html/29852074-d1f3-aeef-e0d0-838a4140b845.htm" />
+  <HelpKINode Title="AppendAnonymized method" Url="html/a3819a97-d3f4-feea-9a76-5c6081937430.htm" />
+  <HelpKINode Title="cleanFilename method" Url="html/3a41e12f-466d-e40c-e425-fb4132d3dc66.htm" />
+  <HelpKINode Title="Commandline.AnonymizeCSV namespace" Url="html/86700e2e-3c47-f1f1-9c8c-bb157db89c2d.htm" />
+  <HelpKINode Title="Commandline.AnonymizeCSV.AnonymizeCSV class" Url="html/a3c1388f-a07b-bb3c-6fb4-ebdc2cef0d23.htm" />
+  <HelpKINode Title="Commandline.AnonymizeXML namespace" Url="html/2d7d1e1e-47f2-324a-26e9-92d71fe9cffd.htm" />
+  <HelpKINode Title="Commandline.AnonymizeXML.AnonymizeXML class" Url="html/f373d053-b4eb-8ed1-ec72-3add21b67da5.htm" />
+  <HelpKINode Title="Commandline.compareXMLRecords namespace" Url="html/2d2ba18b-5a69-282d-fb99-3c2df72e5eff.htm" />
+  <HelpKINode Title="Commandline.compareXMLRecords.compareXMLRecords class" Url="html/54971a93-04f1-6fa5-f77d-63e36be0e673.htm" />
+  <HelpKINode Title="Commandline.ExtractXMLRecord namespace" Url="html/cd2961d3-f826-72b0-1aa0-c6bbe7a6f2bb.htm" />
+  <HelpKINode Title="Commandline.ExtractXMLRecord.extractXMLRecord class" Url="html/893be871-1c6a-9140-51e2-281ca9443f2f.htm" />
+  <HelpKINode Title="common_constructor method">
+    <HelpKINode Title="Anonymizer.common_constructor Method " Url="html/5c502561-a2df-cb96-12ce-a14b3ad13aee.htm" />
+    <HelpKINode Title="AnonymizerWithRules.common_constructor Method " Url="html/89e9e106-f12b-e1e0-57b0-a280a7c07e6b.htm" />
+    <HelpKINode Title="AnonymizerXML.common_constructor Method " Url="html/7a031add-636e-66e2-3c58-6a5e51f1f1b7.htm" />
+    <HelpKINode Title="XMLRecordFile.common_constructor Method " Url="html/848770be-0d22-26e6-991f-eccdfebca1d0.htm" />
+  </HelpKINode>
+  <HelpKINode Title="compare method" Url="html/a7f8074a-8389-c45d-adce-10fc34a77f00.htm" />
+  <HelpKINode Title="CompareTo method">
+    <HelpKINode Title="AnonymizeCache.CompareTo Method " Url="html/d7a1507b-b242-9451-c52c-0d38fe9fff44.htm" />
+    <HelpKINode Title="AnonymizeRule.CompareTo Method " Url="html/3e0861b7-afb4-6b51-5d22-4ab2b5773114.htm" />
+    <HelpKINode Title="XMLRecord.CompareTo Method " Url="html/1167a445-dcd2-9b15-2024-b1b6e646043b.htm" />
+  </HelpKINode>
+  <HelpKINode Title="compareXMLRecords class">
+    <HelpKINode Title="compareXMLRecords Class" Url="html/54971a93-04f1-6fa5-f77d-63e36be0e673.htm" />
+    <HelpKINode Title="about compareXMLRecords class" Url="html/54971a93-04f1-6fa5-f77d-63e36be0e673.htm" />
+    <HelpKINode Title="constructor" Url="html/def66dba-aa45-c89f-78e0-9d4ae0a4cae6.htm" />
+    <HelpKINode Title="methods" Url="html/5de80195-8d05-e209-d5ec-a63d98e16950.htm" />
+  </HelpKINode>
+  <HelpKINode Title="compareXMLRecords.compareXMLRecords constructor" Url="html/def66dba-aa45-c89f-78e0-9d4ae0a4cae6.htm" />
+  <HelpKINode Title="compareXMLRecords.getHelpText method" Url="html/2a51477d-379e-5171-a295-b88859a7e919.htm" />
+  <HelpKINode Title="compareXMLRecords.Main method" Url="html/70570c09-dcfb-b620-803c-ad87ab1901be.htm" />
+  <HelpKINode Title="Core.Anonymization namespace" Url="html/70fab1d2-75ea-c5bc-73ff-e2b6abfeb069.htm" />
+  <HelpKINode Title="Core.Anonymization.AnonymizeCache class" Url="html/da115f55-76fc-13de-13f6-46aef3869d55.htm" />
+  <HelpKINode Title="Core.Anonymization.AnonymizeCacheDB class" Url="html/0a0f30e7-7646-18c0-e0ac-5a6f606ea4b6.htm" />
+  <HelpKINode Title="Core.Anonymization.AnonymizeCacheFile class" Url="html/935776df-69cf-60ab-a69d-33add96371ec.htm" />
+  <HelpKINode Title="Core.Anonymization.Anonymizer class" Url="html/aa09c2a7-d136-255d-d344-4016d5052174.htm" />
+  <HelpKINode Title="Core.Anonymization.AnonymizerCSV class" Url="html/038dfca4-5026-d700-3e15-9d37306ebdd8.htm" />
+  <HelpKINode Title="Core.Anonymization.AnonymizeRule class" Url="html/427f0e94-46c3-159f-a003-a384dca5a793.htm" />
+  <HelpKINode Title="Core.Anonymization.AnonymizeRule.MethodType enumeration" Url="html/71c7dc6c-c627-b2b3-7aac-21886b92dc18.htm" />
+  <HelpKINode Title="Core.Anonymization.AnonymizerWithRules class" Url="html/fe89a95c-9d48-da6f-6ae0-2a20db977c28.htm" />
+  <HelpKINode Title="Core.XMLCompare namespace" Url="html/185a4d22-cc50-dc32-ea8b-0a2f8dd82835.htm" />
+  <HelpKINode Title="Core.XMLCompare.XMLCompare class" Url="html/b05664fb-70ed-1cb2-9835-07de7ea5330c.htm" />
+  <HelpKINode Title="Core.XMLRecords namespace" Url="html/25bec542-6131-db0e-87e9-b295a61e1f09.htm" />
+  <HelpKINode Title="Core.XMLRecords.Anonymization namespace" Url="html/a91082f2-6e61-d58d-d582-8bf96c526bc1.htm" />
+  <HelpKINode Title="Core.XMLRecords.Anonymization.AnonymizerXML class" Url="html/6cd3a338-29dd-d6c2-0bef-c9025d431033.htm" />
+  <HelpKINode Title="Core.XMLRecords.XMLRecord class" Url="html/57d93551-eba9-a23d-9299-7c4b7291f8f0.htm" />
+  <HelpKINode Title="Core.XMLRecords.XMLRecordFile class" Url="html/76c3ec45-4390-1474-c831-4fdcb67cab1a.htm" />
+  <HelpKINode Title="Core.XMLRecords.XMLRecordFile.ProcessType enumeration" Url="html/02aa21a8-874a-4a2c-bbdc-adbe5d07cc68.htm" />
+  <HelpKINode Title="CreateCompressedDir method" Url="html/dc9f447d-ecdc-5749-b380-09029ff69398.htm" />
+  <HelpKINode Title="curDir field" Url="html/55c7cabe-12e5-f377-a38d-39e369453d0d.htm" />
+  <HelpKINode Title="Date enumeration member" Url="html/71c7dc6c-c627-b2b3-7aac-21886b92dc18.htm" />
+  <HelpKINode Title="Empty enumeration member" Url="html/71c7dc6c-c627-b2b3-7aac-21886b92dc18.htm" />
+  <HelpKINode Title="Equals method">
+    <HelpKINode Title="AnonymizeCache.Equals Method " Url="html/4c3ee971-e880-06e1-1bdd-9bf6e1c63847.htm" />
+    <HelpKINode Title="AnonymizeRule.Equals Method " Url="html/805b5df9-a064-2715-9664-d03f13201917.htm" />
+    <HelpKINode Title="XMLRecord.Equals Method " Url="html/39ae1e8f-aee2-c515-51e9-a5ff37d69807.htm" />
+  </HelpKINode>
+  <HelpKINode Title="extractXMLRecord class">
+    <HelpKINode Title="extractXMLRecord Class" Url="html/893be871-1c6a-9140-51e2-281ca9443f2f.htm" />
+    <HelpKINode Title="about extractXMLRecord class" Url="html/893be871-1c6a-9140-51e2-281ca9443f2f.htm" />
+    <HelpKINode Title="constructor" Url="html/86717df5-2a75-ee3b-783e-94299433466c.htm" />
+    <HelpKINode Title="methods" Url="html/e143c28c-aaf8-b5aa-a3fc-6a56f54c3608.htm" />
+  </HelpKINode>
+  <HelpKINode Title="extractXMLRecord.extractXMLRecord constructor" Url="html/86717df5-2a75-ee3b-783e-94299433466c.htm" />
+  <HelpKINode Title="extractXMLRecord.Main method" Url="html/f0af5a99-dec8-e7bc-6d08-b332e626cc0a.htm" />
+  <HelpKINode Title="Filename property" Url="html/ea294ac4-78ec-51d8-b422-04bcf7b37cc2.htm" />
+  <HelpKINode Title="File_to_be_anonymized property" Url="html/4e296ffd-09f6-d9d5-5d8b-1d9c8da131db.htm" />
+  <HelpKINode Title="Filter property" Url="html/2b05d7b3-38bd-376e-d092-3a7ef497aa0f.htm" />
+  <HelpKINode Title="FilterLocation property" Url="html/a46dbb96-5af4-ce59-82be-dce1a5afc5ea.htm" />
+  <HelpKINode Title="FilterOperator property" Url="html/735f4cab-3227-6102-7cb3-b0b4764449b7.htm" />
+  <HelpKINode Title="FilterValue property" Url="html/27848d53-ec50-1a51-adce-5871a9e0b3fa.htm" />
+  <HelpKINode Title="fnIndicator field" Url="html/2f525354-c1d1-5e03-2132-3f810fb79c09.htm" />
+  <HelpKINode Title="getAttributes method" Url="html/cc58b0d5-dbcb-2318-86e2-b003339dbf02.htm" />
+  <HelpKINode Title="getEndNamespaceTag method" Url="html/ada899b5-053f-11d9-86ab-7ae108137545.htm" />
+  <HelpKINode Title="getFilename method" Url="html/7be34af7-d2be-9a0f-affe-c702603399d0.htm" />
+  <HelpKINode Title="getFullFilename method" Url="html/1dd9e16c-3eb9-bab1-92fb-4c796975044b.htm" />
+  <HelpKINode Title="GetHash method" Url="html/6cb06e0c-4126-0e6b-8fd6-d799850cd451.htm" />
+  <HelpKINode Title="GetHashCode method">
+    <HelpKINode Title="AnonymizeCache.GetHashCode Method " Url="html/d691441e-8122-83e4-88fd-0abbd030826c.htm" />
+    <HelpKINode Title="AnonymizeRule.GetHashCode Method " Url="html/e2d45d60-0245-81fb-1bfb-fbd3de922a7a.htm" />
+    <HelpKINode Title="XMLRecord.GetHashCode Method " Url="html/8bf309af-4b26-0cbf-8646-0a3b67d13d6d.htm" />
+  </HelpKINode>
+  <HelpKINode Title="getHelpMessage method">
+    <HelpKINode Title="AnonymizeCSV.getHelpMessage Method " Url="html/c7d04e7c-1e9c-db7b-f96b-7ba6915e9ccc.htm" />
+    <HelpKINode Title="AnonymizeXML.getHelpMessage Method " Url="html/71c02f8b-5e3c-f474-ce87-2ccca7e790a0.htm" />
+  </HelpKINode>
+  <HelpKINode Title="getHelpText method" Url="html/2a51477d-379e-5171-a295-b88859a7e919.htm" />
+  <HelpKINode Title="getID method" Url="html/3045a565-54d7-c877-933c-daeef1e5c20d.htm" />
+  <HelpKINode Title="getIDList method" Url="html/5245e6dc-239f-4c24-a7fc-eee43560b30f.htm" />
+  <HelpKINode Title="getIDs method" Url="html/b5ac2200-4bd1-5f01-b052-4f3418828968.htm" />
+  <HelpKINode Title="getIDTags method" Url="html/e8c46920-44ce-361a-5a4a-36854c5d0d02.htm" />
+  <HelpKINode Title="getIDTagString method" Url="html/c3f0e832-e9b5-5740-06d0-c786fcdef462.htm" />
+  <HelpKINode Title="getMethod method" Url="html/62cf11e6-a7a7-84fe-a91f-cea3eb4d6abd.htm" />
+  <HelpKINode Title="getNamespaceTag method" Url="html/8b403517-625f-94a7-82ac-e3f7aa7756a1.htm" />
+  <HelpKINode Title="getXMLRecord method">
+    <HelpKINode Title="XMLRecord.getXMLRecord Method " Url="html/f55df20b-4a8a-538a-c5e9-1c4e4f598f2b.htm" />
+    <HelpKINode Title="XMLRecordFile.getXMLRecord Method " Url="html/b60d74ae-d3a9-6298-e299-64aa1de996bb.htm" />
+  </HelpKINode>
+  <HelpKINode Title="HouseAidVnr enumeration member" Url="html/71c7dc6c-c627-b2b3-7aac-21886b92dc18.htm" />
+  <HelpKINode Title="In method" Url="html/1079500c-a143-5893-0dac-0ab73ebf6eb0.htm" />
+  <HelpKINode Title="IndexOf method" Url="html/da086b69-7932-61c8-0d3e-57030b8d8b4d.htm" />
+  <HelpKINode Title="IsFiltered property" Url="html/eeb4ac67-1582-b520-654a-db1d253919e8.htm" />
+  <HelpKINode Title="IsIDTag method" Url="html/1c113871-4524-62e2-78ff-d956fa32927e.htm" />
+  <HelpKINode Title="Location property" Url="html/b2e707dd-5188-0401-81b2-f10a7f03c624.htm" />
+  <HelpKINode Title="Main method">
+    <HelpKINode Title="AnonymizeCSV.Main Method " Url="html/989fdd86-3c1f-d9d7-12f7-e8d91c07473a.htm" />
+    <HelpKINode Title="AnonymizeXML.Main Method " Url="html/4e0fbb99-c184-32cb-385c-32efa7ee113b.htm" />
+    <HelpKINode Title="compareXMLRecords.Main Method " Url="html/70570c09-dcfb-b620-803c-ad87ab1901be.htm" />
+    <HelpKINode Title="extractXMLRecord.Main Method " Url="html/f0af5a99-dec8-e7bc-6d08-b332e626cc0a.htm" />
+  </HelpKINode>
+  <HelpKINode Title="maxFilenameLength field" Url="html/bfd18e94-7166-9697-5b95-4dd4e2c90cf0.htm" />
+  <HelpKINode Title="MD5Integer enumeration member" Url="html/71c7dc6c-c627-b2b3-7aac-21886b92dc18.htm" />
+  <HelpKINode Title="Method property" Url="html/2bb3b7ae-ee2e-f1cb-c1b7-aa7f47997c07.htm" />
+  <HelpKINode Title="Namespaces property" Url="html/2c71de67-1361-d556-d098-ba98a4543ede.htm" />
+  <HelpKINode Title="nsIndicator field" Url="html/26efbd03-12f2-8928-0544-8ba044f38a74.htm" />
+  <HelpKINode Title="NumEqLen enumeration member" Url="html/71c7dc6c-c627-b2b3-7aac-21886b92dc18.htm" />
+  <HelpKINode Title="Original_value property" Url="html/a88aa293-36c3-2462-9e6c-92ef97c262ad.htm" />
+  <HelpKINode Title="parmheaderRowIndicator field" Url="html/9dcf6231-4ceb-5551-5607-297147c308a2.htm" />
+  <HelpKINode Title="parmSeperator field" Url="html/26cbebd5-5207-b41f-3714-de0b90c9a470.htm" />
+  <HelpKINode Title="parmTextIndicator field" Url="html/0c863de2-95c8-25d7-6c41-772e01be6800.htm" />
+  <HelpKINode Title="postfix field" Url="html/7e3a4710-acb6-b4b0-7b32-0edee095911e.htm" />
+  <HelpKINode Title="PrintXML method" Url="html/298b63dc-ebe4-211c-5891-19cee4d7b3bc.htm" />
+  <HelpKINode Title="Process method" Url="html/8b15162b-a2dd-f0ca-9791-a75ea55922a5.htm" />
+  <HelpKINode Title="ProcessAnonymizerFile method" Url="html/5115e1ae-3599-5952-c6e1-50cfa20dc03c.htm" />
+  <HelpKINode Title="processFilename method" Url="html/a3e3f80f-38eb-80bd-2390-3cb5bcb3d592.htm" />
+  <HelpKINode Title="ProcessFilter method" Url="html/da363464-3b32-1b08-d469-374260d8bec9.htm" />
+  <HelpKINode Title="ProcessRule method">
+    <HelpKINode Title="AnonymizerWithRules.ProcessRule Method " Url="html/09045766-f9a8-22a4-c0f6-ab16efb17d06.htm" />
+    <HelpKINode Title="AnonymizerXML.ProcessRule Method " Url="html/7da4a4cd-4048-7018-b0b2-a38a928a3da3.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RNDGen field" Url="html/2a5ec550-ac08-1d15-880f-a3c2d99bd16f.htm" />
+  <HelpKINode Title="seperator field" Url="html/54310c93-42fb-766b-dc8d-b6653c5a5ca6.htm" />
+  <HelpKINode Title="Seperator property" Url="html/0fa7ffc8-dde6-51e7-b564-c7ae85c7021e.htm" />
+  <HelpKINode Title="setAnonymizerFile method" Url="html/e34165a8-ad7a-8b19-0d69-1ed997f032d2.htm" />
+  <HelpKINode Title="SHA1Number enumeration member" Url="html/71c7dc6c-c627-b2b3-7aac-21886b92dc18.htm" />
+  <HelpKINode Title="SHA512Number enumeration member" Url="html/71c7dc6c-c627-b2b3-7aac-21886b92dc18.htm" />
+  <HelpKINode Title="split method" Url="html/22c908e7-434a-8295-a0e4-4c2e914622a4.htm" />
+  <HelpKINode Title="tempfile field" Url="html/4066a3c2-63b8-c041-783e-996c366d13ad.htm" />
+  <HelpKINode Title="Text enumeration member" Url="html/71c7dc6c-c627-b2b3-7aac-21886b92dc18.htm" />
+  <HelpKINode Title="TextIndicator property" Url="html/30d524a2-4b47-bf1f-6a97-89bf58d83227.htm" />
+  <HelpKINode Title="throwException method" Url="html/66da3ef4-6742-ccc6-abf6-33553d6d6b46.htm" />
+  <HelpKINode Title="ToFile enumeration member" Url="html/02aa21a8-874a-4a2c-bbdc-adbe5d07cc68.htm" />
+  <HelpKINode Title="ToMemory enumeration member" Url="html/02aa21a8-874a-4a2c-bbdc-adbe5d07cc68.htm" />
+  <HelpKINode Title="ToString method">
+    <HelpKINode Title="AnonymizeRule.ToString Method " Url="html/15dcc2b4-81b8-fafd-7f0a-ac18be407514.htm" />
+    <HelpKINode Title="XMLRecord.ToString Method " Url="html/145979e3-4749-3624-1ba9-bd568a9fb629.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ToXmlString method" Url="html/b450d4ce-62f0-d2f8-2e0b-31a630b7f871.htm" />
+  <HelpKINode Title="TrueFalse enumeration member" Url="html/71c7dc6c-c627-b2b3-7aac-21886b92dc18.htm" />
+  <HelpKINode Title="trunc field" Url="html/b46f897a-7208-5813-dc27-ae85cdb50e2b.htm" />
+  <HelpKINode Title="Unknown enumeration member" Url="html/71c7dc6c-c627-b2b3-7aac-21886b92dc18.htm" />
+  <HelpKINode Title="whitespace field" Url="html/cbe45b11-a4b5-68cd-ef12-6e5fff455a82.htm" />
+  <HelpKINode Title="Write method">
+    <HelpKINode Title="XMLRecord.Write Method " Url="html/2288d297-f747-fd21-ae68-0452d6b907ae.htm" />
+    <HelpKINode Title="XMLRecordFile.Write Method " Url="html/6d3b85ef-9871-014e-2f34-d810f3031b8b.htm" />
+  </HelpKINode>
+  <HelpKINode Title="XML">
+    <HelpKINode Title="Record,Utilities" Url="html/ff34d9fe-b836-4af4-8b61-8967901db97b.htm" />
+  </HelpKINode>
+  <HelpKINode Title="XMLCompare class">
+    <HelpKINode Title="XMLCompare Class" Url="html/b05664fb-70ed-1cb2-9835-07de7ea5330c.htm" />
+    <HelpKINode Title="about XMLCompare class" Url="html/b05664fb-70ed-1cb2-9835-07de7ea5330c.htm" />
+    <HelpKINode Title="constructor" Url="html/5ac12147-55d0-e93d-e6de-7c38e2fa6675.htm" />
+    <HelpKINode Title="fields" Url="html/f4d2c9fd-964f-838d-2c17-7ff819affb1e.htm" />
+    <HelpKINode Title="methods" Url="html/8a3f9a72-ae1c-1451-227c-a2b438b8257c.htm" />
+  </HelpKINode>
+  <HelpKINode Title="XMLCompare.compare method" Url="html/a7f8074a-8389-c45d-adce-10fc34a77f00.htm" />
+  <HelpKINode Title="XMLCompare.getIDTags method" Url="html/e8c46920-44ce-361a-5a4a-36854c5d0d02.htm" />
+  <HelpKINode Title="XMLCompare.XMLCompare constructor" Url="html/5ac12147-55d0-e93d-e6de-7c38e2fa6675.htm" />
+  <HelpKINode Title="XMLCompare._containerTag field" Url="html/e5399082-2a48-1671-6b00-42c931f62836.htm" />
+  <HelpKINode Title="XMLCompare._file1 field" Url="html/0855b850-5749-f7ab-7279-2c533d9190fb.htm" />
+  <HelpKINode Title="XMLCompare._file2 field" Url="html/56330438-ab00-c758-96c0-7ec9b6afebaf.htm" />
+  <HelpKINode Title="XMLCompare._identifyingTags field" Url="html/523ec540-1b56-3184-cd3d-1cecb398738b.htm" />
+  <HelpKINode Title="XMLCompare._perf field" Url="html/212205c3-10a2-5d26-d5ce-7e8a4f413ab0.htm" />
+  <HelpKINode Title="xmlDecl field" Url="html/ee0be42e-b54a-a1c2-17fe-e319262fbc97.htm" />
+  <HelpKINode Title="XMLRecord class">
+    <HelpKINode Title="XMLRecord Class" Url="html/57d93551-eba9-a23d-9299-7c4b7291f8f0.htm" />
+    <HelpKINode Title="about XMLRecord class" Url="html/57d93551-eba9-a23d-9299-7c4b7291f8f0.htm" />
+    <HelpKINode Title="constructor" Url="html/2cd9ee9f-d822-ccf8-d817-5f3bbf62d052.htm" />
+    <HelpKINode Title="constructor" Url="html/8c5d13b0-d038-0622-98d8-25cd242badc7.htm" />
+    <HelpKINode Title="fields" Url="html/fa42d16a-5040-2f94-3346-46184ec3a23f.htm" />
+    <HelpKINode Title="methods" Url="html/bfb382a9-ecc8-2d14-e1f3-0a07b679e970.htm" />
+  </HelpKINode>
+  <HelpKINode Title="XMLRecord.CompareTo method" Url="html/1167a445-dcd2-9b15-2024-b1b6e646043b.htm" />
+  <HelpKINode Title="XMLRecord.Equals method" Url="html/39ae1e8f-aee2-c515-51e9-a5ff37d69807.htm" />
+  <HelpKINode Title="XMLRecord.GetHashCode method" Url="html/8bf309af-4b26-0cbf-8646-0a3b67d13d6d.htm" />
+  <HelpKINode Title="XMLRecord.getID method" Url="html/3045a565-54d7-c877-933c-daeef1e5c20d.htm" />
+  <HelpKINode Title="XMLRecord.getIDs method" Url="html/b5ac2200-4bd1-5f01-b052-4f3418828968.htm" />
+  <HelpKINode Title="XMLRecord.getIDTagString method" Url="html/c3f0e832-e9b5-5740-06d0-c786fcdef462.htm" />
+  <HelpKINode Title="XMLRecord.getXMLRecord method" Url="html/f55df20b-4a8a-538a-c5e9-1c4e4f598f2b.htm" />
+  <HelpKINode Title="XMLRecord.seperator field" Url="html/54310c93-42fb-766b-dc8d-b6653c5a5ca6.htm" />
+  <HelpKINode Title="XMLRecord.ToString method" Url="html/145979e3-4749-3624-1ba9-bd568a9fb629.htm" />
+  <HelpKINode Title="XMLRecord.Write method" Url="html/2288d297-f747-fd21-ae68-0452d6b907ae.htm" />
+  <HelpKINode Title="XMLRecord.XMLRecord constructor">
+    <HelpKINode Title="XMLRecord Constructor " Url="html/2cd9ee9f-d822-ccf8-d817-5f3bbf62d052.htm" />
+    <HelpKINode Title="XMLRecord Constructor " Url="html/8c5d13b0-d038-0622-98d8-25cd242badc7.htm" />
+  </HelpKINode>
+  <HelpKINode Title="XMLRecord._IDs field" Url="html/e8a5b1fc-2abb-0420-ba1b-479c0911ecbf.htm" />
+  <HelpKINode Title="XMLRecord._XMLRecord field" Url="html/d594a725-4de2-7ec8-bff2-dd9e60524f47.htm" />
+  <HelpKINode Title="XMLRecordFile class">
+    <HelpKINode Title="XMLRecordFile Class" Url="html/76c3ec45-4390-1474-c831-4fdcb67cab1a.htm" />
+    <HelpKINode Title="about XMLRecordFile class" Url="html/76c3ec45-4390-1474-c831-4fdcb67cab1a.htm" />
+    <HelpKINode Title="constructor" Url="html/c38c24be-6247-aa6e-f6cc-fdbf5e9b9535.htm" />
+    <HelpKINode Title="fields" Url="html/8fddd332-9f8f-2784-f8ec-0ab58b9100c7.htm" />
+    <HelpKINode Title="methods" Url="html/8ac11e44-73cb-a84d-2099-33b99f3cd886.htm" />
+    <HelpKINode Title="properties" Url="html/1c62b1e4-6f0c-e063-2556-a55f1b34989c.htm" />
+  </HelpKINode>
+  <HelpKINode Title="XMLRecordFile.addToXMLRecord method" Url="html/57b7839f-1c2e-9395-bc2f-08af2d1f2989.htm" />
+  <HelpKINode Title="XMLRecordFile.AllTrue method" Url="html/1feef85d-b58c-bf12-ca1a-43f71eb358cf.htm" />
+  <HelpKINode Title="XMLRecordFile.Anonymized_filename property" Url="html/67e68324-9c27-2773-d290-6a5ac7de342a.htm" />
+  <HelpKINode Title="XMLRecordFile.AppendAnonymized method" Url="html/a3819a97-d3f4-feea-9a76-5c6081937430.htm" />
+  <HelpKINode Title="XMLRecordFile.cleanFilename method" Url="html/3a41e12f-466d-e40c-e425-fb4132d3dc66.htm" />
+  <HelpKINode Title="XMLRecordFile.common_constructor method" Url="html/848770be-0d22-26e6-991f-eccdfebca1d0.htm" />
+  <HelpKINode Title="XMLRecordFile.CreateCompressedDir method" Url="html/dc9f447d-ecdc-5749-b380-09029ff69398.htm" />
+  <HelpKINode Title="XMLRecordFile.curDir field" Url="html/55c7cabe-12e5-f377-a38d-39e369453d0d.htm" />
+  <HelpKINode Title="XMLRecordFile.getAttributes method" Url="html/cc58b0d5-dbcb-2318-86e2-b003339dbf02.htm" />
+  <HelpKINode Title="XMLRecordFile.getEndNamespaceTag method" Url="html/ada899b5-053f-11d9-86ab-7ae108137545.htm" />
+  <HelpKINode Title="XMLRecordFile.getFilename method" Url="html/7be34af7-d2be-9a0f-affe-c702603399d0.htm" />
+  <HelpKINode Title="XMLRecordFile.getFullFilename method" Url="html/1dd9e16c-3eb9-bab1-92fb-4c796975044b.htm" />
+  <HelpKINode Title="XMLRecordFile.getIDList method" Url="html/5245e6dc-239f-4c24-a7fc-eee43560b30f.htm" />
+  <HelpKINode Title="XMLRecordFile.getNamespaceTag method" Url="html/8b403517-625f-94a7-82ac-e3f7aa7756a1.htm" />
+  <HelpKINode Title="XMLRecordFile.getXMLRecord method" Url="html/b60d74ae-d3a9-6298-e299-64aa1de996bb.htm" />
+  <HelpKINode Title="XMLRecordFile.In method" Url="html/1079500c-a143-5893-0dac-0ab73ebf6eb0.htm" />
+  <HelpKINode Title="XMLRecordFile.IndexOf method" Url="html/da086b69-7932-61c8-0d3e-57030b8d8b4d.htm" />
+  <HelpKINode Title="XMLRecordFile.IsIDTag method" Url="html/1c113871-4524-62e2-78ff-d956fa32927e.htm" />
+  <HelpKINode Title="XMLRecordFile.maxFilenameLength field" Url="html/bfd18e94-7166-9697-5b95-4dd4e2c90cf0.htm" />
+  <HelpKINode Title="XMLRecordFile.postfix field" Url="html/7e3a4710-acb6-b4b0-7b32-0edee095911e.htm" />
+  <HelpKINode Title="XMLRecordFile.PrintXML method" Url="html/298b63dc-ebe4-211c-5891-19cee4d7b3bc.htm" />
+  <HelpKINode Title="XMLRecordFile.Process method" Url="html/8b15162b-a2dd-f0ca-9791-a75ea55922a5.htm" />
+  <HelpKINode Title="XMLRecordFile.processFilename method" Url="html/a3e3f80f-38eb-80bd-2390-3cb5bcb3d592.htm" />
+  <HelpKINode Title="XMLRecordFile.ProcessType enumeration" Url="html/02aa21a8-874a-4a2c-bbdc-adbe5d07cc68.htm" />
+  <HelpKINode Title="XMLRecordFile.tempfile field" Url="html/4066a3c2-63b8-c041-783e-996c366d13ad.htm" />
+  <HelpKINode Title="XMLRecordFile.ToXmlString method" Url="html/b450d4ce-62f0-d2f8-2e0b-31a630b7f871.htm" />
+  <HelpKINode Title="XMLRecordFile.trunc field" Url="html/b46f897a-7208-5813-dc27-ae85cdb50e2b.htm" />
+  <HelpKINode Title="XMLRecordFile.Write method" Url="html/6d3b85ef-9871-014e-2f34-d810f3031b8b.htm" />
+  <HelpKINode Title="XMLRecordFile.xmlDecl field" Url="html/ee0be42e-b54a-a1c2-17fe-e319262fbc97.htm" />
+  <HelpKINode Title="XMLRecordFile.XMLRecordFile constructor" Url="html/c38c24be-6247-aa6e-f6cc-fdbf5e9b9535.htm" />
+  <HelpKINode Title="XMLRecordFile._anonymized_filename field" Url="html/8694010d-54b1-d787-1efc-3c0d994709cc.htm" />
+  <HelpKINode Title="XMLRecordFile._containerTags field" Url="html/32052ef7-5cb8-1157-ccc5-be06932d6608.htm" />
+  <HelpKINode Title="XMLRecordFile._endNamespaceTag field" Url="html/23a48b74-6845-f087-f9e3-2e148effe34d.htm" />
+  <HelpKINode Title="XMLRecordFile._fileext field" Url="html/2e159fe6-168a-871c-69dc-4bfc95d9e1d8.htm" />
+  <HelpKINode Title="XMLRecordFile._filename field" Url="html/ea5e4f38-6961-8ca9-2880-ca764276d9fe.htm" />
+  <HelpKINode Title="XMLRecordFile._filepath field" Url="html/3b00cab0-aed2-3482-409b-781dd8446c01.htm" />
+  <HelpKINode Title="XMLRecordFile._IDTags field" Url="html/f13d85a4-d9e2-5aa7-82bc-a4e0ca6efd5b.htm" />
+  <HelpKINode Title="XMLRecordFile._namespaceTag field" Url="html/50cf5de5-65e6-9a42-2f05-e50b89e44e09.htm" />
+  <HelpKINode Title="XMLRecordFile._XMLRecords field" Url="html/3146eb35-ac38-bb73-2857-8e537ee9a71f.htm" />
+  <HelpKINode Title="_allowed field" Url="html/79677846-511d-1bf0-4c9c-92cd193c41f5.htm" />
+  <HelpKINode Title="_anonymized_filename field" Url="html/8694010d-54b1-d787-1efc-3c0d994709cc.htm" />
+  <HelpKINode Title="_anonymizerFile field" Url="html/5607609b-402e-7055-a910-3ebb030c8b76.htm" />
+  <HelpKINode Title="_AnonymizerRules field" Url="html/8b3dde4b-07d8-68e2-73b8-30c4af8c8ae3.htm" />
+  <HelpKINode Title="_anonymizerRulesFilename field" Url="html/eea0c328-f740-3895-6942-ec8c2f8d9380.htm" />
+  <HelpKINode Title="_anonymous_value field" Url="html/ef4bcfb1-e1d8-aae6-ed03-1ac5cb5e64ca.htm" />
+  <HelpKINode Title="_containerTag field" Url="html/e5399082-2a48-1671-6b00-42c931f62836.htm" />
+  <HelpKINode Title="_containerTags field" Url="html/32052ef7-5cb8-1157-ccc5-be06932d6608.htm" />
+  <HelpKINode Title="_dateCache field" Url="html/3aa21fc2-b247-12b6-e6c6-b03266667cae.htm" />
+  <HelpKINode Title="_endNamespaceTag field" Url="html/23a48b74-6845-f087-f9e3-2e148effe34d.htm" />
+  <HelpKINode Title="_file1 field" Url="html/0855b850-5749-f7ab-7279-2c533d9190fb.htm" />
+  <HelpKINode Title="_file2 field" Url="html/56330438-ab00-c758-96c0-7ec9b6afebaf.htm" />
+  <HelpKINode Title="_fileext field" Url="html/2e159fe6-168a-871c-69dc-4bfc95d9e1d8.htm" />
+  <HelpKINode Title="_filename field">
+    <HelpKINode Title="AnonymizerWithRules._filename Field" Url="html/c9e1dd77-1825-8f8e-a1cc-34d319e1fa20.htm" />
+    <HelpKINode Title="XMLRecordFile._filename Field" Url="html/ea5e4f38-6961-8ca9-2880-ca764276d9fe.htm" />
+  </HelpKINode>
+  <HelpKINode Title="_filepath field">
+    <HelpKINode Title="AnonymizerWithRules._filepath Field" Url="html/8ac63521-c983-8096-a76e-a83b57d4e0a2.htm" />
+    <HelpKINode Title="XMLRecordFile._filepath Field" Url="html/3b00cab0-aed2-3482-409b-781dd8446c01.htm" />
+  </HelpKINode>
+  <HelpKINode Title="_filterLocation field" Url="html/a1f93083-67f5-02e4-1475-a0e45ff65ae6.htm" />
+  <HelpKINode Title="_filterOperator field" Url="html/2796aa4c-6c15-f7ed-16ce-43bd38e0c89b.htm" />
+  <HelpKINode Title="_filterValue field" Url="html/9d127395-489a-01c8-c0b2-4c7947997f0e.htm" />
+  <HelpKINode Title="_identifyingTags field" Url="html/523ec540-1b56-3184-cd3d-1cecb398738b.htm" />
+  <HelpKINode Title="_IDs field" Url="html/e8a5b1fc-2abb-0420-ba1b-479c0911ecbf.htm" />
+  <HelpKINode Title="_IDTags field" Url="html/f13d85a4-d9e2-5aa7-82bc-a4e0ca6efd5b.htm" />
+  <HelpKINode Title="_location field" Url="html/d5fc05ce-8f2a-4edd-7350-108ea2d1f102.htm" />
+  <HelpKINode Title="_method field" Url="html/4e97e2e3-b103-5418-b09b-e178f003f4f5.htm" />
+  <HelpKINode Title="_namespaces field" Url="html/80e2b808-18d1-4612-8e6e-68b06d0f437a.htm" />
+  <HelpKINode Title="_namespaceTag field" Url="html/50cf5de5-65e6-9a42-2f05-e50b89e44e09.htm" />
+  <HelpKINode Title="_original_value field" Url="html/999cd959-705f-01ec-a772-ab39fa6e2564.htm" />
+  <HelpKINode Title="_perf field" Url="html/212205c3-10a2-5d26-d5ce-7e8a4f413ab0.htm" />
+  <HelpKINode Title="_seperator field" Url="html/67dbd489-8c4b-2a5c-0352-45a063bf7354.htm" />
+  <HelpKINode Title="_textIndicator field" Url="html/42f9d86d-5cea-a970-e01d-5f10fa6b9a01.htm" />
+  <HelpKINode Title="_XMLRecord field" Url="html/d594a725-4de2-7ec8-bff2-dd9e60524f47.htm" />
+  <HelpKINode Title="_XMLRecords field" Url="html/3146eb35-ac38-bb73-2857-8e537ee9a71f.htm" />
+</HelpKI>

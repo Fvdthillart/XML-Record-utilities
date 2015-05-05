@@ -1,0 +1,76 @@
+﻿<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="../icons/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../styles/branding.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" />
+    <script type="text/javascript" src="../scripts/branding.js"> </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>XML Record Utilities</title>
+    <meta name="Language" content="en-us" />
+    <meta name="System.Keywords" content="XML,Record,Utilities" />
+    <meta name="Microsoft.Help.Id" content="ff34d9fe-b836-4af4-8b61-8967901db97b" />
+    <meta name="Description" content="The XML Record utilities project encompasses all the utilities that were developed to deal with large XML files that have one defining characteristic: They consist of a collection of the same child element directly under the root element." />
+    <meta name="Microsoft.Help.ContentType" content="Concepts" />
+    <meta name="BrandingAware" content="true" />
+    
+    
+    <link rel="stylesheet" type="text/css" href="../styles/branding-Website.css" />
+    <script type="text/javascript" src="../scripts/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../scripts/branding-Website.js"></script>
+  </head>
+  <body onload="OnLoad('cs')">
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <div class="pageHeader" id="PageHeader">XML Utils user guide<form id="SearchForm" method="get" action="#" onsubmit="javascript:TransferToSearchPage(); return false;"><input id="SearchTextBox" type="text" maxlength="200" /><button id="SearchButton" type="submit"></button></form></div>
+    <div class="pageBody">
+      <div class="leftNav" id="leftNav"><div id="tocNav"><div class="toclevel0" data-toclevel="0"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!"></a><a data-tochassubtree="true" href="ff34d9fe-b836-4af4-8b61-8967901db97b.htm" title="XML Utils user guide" tocid="roottoc">XML Utils user guide</a></div><div class="toclevel1 current" data-toclevel="1" data-childrenloaded="true"><a class="tocExpanded" onclick="javascript: Toggle(this);" href="#!"></a><a data-tochassubtree="true" href="ff34d9fe-b836-4af4-8b61-8967901db97b.htm" title="XML Record Utilities" tocid="ff34d9fe-b836-4af4-8b61-8967901db97b">XML Record Utilities</a></div><div class="toclevel2" data-toclevel="2"><a data-tochassubtree="false" href="2dceb3f1-a945-4fcb-83cc-b576f93f70a8.htm" title="How To build the XML utils" tocid="2dceb3f1-a945-4fcb-83cc-b576f93f70a8">How To build the XML utils</a></div><div class="toclevel2" data-toclevel="2"><a data-tochassubtree="false" href="1751606c-0bef-4a61-a397-bbc441b6c00a.htm" title="ClassDiagram" tocid="1751606c-0bef-4a61-a397-bbc441b6c00a">ClassDiagram</a></div><div class="toclevel2" data-toclevel="2"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!"></a><a data-tochassubtree="true" href="86700e2e-3c47-f1f1-9c8c-bb157db89c2d.htm" title="Classes" tocid="590f2361-5390-44bf-bc61-6e287b6c0755">Classes</a></div></div><div id="tocResizableEW" onmousedown="OnMouseDown(event);"></div><div id="TocResize" class="tocResize"><img id="ResizeImageIncrease" src="../icons/TocOpen.gif" onclick="OnIncreaseToc()" alt="Click or drag to resize" title="Click or drag to resize"><img id="ResizeImageReset" src="../icons/TocClose.gif" style="display:none" onclick="OnResetToc()" alt="Click or drag to resize" title="Click or drag to resize"></div></div><div class="topicContent" id="TopicContent">
+        <table class="titleTable">
+          <tr>
+            <td class="logoColumn">
+              <img src="../icons/Help.png" />
+            </td>
+            <td class="titleColumn">XML Record Utilities</td>
+          </tr>
+        </table>
+        <span class="introStyle"></span>
+        <div class="introduction">
+          <p>
+				The XML Record utilities project encompasses all the utilities that were developed to deal with large XML files that have one defining characteristic:
+				They consist of a collection of the same child element directly under the root element. A child element and its subtree, identified uniquely by a combination of elements in the subtree, define an XML Record.
+				</p>
+          <p>
+				For example: &lt;summaries&gt;&lt;summary&gt;&lt;ID&gt;1&lt;/ID&gt;...&lt;/summary&gt;&lt;summary&gt;&lt;ID&gt;2&lt;/ID&gt;...&lt;/summary&gt;&lt;summary&gt;&lt;ID&gt;n&lt;/ID&gt;...&lt;/summary&gt;&lt;/summaries&gt;
+				</p>
+          <p>
+          An XMLRecord is the term used for describing the XML subtrees of the repeating element like paragraphs in a document or records in a database table. It's named an record because it has a key part, namely a combination of element values that uniqely identify the subtree, and a descriptive part, the XML sub tree itself.
+        </p>
+          <p>
+          In the example above each summary subtree is identified by the ID element.
+        </p>
+        </div>
+        <div class="collapsibleAreaRegion">
+          <span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID0RB')" onkeypress="SectionExpandCollapse_CheckKey('ID0RB', event)" tabindex="0">
+            <img id="ID0RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Processing</span>
+        </div>
+        <div id="ID0RBSection" class="collapsibleSection">
+          <p />
+          <p>
+          An XMLReader instance is used to process the original large XML file. The XMLReader instance reads the file node by node and doesn't try to load it in memory. When the node is an element with the name that's specified as the containertag (summary in the example above), it loads the subtree in memory in an XMLDocument object and extracts all the values of the elements identified by the identifying tags string array and stores the extracted values as a string array with the XML subtree in an XMLRecord instance.
+        </p>
+          <p>
+Thus the algoritm still capitalizes on the speed of in memory XML processing of the XML Document class while using the resource efficiency of the XML reader class to keep its resource hunger to a minimum.
+				</p>
+        </div>
+      </div>
+    </div>
+    <div id="pageFooter" class="pageFooter" />
+  </body>
+<script type="text/javascript">
+<!--
+    var tocNav = document.getElementById("tocNav");
+    var anchor = tocNav.children[0].children[0];
+    Toggle(anchor);
+    tocNav.children[0].className += " current";
+-->
+</script>
+</html>

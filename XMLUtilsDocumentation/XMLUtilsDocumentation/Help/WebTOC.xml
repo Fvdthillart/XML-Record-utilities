@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpTOC>
+
+  <HelpTOCNode Id="7da2921c-5caf-43c3-bc79-c42cb5c9d3a8" Title="XML Record Utilities" Url="html/ff34d9fe-b836-4af4-8b61-8967901db97b.htm">
+    <HelpTOCNode Title="How To build the XML utils" Url="html/2dceb3f1-a945-4fcb-83cc-b576f93f70a8.htm" />
+    <HelpTOCNode Title="ClassDiagram" Url="html/1751606c-0bef-4a61-a397-bbc441b6c00a.htm" />
+    <HelpTOCNode Id="590f2361-5390-44bf-bc61-6e287b6c0755" Title="Classes">
+      <HelpTOCNode Id="fda335d8-35a2-44b2-be4e-c0de0d3efc86" Title="Commandline.AnonymizeCSV" Url="html/86700e2e-3c47-f1f1-9c8c-bb157db89c2d.htm">
+        <HelpTOCNode Id="6b5384a1-8b08-4492-afc4-7ace0d6b7021" Title="AnonymizeCSV Class" Url="html/a3c1388f-a07b-bb3c-6fb4-ebdc2cef0d23.htm">
+          <HelpTOCNode Title="AnonymizeCSV Constructor " Url="html/eef3e216-9531-af4c-7afc-64829e6ef400.htm" />
+          <HelpTOCNode Id="934a843b-7547-470a-9d68-b23bd39b7154" Title="AnonymizeCSV Fields" Url="html/816d36af-2e63-4624-b608-589280da7db9.htm">
+            <HelpTOCNode Title="anonymizeFile Field" Url="html/08d40b50-80e8-0f45-25bf-ce688f42b0d2.htm" />
+            <HelpTOCNode Title="anonymizePostfix Field" Url="html/95847a42-f5be-e4f5-d95d-6273983503bb.htm" />
+            <HelpTOCNode Title="parmheaderRowIndicator Field" Url="html/9dcf6231-4ceb-5551-5607-297147c308a2.htm" />
+            <HelpTOCNode Title="parmSeperator Field" Url="html/26cbebd5-5207-b41f-3714-de0b90c9a470.htm" />
+            <HelpTOCNode Title="parmTextIndicator Field" Url="html/0c863de2-95c8-25d7-6c41-772e01be6800.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="f8a7f30c-fc96-4dc6-9fd0-2ba2f70cff3c" Title="AnonymizeCSV Methods" Url="html/8e5c210f-7290-2ef1-158d-95039374c7b4.htm">
+            <HelpTOCNode Title="getHelpMessage Method " Url="html/c7d04e7c-1e9c-db7b-f96b-7ba6915e9ccc.htm" />
+            <HelpTOCNode Title="Main Method " Url="html/989fdd86-3c1f-d9d7-12f7-e8d91c07473a.htm" />
+            <HelpTOCNode Title="throwException Method " Url="html/66da3ef4-6742-ccc6-abf6-33553d6d6b46.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="c9ce9eb0-fabf-4133-a433-d4a8ac9a5de0" Title="Commandline.AnonymizeXML" Url="html/2d7d1e1e-47f2-324a-26e9-92d71fe9cffd.htm">
+        <HelpTOCNode Id="4344474f-1047-4b6c-8ba9-180df741ad74" Title="AnonymizeXML Class" Url="html/f373d053-b4eb-8ed1-ec72-3add21b67da5.htm">
+          <HelpTOCNode Title="AnonymizeXML Constructor " Url="html/ed2d6f8b-4e8b-532a-4607-264f5ec965b3.htm" />
+          <HelpTOCNode Id="5c0ed7c8-d863-4733-b79c-1e2e6347b9da" Title="AnonymizeXML Fields" Url="html/cc8c84ff-69d9-922f-24a8-f1e2742b03d9.htm">
+            <HelpTOCNode Title="anonymizeFile Field" Url="html/1daea555-5469-39c1-3b8c-f69157b54b86.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="65d90405-f951-4bb0-838c-726d0a60a57f" Title="AnonymizeXML Methods" Url="html/08ecc60a-2adf-4a55-5c26-cce2ae77b34a.htm">
+            <HelpTOCNode Title="getHelpMessage Method " Url="html/71c02f8b-5e3c-f474-ce87-2ccca7e790a0.htm" />
+            <HelpTOCNode Title="Main Method " Url="html/4e0fbb99-c184-32cb-385c-32efa7ee113b.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="62bf9c39-06d8-43cc-9a30-a6fe62a309f6" Title="Commandline.compareXMLRecords" Url="html/2d2ba18b-5a69-282d-fb99-3c2df72e5eff.htm">
+        <HelpTOCNode Id="30884ccf-26ad-4791-8304-bec7f46d0e58" Title="compareXMLRecords Class" Url="html/54971a93-04f1-6fa5-f77d-63e36be0e673.htm">
+          <HelpTOCNode Title="compareXMLRecords Constructor " Url="html/def66dba-aa45-c89f-78e0-9d4ae0a4cae6.htm" />
+          <HelpTOCNode Id="9f4068bc-78ae-4d1a-aabe-cf59316b819d" Title="compareXMLRecords Methods" Url="html/5de80195-8d05-e209-d5ec-a63d98e16950.htm">
+            <HelpTOCNode Title="getHelpText Method " Url="html/2a51477d-379e-5171-a295-b88859a7e919.htm" />
+            <HelpTOCNode Title="Main Method " Url="html/70570c09-dcfb-b620-803c-ad87ab1901be.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="9075cc09-158e-46fc-9c97-c61f0ec1b022" Title="Commandline.ExtractXMLRecord" Url="html/cd2961d3-f826-72b0-1aa0-c6bbe7a6f2bb.htm">
+        <HelpTOCNode Id="db329868-a041-43e2-84f3-3c1c889c71ee" Title="extractXMLRecord Class" Url="html/893be871-1c6a-9140-51e2-281ca9443f2f.htm">
+          <HelpTOCNode Title="extractXMLRecord Constructor " Url="html/86717df5-2a75-ee3b-783e-94299433466c.htm" />
+          <HelpTOCNode Id="f8db7c26-34ec-4c89-8658-4480b84463e0" Title="extractXMLRecord Methods" Url="html/e143c28c-aaf8-b5aa-a3fc-6a56f54c3608.htm">
+            <HelpTOCNode Title="Main Method " Url="html/f0af5a99-dec8-e7bc-6d08-b332e626cc0a.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="1d96ec83-97b6-4d4e-b0ce-ffaf0eea9a51" Title="Core.Anonymization" Url="html/70fab1d2-75ea-c5bc-73ff-e2b6abfeb069.htm">
+        <HelpTOCNode Id="8f8e2239-3282-4a72-bdd9-16167ed14a11" Title="AnonymizeCache Class" Url="html/da115f55-76fc-13de-13f6-46aef3869d55.htm">
+          <HelpTOCNode Id="f41b7006-e531-4272-918b-83a77de1ee76" Title="AnonymizeCache Constructor " Url="html/58503292-c218-c8af-ae80-8ab2a7b587c6.htm">
+            <HelpTOCNode Title="AnonymizeCache Constructor " Url="html/7a062d36-2029-ea0e-9270-e633870c7f17.htm" />
+            <HelpTOCNode Title="AnonymizeCache Constructor (String, String)" Url="html/f8b6d696-3381-6c4e-f540-c0df141a0fa5.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="c4a78888-c30f-4300-879e-4a63bf9bc6f7" Title="AnonymizeCache Fields" Url="html/f0332761-0d60-ee03-76df-5ee4afce5d9d.htm">
+            <HelpTOCNode Title="_anonymous_value Field" Url="html/ef4bcfb1-e1d8-aae6-ed03-1ac5cb5e64ca.htm" />
+            <HelpTOCNode Title="_original_value Field" Url="html/999cd959-705f-01ec-a772-ab39fa6e2564.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="12bc2e10-8eef-4864-a57a-0ca240a50836" Title="AnonymizeCache Methods" Url="html/e1c95987-a5ce-ab58-51b5-937eeeadf04d.htm">
+            <HelpTOCNode Title="CompareTo Method " Url="html/d7a1507b-b242-9451-c52c-0d38fe9fff44.htm" />
+            <HelpTOCNode Id="6271804a-7135-430f-82c6-5e5d0db0fc95" Title="Equals Method " Url="html/4c3ee971-e880-06e1-1bdd-9bf6e1c63847.htm">
+              <HelpTOCNode Title="Equals Method (Object)" Url="html/a0f7c2d8-0010-9304-9ab3-28c05443053d.htm" />
+              <HelpTOCNode Title="Equals Method (AnonymizeCache)" Url="html/851fea89-6ba0-c0c1-f1f3-aef83739191a.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Title="GetHashCode Method " Url="html/d691441e-8122-83e4-88fd-0abbd030826c.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="049503ba-a9a1-4db1-86ec-3a911ce1dfa1" Title="AnonymizeCache Properties" Url="html/8b0cac8d-c5ae-bf23-d817-6a9d430c9d48.htm">
+            <HelpTOCNode Title="Anonymous_value Property " Url="html/29852074-d1f3-aeef-e0d0-838a4140b845.htm" />
+            <HelpTOCNode Title="Original_value Property " Url="html/a88aa293-36c3-2462-9e6c-92ef97c262ad.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="d03e02a5-03fe-4aaf-bf45-19410314caa4" Title="AnonymizeCacheDB Class" Url="html/0a0f30e7-7646-18c0-e0ac-5a6f606ea4b6.htm">
+          <HelpTOCNode Title="AnonymizeCacheDB Constructor " Url="html/854c334d-9a9a-0e17-7a29-b696853219d8.htm" />
+          <HelpTOCNode Title="AnonymizeCacheDB Fields" Url="html/2ba00ea6-25aa-30da-e8d6-f3bbbfbd29f2.htm" />
+          <HelpTOCNode Title="AnonymizeCacheDB Methods" Url="html/05ba6baa-01f5-df03-2494-e95b8f074ffc.htm" />
+          <HelpTOCNode Title="AnonymizeCacheDB Properties" Url="html/190e92a4-9104-c47b-4336-62d52f7cca0c.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="8b9ab7d6-9f4b-4ac5-8c63-ff4b2ef7686d" Title="AnonymizeCacheFile Class" Url="html/935776df-69cf-60ab-a69d-33add96371ec.htm">
+          <HelpTOCNode Title="AnonymizeCacheFile Constructor " Url="html/638eb926-acf6-763b-8257-7fba853040cf.htm" />
+          <HelpTOCNode Title="AnonymizeCacheFile Fields" Url="html/3d43c1a5-dcf4-69cb-ae69-7090d0c94e9e.htm" />
+          <HelpTOCNode Title="AnonymizeCacheFile Methods" Url="html/a0ecc13b-fb0e-e350-2d4e-9b8dbc30ea4d.htm" />
+          <HelpTOCNode Title="AnonymizeCacheFile Properties" Url="html/9b5582b8-8312-58b9-2c54-e4b85df5a95d.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="5e84da00-3c4b-4cad-a7d7-905f9179b4a5" Title="Anonymizer Class" Url="html/aa09c2a7-d136-255d-d344-4016d5052174.htm">
+          <HelpTOCNode Title="Anonymizer Constructor " Url="html/921b9c2a-5601-9e44-90a0-d7f07aea5aae.htm" />
+          <HelpTOCNode Id="5ab4b472-283e-44cc-90f5-d51573f446e7" Title="Anonymizer Fields" Url="html/4a2c0426-98a5-6b4d-5472-e10ec3e3d1dd.htm">
+            <HelpTOCNode Title="_dateCache Field" Url="html/3aa21fc2-b247-12b6-e6c6-b03266667cae.htm" />
+            <HelpTOCNode Title="RNDGen Field" Url="html/2a5ec550-ac08-1d15-880f-a3c2d99bd16f.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="e84ba0fb-4656-4bbd-b688-fd6ffde8f524" Title="Anonymizer Methods" Url="html/a4e8e5df-d859-050e-8e7a-02f8e9c0c066.htm">
+            <HelpTOCNode Title="Anonymize Method " Url="html/b4a3827f-5862-e691-8bdf-666832e481a6.htm" />
+            <HelpTOCNode Title="AnonymizeDate Method " Url="html/3d9f491b-a9fb-952a-1af7-65bb2c40d270.htm" />
+            <HelpTOCNode Title="AnonymizeHouseAidVnr Method " Url="html/9f89811b-2812-ec05-38f9-dfd21bb895c8.htm" />
+            <HelpTOCNode Title="AnonymizeMD5Decimal Method " Url="html/2e46b0b0-15a0-2b12-9ec3-907f5fbdb0e6.htm" />
+            <HelpTOCNode Title="AnonymizeMD5Integer Method " Url="html/248c806b-6baf-2c1e-036f-286686795346.htm" />
+            <HelpTOCNode Title="AnonymizeNumEqLen Method " Url="html/bfaec3b8-e4b8-ef70-12f5-4a40df687ede.htm" />
+            <HelpTOCNode Title="AnonymizeSHA1Integer Method " Url="html/71fbfe8f-28ec-426d-1ccc-e4ec485f800b.htm" />
+            <HelpTOCNode Title="AnonymizeSHA512Integer Method " Url="html/9ee9f77b-818b-ed0f-1a94-72a65316c3e5.htm" />
+            <HelpTOCNode Title="AnonymizeText Method " Url="html/242f43b2-f5a4-1f98-cf6a-bdf70ff2aa88.htm" />
+            <HelpTOCNode Title="AnonymizeTrueFalse Method " Url="html/b33bc7ba-0173-f79a-c0bb-21a5521b772b.htm" />
+            <HelpTOCNode Title="common_constructor Method " Url="html/5c502561-a2df-cb96-12ce-a14b3ad13aee.htm" />
+            <HelpTOCNode Title="GetHash Method " Url="html/6cb06e0c-4126-0e6b-8fd6-d799850cd451.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="75eb8416-90c1-4460-8c50-885c54a94771" Title="AnonymizerCSV Class" Url="html/038dfca4-5026-d700-3e15-9d37306ebdd8.htm">
+          <HelpTOCNode Title="AnonymizerCSV Constructor " Url="html/4594396e-db60-0b7a-408f-cd8280f6a1cd.htm" />
+          <HelpTOCNode Id="6a6f679e-10b2-4274-bdee-ad408b9dec04" Title="AnonymizerCSV Fields" Url="html/252ecf23-68ad-1bff-e42a-1ccc5d213f4d.htm">
+            <HelpTOCNode Title="_seperator Field" Url="html/67dbd489-8c4b-2a5c-0352-45a063bf7354.htm" />
+            <HelpTOCNode Title="_textIndicator Field" Url="html/42f9d86d-5cea-a970-e01d-5f10fa6b9a01.htm" />
+            <HelpTOCNode Title="whitespace Field" Url="html/cbe45b11-a4b5-68cd-ef12-6e5fff455a82.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="0b7cef29-0092-411e-b3ed-092c1a94e291" Title="AnonymizerCSV Methods" Url="html/662ba233-eed4-31d5-118f-f940a2194c1c.htm">
+            <HelpTOCNode Title="split Method " Url="html/22c908e7-434a-8295-a0e4-4c2e914622a4.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="bd00c64d-072a-484b-81b3-255e2d2cde3a" Title="AnonymizerCSV Properties" Url="html/642f99ad-fe55-5ac2-d6f3-1a9c87f64607.htm">
+            <HelpTOCNode Title="Seperator Property " Url="html/0fa7ffc8-dde6-51e7-b564-c7ae85c7021e.htm" />
+            <HelpTOCNode Title="TextIndicator Property " Url="html/30d524a2-4b47-bf1f-6a97-89bf58d83227.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="3e6eb110-f50f-4f82-b389-b86f0c599d3a" Title="AnonymizeRule Class" Url="html/427f0e94-46c3-159f-a003-a384dca5a793.htm">
+          <HelpTOCNode Id="5d85899a-ed72-42c0-b615-6beb82c22249" Title="AnonymizeRule Constructor " Url="html/9e176c4c-de94-391d-2413-0a3e7b92d0ea.htm">
+            <HelpTOCNode Title="AnonymizeRule Constructor " Url="html/3e3e9c8b-ca71-f148-a73d-1121531c6f3f.htm" />
+            <HelpTOCNode Title="AnonymizeRule Constructor (String, AnonymizeRule.MethodType)" Url="html/1d8264a9-00a4-44ab-c5ca-e024205e058b.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="a26eeb18-4016-46f9-8903-8b5a19ffa34c" Title="AnonymizeRule Fields" Url="html/96b0ead8-db19-c16f-1d7b-bd35f695bd29.htm">
+            <HelpTOCNode Title="_allowed Field" Url="html/79677846-511d-1bf0-4c9c-92cd193c41f5.htm" />
+            <HelpTOCNode Title="_filterLocation Field" Url="html/a1f93083-67f5-02e4-1475-a0e45ff65ae6.htm" />
+            <HelpTOCNode Title="_filterOperator Field" Url="html/2796aa4c-6c15-f7ed-16ce-43bd38e0c89b.htm" />
+            <HelpTOCNode Title="_filterValue Field" Url="html/9d127395-489a-01c8-c0b2-4c7947997f0e.htm" />
+            <HelpTOCNode Title="_location Field" Url="html/d5fc05ce-8f2a-4edd-7350-108ea2d1f102.htm" />
+            <HelpTOCNode Title="_method Field" Url="html/4e97e2e3-b103-5418-b09b-e178f003f4f5.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="43bc6576-7430-4d21-88b6-96395ca83364" Title="AnonymizeRule Methods" Url="html/198b7e6b-4c0f-2cfe-5a0c-3998ea23488d.htm">
+            <HelpTOCNode Title="CompareTo Method " Url="html/3e0861b7-afb4-6b51-5d22-4ab2b5773114.htm" />
+            <HelpTOCNode Id="7bba6886-0672-46de-98b4-3a45f9fb5e5a" Title="Equals Method " Url="html/805b5df9-a064-2715-9664-d03f13201917.htm">
+              <HelpTOCNode Title="Equals Method (Object)" Url="html/2283a40d-2a39-47de-813e-7aca8a2b05e5.htm" />
+              <HelpTOCNode Title="Equals Method (AnonymizeRule)" Url="html/7d6d9865-c131-5cfa-5668-bb32997d249a.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Title="GetHashCode Method " Url="html/e2d45d60-0245-81fb-1bfb-fbd3de922a7a.htm" />
+            <HelpTOCNode Title="getMethod Method " Url="html/62cf11e6-a7a7-84fe-a91f-cea3eb4d6abd.htm" />
+            <HelpTOCNode Title="ToString Method " Url="html/15dcc2b4-81b8-fafd-7f0a-ac18be407514.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="7e4755e6-02c2-4329-bf42-9dbf028afc4f" Title="AnonymizeRule Properties" Url="html/cbe269b8-51f1-ef52-279e-1abf2533e514.htm">
+            <HelpTOCNode Title="Allowed Property " Url="html/fd2dcf39-00e7-4f76-4bb0-b23c8cd9fb82.htm" />
+            <HelpTOCNode Title="Filter Property " Url="html/2b05d7b3-38bd-376e-d092-3a7ef497aa0f.htm" />
+            <HelpTOCNode Title="FilterLocation Property " Url="html/a46dbb96-5af4-ce59-82be-dce1a5afc5ea.htm" />
+            <HelpTOCNode Title="FilterOperator Property " Url="html/735f4cab-3227-6102-7cb3-b0b4764449b7.htm" />
+            <HelpTOCNode Title="FilterValue Property " Url="html/27848d53-ec50-1a51-adce-5871a9e0b3fa.htm" />
+            <HelpTOCNode Title="IsFiltered Property " Url="html/eeb4ac67-1582-b520-654a-db1d253919e8.htm" />
+            <HelpTOCNode Title="Location Property " Url="html/b2e707dd-5188-0401-81b2-f10a7f03c624.htm" />
+            <HelpTOCNode Title="Method Property " Url="html/2bb3b7ae-ee2e-f1cb-c1b7-aa7f47997c07.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Title="AnonymizeRule.MethodType Enumeration" Url="html/71c7dc6c-c627-b2b3-7aac-21886b92dc18.htm" />
+        <HelpTOCNode Id="fc2d6b49-ebbe-4616-a732-8ae3f0f4206c" Title="AnonymizerWithRules Class" Url="html/fe89a95c-9d48-da6f-6ae0-2a20db977c28.htm">
+          <HelpTOCNode Id="8ac7e523-3da4-4cad-a9c5-80bb7b6e57df" Title="AnonymizerWithRules Constructor " Url="html/39368750-cc16-e662-184f-c86536295488.htm">
+            <HelpTOCNode Title="AnonymizerWithRules Constructor " Url="html/6173d2f0-47db-2a49-70c0-7e81c98ce233.htm" />
+            <HelpTOCNode Title="AnonymizerWithRules Constructor (String)" Url="html/fedff3cf-70cf-132b-a2b8-d8ee1804a3fb.htm" />
+            <HelpTOCNode Title="AnonymizerWithRules Constructor (String, String)" Url="html/d04b63b2-80d5-c186-c746-01a81db6ba2a.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="7f63dbe1-3f9d-45d2-8de7-4cdeec11fd3d" Title="AnonymizerWithRules Fields" Url="html/1eacc018-283d-c61a-c935-4df70533f79e.htm">
+            <HelpTOCNode Title="_anonymizerFile Field" Url="html/5607609b-402e-7055-a910-3ebb030c8b76.htm" />
+            <HelpTOCNode Title="_AnonymizerRules Field" Url="html/8b3dde4b-07d8-68e2-73b8-30c4af8c8ae3.htm" />
+            <HelpTOCNode Title="_anonymizerRulesFilename Field" Url="html/eea0c328-f740-3895-6942-ec8c2f8d9380.htm" />
+            <HelpTOCNode Title="_filename Field" Url="html/c9e1dd77-1825-8f8e-a1cc-34d319e1fa20.htm" />
+            <HelpTOCNode Title="_filepath Field" Url="html/8ac63521-c983-8096-a76e-a83b57d4e0a2.htm" />
+            <HelpTOCNode Title="fnIndicator Field" Url="html/2f525354-c1d1-5e03-2132-3f810fb79c09.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="8e594406-e1d5-47e9-924c-79c03f9ebd44" Title="AnonymizerWithRules Methods" Url="html/32cc8398-c9f0-2a74-a0d4-2164515cf1b3.htm">
+            <HelpTOCNode Id="0a212303-0e8a-4757-8978-cf3bf855d3d8" Title="common_constructor Method " Url="html/89e9e106-f12b-e1e0-57b0-a280a7c07e6b.htm">
+              <HelpTOCNode Title="common_constructor Method (String)" Url="html/e9c16f21-06a3-97a7-aaa3-f905255baa5a.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Title="ProcessAnonymizerFile Method " Url="html/5115e1ae-3599-5952-c6e1-50cfa20dc03c.htm" />
+            <HelpTOCNode Title="ProcessFilter Method " Url="html/da363464-3b32-1b08-d469-374260d8bec9.htm" />
+            <HelpTOCNode Title="ProcessRule Method " Url="html/09045766-f9a8-22a4-c0f6-ab16efb17d06.htm" />
+            <HelpTOCNode Title="setAnonymizerFile Method " Url="html/e34165a8-ad7a-8b19-0d69-1ed997f032d2.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="26c497f9-f1e4-4569-b539-f9fe9d763ade" Title="AnonymizerWithRules Properties" Url="html/b207682a-ef77-1f9f-711a-3d0275c0387b.htm">
+            <HelpTOCNode Title="AnonymizerRules Property " Url="html/4f4d1018-03fd-6f7c-24c6-ca1a21a45226.htm" />
+            <HelpTOCNode Title="AnonymizerRulesFilename Property " Url="html/b69d85c5-6a7f-0531-4178-e4d294f9349a.htm" />
+            <HelpTOCNode Title="File_to_be_anonymized Property " Url="html/4e296ffd-09f6-d9d5-5d8b-1d9c8da131db.htm" />
+            <HelpTOCNode Title="Filename Property " Url="html/ea294ac4-78ec-51d8-b422-04bcf7b37cc2.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="9c9a49ee-9b43-4bce-9b45-72bc67d66d41" Title="Core.XMLCompare" Url="html/185a4d22-cc50-dc32-ea8b-0a2f8dd82835.htm">
+        <HelpTOCNode Id="5f04c29a-758e-4002-8ad0-5ae104f91186" Title="XMLCompare Class" Url="html/b05664fb-70ed-1cb2-9835-07de7ea5330c.htm">
+          <HelpTOCNode Title="XMLCompare Constructor " Url="html/5ac12147-55d0-e93d-e6de-7c38e2fa6675.htm" />
+          <HelpTOCNode Id="966addd4-5ad6-4320-810f-e202771ff086" Title="XMLCompare Fields" Url="html/f4d2c9fd-964f-838d-2c17-7ff819affb1e.htm">
+            <HelpTOCNode Title="_containerTag Field" Url="html/e5399082-2a48-1671-6b00-42c931f62836.htm" />
+            <HelpTOCNode Title="_file1 Field" Url="html/0855b850-5749-f7ab-7279-2c533d9190fb.htm" />
+            <HelpTOCNode Title="_file2 Field" Url="html/56330438-ab00-c758-96c0-7ec9b6afebaf.htm" />
+            <HelpTOCNode Title="_identifyingTags Field" Url="html/523ec540-1b56-3184-cd3d-1cecb398738b.htm" />
+            <HelpTOCNode Title="_perf Field" Url="html/212205c3-10a2-5d26-d5ce-7e8a4f413ab0.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="2bfbcf60-18cf-4dab-95e0-d5131373c2ec" Title="XMLCompare Methods" Url="html/8a3f9a72-ae1c-1451-227c-a2b438b8257c.htm">
+            <HelpTOCNode Title="compare Method " Url="html/a7f8074a-8389-c45d-adce-10fc34a77f00.htm" />
+            <HelpTOCNode Title="getIDTags Method " Url="html/e8c46920-44ce-361a-5a4a-36854c5d0d02.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="2c9657a2-bb1d-42b8-8696-7ca2681cbfc7" Title="Core.XMLRecords" Url="html/25bec542-6131-db0e-87e9-b295a61e1f09.htm">
+        <HelpTOCNode Id="022962d2-e5d5-4c31-8c56-81e73392f1e8" Title="XMLRecord Class" Url="html/57d93551-eba9-a23d-9299-7c4b7291f8f0.htm">
+          <HelpTOCNode Id="d7ec9a81-df98-4258-b7c5-bf06eda041d4" Title="XMLRecord Constructor " Url="html/8c5d13b0-d038-0622-98d8-25cd242badc7.htm">
+            <HelpTOCNode Title="XMLRecord Constructor (String)" Url="html/65b2bdef-015b-98db-7233-7e0250845758.htm" />
+            <HelpTOCNode Title="XMLRecord Constructor (String[])" Url="html/1adaf1a2-5579-2189-220a-b2ab62cbd89a.htm" />
+            <HelpTOCNode Title="XMLRecord Constructor (String, String)" Url="html/fa59e41d-8e73-52bb-1d57-8237ec5f0e24.htm" />
+            <HelpTOCNode Title="XMLRecord Constructor (String[], String)" Url="html/54280508-c68a-c756-9ab7-873561d58ee3.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="XMLRecord Constructor " Url="html/2cd9ee9f-d822-ccf8-d817-5f3bbf62d052.htm" />
+          <HelpTOCNode Id="e8de01fc-6ebd-438f-9802-9c1cfa69ec3e" Title="XMLRecord Fields" Url="html/fa42d16a-5040-2f94-3346-46184ec3a23f.htm">
+            <HelpTOCNode Title="_IDs Field" Url="html/e8a5b1fc-2abb-0420-ba1b-479c0911ecbf.htm" />
+            <HelpTOCNode Title="_XMLRecord Field" Url="html/d594a725-4de2-7ec8-bff2-dd9e60524f47.htm" />
+            <HelpTOCNode Title="seperator Field" Url="html/54310c93-42fb-766b-dc8d-b6653c5a5ca6.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="e8b1df98-c596-4f78-8d49-d8459121aa78" Title="XMLRecord Methods" Url="html/bfb382a9-ecc8-2d14-e1f3-0a07b679e970.htm">
+            <HelpTOCNode Title="CompareTo Method " Url="html/1167a445-dcd2-9b15-2024-b1b6e646043b.htm" />
+            <HelpTOCNode Id="edc77466-390d-4149-bf34-d5d3ca22185b" Title="Equals Method " Url="html/39ae1e8f-aee2-c515-51e9-a5ff37d69807.htm">
+              <HelpTOCNode Title="Equals Method (Object)" Url="html/d04d6257-6bcf-7b95-a048-fc4369bf1f37.htm" />
+              <HelpTOCNode Title="Equals Method (XMLRecord)" Url="html/8015080a-06d9-c47a-8cd6-e2832507635f.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Title="GetHashCode Method " Url="html/8bf309af-4b26-0cbf-8646-0a3b67d13d6d.htm" />
+            <HelpTOCNode Title="getID Method " Url="html/3045a565-54d7-c877-933c-daeef1e5c20d.htm" />
+            <HelpTOCNode Title="getIDs Method " Url="html/b5ac2200-4bd1-5f01-b052-4f3418828968.htm" />
+            <HelpTOCNode Title="getIDTagString Method " Url="html/c3f0e832-e9b5-5740-06d0-c786fcdef462.htm" />
+            <HelpTOCNode Title="getXMLRecord Method " Url="html/f55df20b-4a8a-538a-c5e9-1c4e4f598f2b.htm" />
+            <HelpTOCNode Title="ToString Method " Url="html/145979e3-4749-3624-1ba9-bd568a9fb629.htm" />
+            <HelpTOCNode Id="9dd77327-6848-4a49-a6a6-3b7135639f6a" Title="Write Method " Url="html/2288d297-f747-fd21-ae68-0452d6b907ae.htm">
+              <HelpTOCNode Title="Write Method (String, String)" Url="html/01a114b8-876e-df1c-fe3b-09b63d9add56.htm" />
+              <HelpTOCNode Title="Write Method (String, String, String)" Url="html/8fbf59e3-0681-681c-596d-3909d9e34786.htm" />
+            </HelpTOCNode>
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="e819be97-bba9-4ea0-bfc2-30b886472795" Title="XMLRecordFile Class" Url="html/76c3ec45-4390-1474-c831-4fdcb67cab1a.htm">
+          <HelpTOCNode Id="8280c61d-6c99-4394-a10e-172f9273adde" Title="XMLRecordFile Constructor " Url="html/c38c24be-6247-aa6e-f6cc-fdbf5e9b9535.htm">
+            <HelpTOCNode Title="XMLRecordFile Constructor (String, String)" Url="html/ca2b9e9a-25c4-64b1-e851-8b1b584f96ac.htm" />
+            <HelpTOCNode Title="XMLRecordFile Constructor (String, String[])" Url="html/6a8bce0c-ec69-d09f-32c6-10d2702e22ef.htm" />
+            <HelpTOCNode Title="XMLRecordFile Constructor (String, String, String)" Url="html/3dd8c890-54e6-4b6a-182a-db4fa13a7b14.htm" />
+            <HelpTOCNode Title="XMLRecordFile Constructor (String, String, String[])" Url="html/a1da7c4a-dcc5-fcb7-7fc8-152634de3630.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="3ba874b8-4bab-466b-bc83-a58e2f03ca95" Title="XMLRecordFile Fields" Url="html/8fddd332-9f8f-2784-f8ec-0ab58b9100c7.htm">
+            <HelpTOCNode Title="_anonymized_filename Field" Url="html/8694010d-54b1-d787-1efc-3c0d994709cc.htm" />
+            <HelpTOCNode Title="_containerTags Field" Url="html/32052ef7-5cb8-1157-ccc5-be06932d6608.htm" />
+            <HelpTOCNode Title="_endNamespaceTag Field" Url="html/23a48b74-6845-f087-f9e3-2e148effe34d.htm" />
+            <HelpTOCNode Title="_fileext Field" Url="html/2e159fe6-168a-871c-69dc-4bfc95d9e1d8.htm" />
+            <HelpTOCNode Title="_filename Field" Url="html/ea5e4f38-6961-8ca9-2880-ca764276d9fe.htm" />
+            <HelpTOCNode Title="_filepath Field" Url="html/3b00cab0-aed2-3482-409b-781dd8446c01.htm" />
+            <HelpTOCNode Title="_IDTags Field" Url="html/f13d85a4-d9e2-5aa7-82bc-a4e0ca6efd5b.htm" />
+            <HelpTOCNode Title="_namespaceTag Field" Url="html/50cf5de5-65e6-9a42-2f05-e50b89e44e09.htm" />
+            <HelpTOCNode Title="_XMLRecords Field" Url="html/3146eb35-ac38-bb73-2857-8e537ee9a71f.htm" />
+            <HelpTOCNode Title="curDir Field" Url="html/55c7cabe-12e5-f377-a38d-39e369453d0d.htm" />
+            <HelpTOCNode Title="maxFilenameLength Field" Url="html/bfd18e94-7166-9697-5b95-4dd4e2c90cf0.htm" />
+            <HelpTOCNode Title="postfix Field" Url="html/7e3a4710-acb6-b4b0-7b32-0edee095911e.htm" />
+            <HelpTOCNode Title="tempfile Field" Url="html/4066a3c2-63b8-c041-783e-996c366d13ad.htm" />
+            <HelpTOCNode Title="trunc Field" Url="html/b46f897a-7208-5813-dc27-ae85cdb50e2b.htm" />
+            <HelpTOCNode Title="xmlDecl Field" Url="html/ee0be42e-b54a-a1c2-17fe-e319262fbc97.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="3ecaeea9-4069-4c00-a90f-227605e2954b" Title="XMLRecordFile Methods" Url="html/8ac11e44-73cb-a84d-2099-33b99f3cd886.htm">
+            <HelpTOCNode Title="addToXMLRecord Method " Url="html/57b7839f-1c2e-9395-bc2f-08af2d1f2989.htm" />
+            <HelpTOCNode Title="AllTrue Method " Url="html/1feef85d-b58c-bf12-ca1a-43f71eb358cf.htm" />
+            <HelpTOCNode Title="AppendAnonymized Method " Url="html/a3819a97-d3f4-feea-9a76-5c6081937430.htm" />
+            <HelpTOCNode Title="cleanFilename Method " Url="html/3a41e12f-466d-e40c-e425-fb4132d3dc66.htm" />
+            <HelpTOCNode Title="common_constructor Method " Url="html/848770be-0d22-26e6-991f-eccdfebca1d0.htm" />
+            <HelpTOCNode Title="CreateCompressedDir Method " Url="html/dc9f447d-ecdc-5749-b380-09029ff69398.htm" />
+            <HelpTOCNode Title="getAttributes Method " Url="html/cc58b0d5-dbcb-2318-86e2-b003339dbf02.htm" />
+            <HelpTOCNode Title="getEndNamespaceTag Method " Url="html/ada899b5-053f-11d9-86ab-7ae108137545.htm" />
+            <HelpTOCNode Title="getFilename Method " Url="html/7be34af7-d2be-9a0f-affe-c702603399d0.htm" />
+            <HelpTOCNode Title="getFullFilename Method " Url="html/1dd9e16c-3eb9-bab1-92fb-4c796975044b.htm" />
+            <HelpTOCNode Title="getIDList Method " Url="html/5245e6dc-239f-4c24-a7fc-eee43560b30f.htm" />
+            <HelpTOCNode Title="getNamespaceTag Method " Url="html/8b403517-625f-94a7-82ac-e3f7aa7756a1.htm" />
+            <HelpTOCNode Title="getXMLRecord Method " Url="html/b60d74ae-d3a9-6298-e299-64aa1de996bb.htm" />
+            <HelpTOCNode Title="In Method " Url="html/1079500c-a143-5893-0dac-0ab73ebf6eb0.htm" />
+            <HelpTOCNode Title="IndexOf Method " Url="html/da086b69-7932-61c8-0d3e-57030b8d8b4d.htm" />
+            <HelpTOCNode Title="IsIDTag Method " Url="html/1c113871-4524-62e2-78ff-d956fa32927e.htm" />
+            <HelpTOCNode Title="PrintXML Method " Url="html/298b63dc-ebe4-211c-5891-19cee4d7b3bc.htm" />
+            <HelpTOCNode Title="Process Method " Url="html/8b15162b-a2dd-f0ca-9791-a75ea55922a5.htm" />
+            <HelpTOCNode Title="processFilename Method " Url="html/a3e3f80f-38eb-80bd-2390-3cb5bcb3d592.htm" />
+            <HelpTOCNode Title="ToXmlString Method " Url="html/b450d4ce-62f0-d2f8-2e0b-31a630b7f871.htm" />
+            <HelpTOCNode Title="Write Method " Url="html/6d3b85ef-9871-014e-2f34-d810f3031b8b.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="0464852c-00f0-40a5-b6bd-3a2521b4586b" Title="XMLRecordFile Properties" Url="html/1c62b1e4-6f0c-e063-2556-a55f1b34989c.htm">
+            <HelpTOCNode Title="Anonymized_filename Property " Url="html/67e68324-9c27-2773-d290-6a5ac7de342a.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Title="XMLRecordFile.ProcessType Enumeration" Url="html/02aa21a8-874a-4a2c-bbdc-adbe5d07cc68.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="953d9953-434c-434e-91e4-2029bde33959" Title="Core.XMLRecords.Anonymization" Url="html/a91082f2-6e61-d58d-d582-8bf96c526bc1.htm">
+        <HelpTOCNode Id="203a0e62-235a-4a65-912b-9d94725e5e57" Title="AnonymizerXML Class" Url="html/6cd3a338-29dd-d6c2-0bef-c9025d431033.htm">
+          <HelpTOCNode Id="2cd92fb4-b5a0-4a6d-82b6-747ab3211646" Title="AnonymizerXML Constructor " Url="html/2476480a-5fc9-357f-bc2d-8af548b50f6c.htm">
+            <HelpTOCNode Title="AnonymizerXML Constructor (String)" Url="html/7dc3459e-5229-99ef-b94f-a9d51585d357.htm" />
+            <HelpTOCNode Title="AnonymizerXML Constructor (String, String)" Url="html/1be6af84-12aa-2304-aee6-e4d5a089fd98.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="ab6cdfd6-c36e-4944-a776-fbd17c039da8" Title="AnonymizerXML Fields" Url="html/f0a2aa2e-6131-9e64-7766-0c491b7f6d62.htm">
+            <HelpTOCNode Title="_namespaces Field" Url="html/80e2b808-18d1-4612-8e6e-68b06d0f437a.htm" />
+            <HelpTOCNode Title="nsIndicator Field" Url="html/26efbd03-12f2-8928-0544-8ba044f38a74.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="87d3995d-bfa3-4ef8-a423-4bd3cdf63bfe" Title="AnonymizerXML Methods" Url="html/38ef073c-2d6e-567d-f360-f698c63fb56f.htm">
+            <HelpTOCNode Id="4eb56f1e-00b8-44a3-b357-a20127e019d2" Title="common_constructor Method " Url="html/7a031add-636e-66e2-3c58-6a5e51f1f1b7.htm">
+              <HelpTOCNode Title="common_constructor Method (String)" Url="html/10643e25-aba7-817a-01f0-9879c4170ddf.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Title="ProcessRule Method " Url="html/7da4a4cd-4048-7018-b0b2-a38a928a3da3.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="760feca0-e427-4470-b068-87757da365fc" Title="AnonymizerXML Properties" Url="html/0e5ed286-5935-5a48-0022-933be98bbb86.htm">
+            <HelpTOCNode Title="Namespaces Property " Url="html/2c71de67-1361-d556-d098-ba98a4543ede.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+</HelpTOC>

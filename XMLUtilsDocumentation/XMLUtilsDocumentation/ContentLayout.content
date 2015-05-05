@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Topics>
+  <Topic id="ff34d9fe-b836-4af4-8b61-8967901db97b" visible="True" isDefault="true" isExpanded="true" isSelected="true" title="XML Record Utilities" tocTitle="XML Record Utilities" linkText="XML Record Utilities">
+    <HelpKeywords>
+      <HelpKeyword index="K" term="XML,Record,Utilities" />
+    </HelpKeywords>
+    <Topic id="2dceb3f1-a945-4fcb-83cc-b576f93f70a8" visible="True" />
+    <Topic id="1751606c-0bef-4a61-a397-bbc441b6c00a" visible="True" />
+    <Topic id="94b7c66f-adfe-403d-b04e-5514d12c9350" visible="True" noFile="true" apiParentMode="InsertAsChild" title="Classes" tocTitle="Classes" linkText="Classes" />
+    <Topic id="570d2f16-f0c0-47eb-afae-44f5d018c85f" visible="False" isExpanded="true" title="Version history" tocTitle="Version history" linkText="Version history">
+      <Topic id="0b826c96-9904-4a45-a210-e5dc785028e9" visible="True" />
+    </Topic>
+  </Topic>
+</Topics>
