@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<giadd:addressMessage xmlns:giadd="http://www.able.eu/epp/interfaces/generic/address" schemaBinding="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.able.eu/epp/interfaces/generic/address">
+	<party>
+		<address xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="giadd:structuredAddress">
+			<id>7545</id>
+			<postalCode>1522AA</postalCode>
+			<country>
+				<id>1</id>
+			</country>
+			<usage>
+				<id>1</id>
+			</usage>
+			<number>14</number>
+			<street>OndernBGSgsweg</street>
+		</address>
+		<emailAddress>
+			<address>testBGSble.eu</address>
+		</emailAddress>
+		<homePhone>
+			<number>0297288547</number>
+		</homePhone>
+		<id>
+			<number>4</number>
+			<source>EOR</source>
+		</id>
+	</party>
+	<party>
+		<address xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="giadd:postofficeBox">
+			<id>7505</id>
+			<country>
+				<id>1</id>
+			</country>
+			<usage>
+				<id>1</id>
+			</usage>
+			<boxNumber>99</boxNumber>
+		</address>
+		<id>
+			<number>122</number>
+			<source>EOR</source>
+		</id>
+	</party>
+	<party>
+		<address xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="giadd:structuredAddress">
+			<city>BergsBGSoek</city>
+			<id>7618</id>
+			<postalCode>1234XX</postalCode>
+			<country>
+				<id>1</id>
+			</country>
+			<usage>
+				<id>1</id>
+			</usage>
+			<location>Test BGSt medeholder Land</location>
+			<number>11</number>
+			<street>Vlieland</street>
+		</address>
+		<id>
+			<number>2121</number>
+			<source>EOR</source>
+		</id>
+	</party>
+	<party>
+		<address xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="giadd:structuredAddress">
+			<city>Maassluis</city>
+			<id>8210</id>
+			<country>
+				<id>1</id>
+			</country>
+			<usage>
+				<id>1</id>
+			</usage>
+			<number>12</number>
+			<numberSuffix>boven</numberSuffix>
+			<street>BuiBGSstraat</street>
+		</address>
+		<id>
+			<number>2233</number>
+			<source>EOR</source>
+		</id>
+	</party>
+	<party>
+		<address xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="giadd:structuredAddress">
+			<city>Bergambacht</city>
+			<id>7596</id>
+			<postalCode>2861AG</postalCode>
+			<country>
+				<id>1</id>
+			</country>
+			<usage>
+				<id>1</id>
+			</usage>
+			<number>15</number>
+			<street>KerksiBGS</street>
+		</address>
+		<id>
+			<number>3123</number>
+			<source>EOR</source>
+		</id>
+	</party>
+	<party>
+		<address xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="giadd:structuredAddress">
+			<city>Bergschenhoek</city>
+			<id>8208</id>
+			<postalCode>2661AS</postalCode>
+			<country>
+				<id>1</id>
+			</country>
+			<usage>
+				<id>1</id>
+			</usage>
+			<number>5</number>
+			<street>DennenBGSst</street>
+		</address>
+		<id>
+			<number>5255</number>
+			<source>CL</source>
+		</id>
+	</party>
+	<party>
+		<address xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="giadd:structuredAddress">
+			<city>AMs</city>
+			<id>8195</id>
+			<postalCode>1072SN</postalCode>
+			<country>
+				<id>1</id>
+			</country>
+			<usage>
+				<id>1</id>
+			</usage>
+			<number>94</number>
+			<street>AMsBGS</street>
+		</address>
+		<id>
+			<number>10541</number>
+			<source>CL</source>
+		</id>
+	</party>
+	<party>
+		<address xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="giadd:structuredAddress">
+			<city>AMs</city>
+			<id>8197</id>
+			<postalCode>1095XX</postalCode>
+			<country>
+				<id>1</id>
+			</country>
+			<usage>
+				<id>1</id>
+			</usage>
+			<number>94</number>
+			<street>AMsBGS</street>
+		</address>
+		<id>
+			<number>11111</number>
+			<source>CL</source>
+		</id>
+	</party>
+	<party>
+		<address xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="giadd:structuredAddress">
+			<city>amsterdam</city>
+			<id>7619</id>
+			<country>
+				<id>1</id>
+			</country>
+			<usage>
+				<id>1</id>
+			</usage>
+			<number>127</number>
+			<street>TeststrBGS</street>
+		</address>
+		<address xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="giadd:unstructuredAddress">
+			<id>8128</id>
+			<country>
+				<id>3</id>
+			</country>
+			<usage>
+				<id>2</id>
+			</usage>
+			<addressLine>buitenland BGS 1 (een)</addressLine>
+			<addressLine>buitenland BGS 2 (twee)</addressLine>
+			<addressLine>buitenland BGS 3 (drie)</addressLine>
+		</address>
+		<id>
+			<number>23321</number>
+			<source>EXPA</source>
+		</id>
+	</party>
+	<party>
+		<address xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="giadd:postofficeBox">
+			<city>Amsterdam</city>
+			<id>7507</id>
+			<postalCode>1000AA</postalCode>
+			<country>
+				<id>1</id>
+			</country>
+			<usage>
+				<id>1</id>
+			</usage>
+			<boxNumber>99</boxNumber>
+		</address>
+		<id>
+			<number>999525045</number>
+			<source>IME</source>
+		</id>
+	</party>
+	<party>
+		<address xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="giadd:structuredAddress">
+			<city>Maassluis</city>
+			<id>9560</id>
+			<postalCode>3145AD</postalCode>
+			<country>
+				<id>1</id>
+			</country>
+			<usage>
+				<id>1</id>
+			</usage>
+			<number>100</number>
+			<street>BuizerdBGSat</street>
+		</address>
+		<emailAddress>
+			<address>dijk@liBGSnl</address>
+		</emailAddress>
+		<id>
+			<number>999525051</number>
+			<source>IME</source>
+		</id>
+	</party>
+	<party>
+		<address xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="giadd:postofficeBox">
+			<city>Amsterdam</city>
+			<id>7504</id>
+			<postalCode>1000AA</postalCode>
+			<country>
+				<id>1</id>
+			</country>
+			<usage>
+				<id>1</id>
+			</usage>
+			<boxNumber>99</boxNumber>
+		</address>
+		<id>
+			<number>1</number>
+			<source>EXPA</source>
+		</id>
+	</party>
+	<party>
+		<address xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="giadd:structuredAddress">
+			<city>Amsterdam</city>
+			<id>6162</id>
+			<postalCode>1012RB</postalCode>
+			<country>
+				<id>1</id>
+			</country>
+			<usage>
+				<id>1</id>
+			</usage>
+			<location>AmsterBGS</location>
+			<number>1</number>
+			<street>PaleissBGSt</street>
+		</address>
+		<address xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="giadd:unstructuredAddress">
+			<city>Buitenland W</city>
+			<id>8127</id>
+			<postalCode>8411KK</postalCode>
+			<country>
+				<id>2</id>
+			</country>
+			<usage>
+				<id>2</id>
+			</usage>
+			<addressLine>buitenland BGS 1 (een)</addressLine>
+			<addressLine>buitenland BGS 2 (twee)</addressLine>
+			<addressLine>buitenland BGS 3 (drie)</addressLine>
+		</address>
+		<emailAddress>
+			<address>email@dimhhmyjmn.nf</address>
+		</emailAddress>
+		<fax>
+			<number>099-1234567</number>
+		</fax>
+		<homePhone>
+			<number>020-9988776</number>
+		</homePhone>
+		<id>
+			<number>60053981</number>
+			<source>CL</source>
+		</id>
+		<mobilePhone>
+			<number>06-22334455</number>
+		</mobilePhone>
+		<officePhone>
+			<number> 010-5566778</number>
+		</officePhone>
+	</party>
+	<party>
+		<address xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="giadd:structuredAddress">
+			<city>Amsterdam oBGS</city>
+			<id>6165</id>
+			<postalCode>1012RB</postalCode>
+			<country>
+				<id>1</id>
+			</country>
+			<usage>
+				<id>1</id>
+			</usage>
+			<location>AmsteBGS </location>
+			<number>1</number>
+			<street>PaleiBGSaat</street>
+		</address>
+		<address xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="giadd:unstructuredAddress">
+			<city>Buitenland W</city>
+			<id>8130</id>
+			<postalCode>8411KK</postalCode>
+			<country>
+				<id>2</id>
+			</country>
+			<usage>
+				<id>2</id>
+			</usage>
+			<addressLine>buitenland BGS 1 (een)</addressLine>
+			<addressLine>buitenland BGS 2 (twee)</addressLine>
+			<addressLine>buitenland BGS 3 (drie)</addressLine>
+		</address>
+		<emailAddress>
+			<address>email@dimhhBGSmn.nf</address>
+		</emailAddress>
+		<fax>
+			<number>099-1234567</number>
+		</fax>
+		<homePhone>
+			<number>020-9988776</number>
+		</homePhone>
+		<id>
+			<number>999525050</number>
+			<source>IME</source>
+		</id>
+		<mobilePhone>
+			<number>06-22334455</number>
+		</mobilePhone>
+		<officePhone>
+			<number> 010-5566778</number>
+		</officePhone>
+	</party>
+	<party>
+		<id>
+			<number>2465771</number>
+			<source>EOR</source>
+		</id>
+	</party>
+	<party>
+		<homePhone>
+			<number>0769-116909</number>
+		</homePhone>
+		<id>
+			<number>2476023</number>
+			<source>EOR</source>
+		</id>
+		<mobilePhone>
+			<number>09-18 83 28 18</number>
+		</mobilePhone>
+	</party>
+	<party>
+		<id>
+			<number>2476054</number>
+			<source>EOR</source>
+		</id>
+	</party>
+	<party>
+		<id>
+			<number>2476276</number>
+			<source>EOR</source>
+		</id>
+	</party>
+	<party>
+		<homePhone>
+			<number>001 999 63 06</number>
+		</homePhone>
+		<id>
+			<number>2481766</number>
+			<source>EOR</source>
+		</id>
+	</party>
+	<party>
+		<id>
+			<number>2481933</number>
+			<source>EOR</source>
+		</id>
+	</party>
+</giadd:addressMessage>
