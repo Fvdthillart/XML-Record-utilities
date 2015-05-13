@@ -45,8 +45,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnonymizeCache.cs" />
-    <Compile Include="AnonymizeCacheDB.cs" />
-    <Compile Include="AnonymizeCacheFile.cs" />
     <Compile Include="Anonymizer.cs" />
     <Compile Include="AnonymizerCSV.cs" />
     <Compile Include="AnonymizeRule.cs" />
