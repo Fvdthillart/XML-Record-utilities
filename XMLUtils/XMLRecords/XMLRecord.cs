@@ -10,8 +10,8 @@ namespace Core.XMLRecords
     ///</summary>
     ///<remarks>
     ///<para>
-    /// Een XMLRecord is a new term and describes a part of an XML file that repeats like paragraphs in a document.
-    /// An XMLrecord consists of a string array of ID's, the identifying part, and the XML subtree identified by the containertag.
+    /// An XMLRecord describes a part of an XML file that repeats like paragraphs in a document.
+  /// An XMLrecord consists of the identifying part, a string array of ID's, and the XML subtree identified by a string called the containertag.
     ///</para><para>
     /// Basically what this class does is take the XML subtree of the XML node identified by container tag and store it in a string. Then it takes the values of all the XML nodes identified by the IDtags in the XML subtree and store these in a string array as the identifier. 
     /// and take the  for that ID and store it in an instance of XMLRecord that holds an ID and the XML that the ID refers to
@@ -19,15 +19,35 @@ namespace Core.XMLRecords
     ///</remarks>
     public class XMLRecord : IEquatable<XMLRecord>, IComparable<XMLRecord>
     {
-
- 
         private string[] _IDs;
         private string _XMLRecord;
+
+        private bool mustBeValidatable = false;
+
+        public bool MustBeValidatable
+        {
+          get { return mustBeValidatable; }
+          set { mustBeValidatable = value; }
+        }
+        
         /// <summary>
         /// To communicate the seperator that is used in the constructor that takes a string instead of a string array as argument for the identifying tags
         /// </summary>
-		public static char seperator = ',';
-		
+		    public const char seperator = ',';
+        /// <summary>
+        /// XML declaration. Default value = "<![CDATA[<?xml version=\"1.0\" encoding=\"UTF-8\"?>]]>"
+        /// </summary>
+        protected string _xmlDecl = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>";
+        /// <summary>
+        /// Initial element of an XML file. Used to add to the begin and end of an XML Subtree in an XMLRecord to allow 
+        /// the XML to be validated against the original xsd's and ready to be processed
+        /// </summary>
+        protected string _namespaceTag = "";
+        /// <summary>
+        /// Closing tag of initial element of an XML file. Used to add to the begin and end of an XML Subtree in an XMLRecord to allow 
+        /// the XML to be validated againt the original XSD's and ready to be processed
+        /// </summary>
+        protected string _endNamespaceTag = "";
 
         /// <summary>
         /// Constructor: Creates an instance of the XML record class
@@ -36,8 +56,8 @@ namespace Core.XMLRecords
         /// <param name="XMLRecord">string with the XML subtree to be stored</param>
         public XMLRecord(string ID, string XMLRecord)
         {
-			_IDs = ID.Split(',');
-            _XMLRecord = XMLRecord;
+          _IDs = ID.Split(seperator);
+          _XMLRecord = XMLRecord;
         }
 
         /// <summary>
@@ -52,13 +72,29 @@ namespace Core.XMLRecords
         }
 
         /// <summary>
+        /// Constructor: Creates an instance of the XML record class
+        /// </summary>
+        /// <param name="IDs">string array with the identifying values</param>
+        /// <param name="XMLRecord">string with the XML subtree to be stored</param>
+        /// <param name="XMLDecl">string with the XML Declaration and encoding</param>
+        /// <param name="nsTag">Tag that contains the namespace attributes, usually the root element</param>
+        /// <param name="nsEndTag">Endtag for nsTag</param>
+        public XMLRecord(string[] IDs, string XMLRecord, string XMLDecl, string nsTag, string nsEndTag)
+        {
+          _IDs = IDs;
+          _XMLRecord = XMLRecord;
+          _xmlDecl = XMLDecl;
+          _namespaceTag = nsTag;
+          _endNamespaceTag = nsEndTag;
+        }
+        /// <summary>
         /// Constructor for an xmlrecord with ids but an empty xml subtree
         /// </summary>
         /// <param name="ID">CSV string with the IDs of the new XML Tree</param>
         public XMLRecord(string ID)
         { //id kan een comma seperated string zijn
 	
-            _IDs = ID.Split(XMLRecord.seperator);
+            _IDs = ID.Split(seperator);
 			
         }
 
@@ -77,25 +113,30 @@ namespace Core.XMLRecords
         /// <returns>csv string with all IDs</returns>
         public string getID()
         {
-			StringBuilder sb = new StringBuilder("");
-			for (int i=0;i<_IDs.Length;i++) sb.AppendFormat("{0},", _IDs[i]);
-			sb.Remove(sb.Length-1,1);
-            return sb.ToString();
+			    StringBuilder sb = new StringBuilder("");
+			    for (int i=0;i<_IDs.Length;i++) sb.AppendFormat("{0},", _IDs[i]);
+			    sb.Remove(sb.Length-1,1);
+          return sb.ToString();
         }
-		/// <summary>
-		/// returns a string array with all the ID values
-		/// </summary>
-		/// <returns>string array with all ID values</returns>
-		public string[] getIDs() {
-			return _IDs;
-		}
+
+		    /// <summary>
+		    /// returns a string array with all the ID values
+		    /// </summary>
+		    /// <returns>string array with all ID values</returns>
+		    public string[] getIDs() {
+			    return _IDs;
+		    }
 
         /// <summary>
-        /// Returns the XML subtree of the XML records
+        /// Returns the XML subtree of the XML records. If mustbeValidatable = true, it prefixes the value of member _XMLRecord
+        /// with an XMLdeclaration and the opening tag of the root element of the XMLfile containing the record. An endtag is appended.
         /// </summary>
         /// <returns>returns the XML subtree </returns>
         public string getXMLRecord()
         {
+          if (mustBeValidatable && !String.IsNullOrEmpty(_namespaceTag))
+            return String.Concat(_xmlDecl, "\r\n", _namespaceTag, "\r\n", _XMLRecord, "\r\n", _endNamespaceTag);
+          else
             return _XMLRecord;
         }
 
@@ -119,7 +160,7 @@ namespace Core.XMLRecords
         /// </summary>
         /// <param name="obj">pointer to an object that has to be compared to this XMLRecord</param>
         /// <returns>true if equal, false if otherwise</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(Object obj)
         {
             if (obj == null) return false;
             XMLRecord objAsXMLRecord = obj as XMLRecord;
@@ -133,7 +174,7 @@ namespace Core.XMLRecords
         /// </summary>
         /// <param name="other">XMLRecord to compare to</param>
         /// <returns>true if equal, false if otherwise</returns>
-        public bool Equals(XMLRecord other)
+        bool IEquatable<XMLRecord>.Equals(XMLRecord other)
         {
             if (other == null) return false;
             return (this.getID().Equals(other.getID()));
@@ -155,31 +196,35 @@ namespace Core.XMLRecords
         /// </summary>
         /// <param name="other">CSV string that contains all the ID values of the other XML record</param>
         /// <returns>return 1 if greater, 0 if equal and -1 if smaller</returns>
-        public int CompareTo(XMLRecord other)
+        protected int CompareTo(XMLRecord other)
         {
             // If other is not a valid object reference, this instance is greater. 
             if (other == null) return 1;
 
             // The XMLRecord comparison or search depends on the ID of the XMLRecord
             
-			string[] otherIDs = other.getID().Split(XMLRecord.seperator);
-			int rc = 0; //compareTo geeft dit terug als de waarden gelijk zijn
+			      string[] otherIDs = other.getID().Split(XMLRecord.seperator);
+			      int rc = 0; //compareTo geeft dit terug als de waarden gelijk zijn
 
-            if (_IDs.Length != otherIDs.Length) rc = _IDs.Length - otherIDs.Length;
-			else for(int i = 0; i<_IDs.Length; i++) {
+                  if (_IDs.Length != otherIDs.Length) rc = _IDs.Length - otherIDs.Length;
+			      else for(int i = 0; i<_IDs.Length; i++) {
 				
-				if( i < otherIDs.Length) {
-                    if (_IDs[i] == null) rc = -1;
-                    else if (otherIDs[i] == null) rc = 1;
-                    else
-                        rc = _IDs[i].CompareTo(otherIDs[i]);
-				}
+				      if( i < otherIDs.Length) {
+                          if (_IDs[i] == null) rc = -1;
+                          else if (otherIDs[i] == null) rc = 1;
+                          else
+                              rc = _IDs[i].CompareTo(otherIDs[i]);
+				      }
 				
-				if (rc != 0) break; // beslissing is gemaakt
+				      if (rc != 0) break; // beslissing is gemaakt
 				
-			}
+			      }
             return rc;
-            
+        }
+
+        int IComparable<XMLRecord>.CompareTo(XMLRecord other)
+        {
+          return this.CompareTo(other);
         }
 
         /// <summary>
@@ -189,7 +234,6 @@ namespace Core.XMLRecords
         /// <param name="content">content to be written. Usually the XML subtree of the XML record</param>
         public static void Write(string filename, string content)
         {
-			
             try
             {
                 using (StreamWriter writer = File.CreateText(filename))
@@ -199,7 +243,7 @@ namespace Core.XMLRecords
             }
             catch (Exception e)
             {
-				Console.WriteLine(filename);
+				        Console.WriteLine(filename);
                 Console.WriteLine(e);
             }
         }

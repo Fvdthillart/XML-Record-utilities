@@ -36,13 +36,14 @@ namespace Core.Anonymization
     /// <item>
     /// <term>Location</term>
     /// <description>
-    /// Indicates the elemen to be anonymized. For a CSV file this is a column name or index. For an XML file, this is an xpath expression
+    /// Indicates the element to be anonymized. For a CSV file this is a column name or index. For an XML file, this is an xpath expression
     /// </description>
     /// </item>
     /// <item>
     /// <term>FilterLocation</term>
     /// <description>
-    /// <para> First part of a filter.Indicates the element whose value is to be filtered on. For CSV it can be a header name or index. For XML, it's an xpath expression that identifies 
+    /// <para> First part of a filter.Indicates the element whose value is to be filtered on. For CSV it can be a header name or index. 
+    /// For XML, it's an xpath expression that identifies 
     /// 1 XML element</para>
     /// <para>Optional when none of the other parts of the filer are empty</para>
     /// </description>

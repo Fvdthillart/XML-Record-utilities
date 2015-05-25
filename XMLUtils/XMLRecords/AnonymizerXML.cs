@@ -119,6 +119,7 @@ namespace Core.XMLRecords.Anonymization
         /// Initializes the AnonymizerXML. Requires the file to be anonymized to determine which of the anonymization rules apply
         /// </summary>
         /// <param name="file_to_be_anonymized">the file which is going to be anonymized</param>
+        
         public AnonymizerXML(string file_to_be_anonymized)
             : base(file_to_be_anonymized)
         {

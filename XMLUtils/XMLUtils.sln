@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XMLRecords", "XMLRecords\XMLRecords.csproj", "{E3D5E4E5-7B28-4A0D-91AA-E9B95B961ECB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "compareXMLRecords", "compareXMLRecords\compareXMLRecords.csproj", "{D749F5C8-2794-4E31-BA71-E6C24FEF30C8}"
@@ -13,11 +15,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anonymization", "Anonymizat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnonymizeXML", "AnonymizeXML\AnonymizeXML.csproj", "{74C2DE23-0027-4CE2-AAA3-554F1F6457BC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XMLUtilsUnitTests", "XMLUtilsUnitTests\XMLUtilsUnitTests.csproj", "{3BE22DC1-91DD-4C62-B5AF-32433D5D7DA8}"
+EndProject
 Global
-	GlobalSection(SubversionScc) = preSolution
-		Svn-Managed = True
-		Manager = AnkhSVN - Subversion Support for Visual Studio
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -47,8 +47,16 @@ Global
 		{74C2DE23-0027-4CE2-AAA3-554F1F6457BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74C2DE23-0027-4CE2-AAA3-554F1F6457BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74C2DE23-0027-4CE2-AAA3-554F1F6457BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BE22DC1-91DD-4C62-B5AF-32433D5D7DA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BE22DC1-91DD-4C62-B5AF-32433D5D7DA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BE22DC1-91DD-4C62-B5AF-32433D5D7DA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BE22DC1-91DD-4C62-B5AF-32433D5D7DA8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
 	EndGlobalSection
 EndGlobal

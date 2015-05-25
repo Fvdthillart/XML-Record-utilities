@@ -232,7 +232,7 @@ namespace Core.XMLRecords
         /// <param name="reader">Instance of XMLReader</param>
         /// <param name="elementAttributeCount">count of the attributes</param>
         /// <returns>return string with all atrributes</returns>
-        [Obsolete("Needed for addtoXMLrecord method which is deprecated")]
+
         private string getAttributes(XmlTextReader reader, int elementAttributeCount)
         {
             StringBuilder sb = new StringBuilder("");
