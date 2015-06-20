@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hyp:cfSchuldenaar xmlns:hpg="http://wubank.net/cdf/hypotheken/generiek" xmlns:hyp="http://wubank.net/cdf/hypotheken">
+<hyp:Schuldenaar xmlns:hyp="http://wubank.net/cdf/hypotheken">
+  <hyp:PartijId>602</hyp:PartijId>
+  <hyp:AanvullendePersoonsgegevens>
+    <hyp:BurgerlijkeStaat>01</hyp:BurgerlijkeStaat>
+    <hyp:EigenPersoneelIndicator>N</hyp:EigenPersoneelIndicator>
+    <hyp:Legitimatie>
+      <hyp:Soort>PP</hyp:Soort>
+      <hyp:Nr>IDbewijsnr</hyp:Nr>
+    </hyp:Legitimatie>
+  </hyp:AanvullendePersoonsgegevens>
+  <hyp:Financieel>
+    <hyp:Inkomen xmlns:hpg="http://wubank.net/cdf/hypotheken/generiek" xmlns:hyp="http://wubank.net/cdf/hypotheken">
+      <hpg:VolgNr>1</hpg:VolgNr>
+      <hpg:Code>01</hpg:Code>
+      <hpg:Dienstverband xmlns:hpg="http://wubank.net/cdf/hypotheken/generiek" xmlns:hyp="http://wubank.net/cdf/hypotheken">
+        <hpg:BeroepCode>9999</hpg:BeroepCode>
+        <hpg:BrancheCode>99</hpg:BrancheCode>
+      </hpg:Dienstverband>
+      <hpg:GevalideerdIndicator>N</hpg:GevalideerdIndicator>
+      <hpg:Registratiedatum>1900-01-01</hpg:Registratiedatum>
+      <hpg:InkomenBestandsdeel xmlns:hpg="http://wubank.net/cdf/hypotheken/generiek" xmlns:hyp="http://wubank.net/cdf/hypotheken">
+        <hpg:Code>01</hpg:Code>
+        <hpg:Omschrijving>bruto jaarsalaris</hpg:Omschrijving>
+        <hpg:BrutoInkomenPerJaar>96050</hpg:BrutoInkomenPerJaar>
+      </hpg:InkomenBestandsdeel>
+    </hyp:Inkomen>
+    <hyp:Inkomen xmlns:hpg="http://wubank.net/cdf/hypotheken/generiek" xmlns:hyp="http://wubank.net/cdf/hypotheken">
+      <hpg:VolgNr>2</hpg:VolgNr>
+      <hpg:Code>08</hpg:Code>
+      <hpg:Ingangsdatum>2020-07-01</hpg:Ingangsdatum>
+      <hpg:Dienstverband xmlns:hpg="http://wubank.net/cdf/hypotheken/generiek" xmlns:hyp="http://wubank.net/cdf/hypotheken">
+        <hpg:BeroepCode>?</hpg:BeroepCode>
+      </hpg:Dienstverband>
+      <hpg:GevalideerdIndicator>N</hpg:GevalideerdIndicator>
+      <hpg:Registratiedatum>1900-01-01</hpg:Registratiedatum>
+      <hpg:InkomenBestandsdeel xmlns:hpg="http://wubank.net/cdf/hypotheken/generiek" xmlns:hyp="http://wubank.net/cdf/hypotheken">
+        <hpg:Code>04</hpg:Code>
+        <hpg:Omschrijving>pensioeninkomen</hpg:Omschrijving>
+        <hpg:BrutoInkomenPerJaar>51725.34</hpg:BrutoInkomenPerJaar>
+      </hpg:InkomenBestandsdeel>
+    </hyp:Inkomen>
+  </hyp:Financieel>
+</hyp:Schuldenaar>
+</hyp:cfSchuldenaar>

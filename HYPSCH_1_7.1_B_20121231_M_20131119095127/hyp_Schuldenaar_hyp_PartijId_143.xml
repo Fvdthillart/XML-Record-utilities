@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hyp:cfSchuldenaar xmlns:hpg="http://wubank.net/cdf/hypotheken/generiek" xmlns:hyp="http://wubank.net/cdf/hypotheken">
+<hyp:Schuldenaar xmlns:hyp="http://wubank.net/cdf/hypotheken">
+  <hyp:PartijId>143</hyp:PartijId>
+  <hyp:AanvullendePersoonsgegevens>
+    <hyp:BurgerlijkeStaat>04</hyp:BurgerlijkeStaat>
+    <hyp:EigenPersoneelIndicator>N</hyp:EigenPersoneelIndicator>
+    <hyp:GeboortePlaats>Como</hyp:GeboortePlaats>
+    <hyp:GeboorteLandcode>IT</hyp:GeboorteLandcode>
+    <hyp:Legitimatie>
+      <hyp:Soort>PP</hyp:Soort>
+      <hyp:Nr>aa1762028</hyp:Nr>
+      <hyp:AfgifteDatum>2009-11-16</hyp:AfgifteDatum>
+    </hyp:Legitimatie>
+    <hyp:Opleiding>
+      <hyp:Niveau>06</hyp:Niveau>
+    </hyp:Opleiding>
+    <hyp:Gezinssituatie>
+      <hyp:HuwelijkOoitOntbondenIndicator>N</hyp:HuwelijkOoitOntbondenIndicator>
+    </hyp:Gezinssituatie>
+  </hyp:AanvullendePersoonsgegevens>
+  <hyp:Financieel>
+    <hyp:Inkomen xmlns:hpg="http://wubank.net/cdf/hypotheken/generiek" xmlns:hyp="http://wubank.net/cdf/hypotheken">
+      <hpg:VolgNr>1</hpg:VolgNr>
+      <hpg:Code>01</hpg:Code>
+      <hpg:Ingangsdatum>2007-05-14</hpg:Ingangsdatum>
+      <hpg:Dienstverband xmlns:hpg="http://wubank.net/cdf/hypotheken/generiek" xmlns:hyp="http://wubank.net/cdf/hypotheken">
+        <hpg:BeroepCode>9999</hpg:BeroepCode>
+        <hpg:BeroepOmschrijving>Area Manager</hpg:BeroepOmschrijving>
+        <hpg:BrancheCode>99</hpg:BrancheCode>
+        <hpg:WerkgeverNaam>Booking.com</hpg:WerkgeverNaam>
+        <hpg:WerkgeverPlaats>Amsterdam</hpg:WerkgeverPlaats>
+      </hpg:Dienstverband>
+      <hpg:GevalideerdIndicator>N</hpg:GevalideerdIndicator>
+      <hpg:Registratiedatum>1900-01-01</hpg:Registratiedatum>
+      <hpg:InkomenBestandsdeel xmlns:hpg="http://wubank.net/cdf/hypotheken/generiek" xmlns:hyp="http://wubank.net/cdf/hypotheken">
+        <hpg:Code>01</hpg:Code>
+        <hpg:BrutoInkomenPerJaar>50000.01</hpg:BrutoInkomenPerJaar>
+      </hpg:InkomenBestandsdeel>
+      <hpg:InkomenBestandsdeel xmlns:hpg="http://wubank.net/cdf/hypotheken/generiek" xmlns:hyp="http://wubank.net/cdf/hypotheken">
+        <hpg:Code>03</hpg:Code>
+        <hpg:BrutoInkomenPerJaar>54000</hpg:BrutoInkomenPerJaar>
+      </hpg:InkomenBestandsdeel>
+      <hpg:InkomenBestandsdeel xmlns:hpg="http://wubank.net/cdf/hypotheken/generiek" xmlns:hyp="http://wubank.net/cdf/hypotheken">
+        <hpg:Code>07</hpg:Code>
+        <hpg:BrutoInkomenPerJaar>3999.99</hpg:BrutoInkomenPerJaar>
+      </hpg:InkomenBestandsdeel>
+      <hpg:InkomenBestandsdeel xmlns:hpg="http://wubank.net/cdf/hypotheken/generiek" xmlns:hyp="http://wubank.net/cdf/hypotheken">
+        <hpg:Code>29</hpg:Code>
+        <hpg:BrutoInkomenPerJaar>54000</hpg:BrutoInkomenPerJaar>
+      </hpg:InkomenBestandsdeel>
+    </hyp:Inkomen>
+  </hyp:Financieel>
+  <hyp:OverigeToetsing xmlns:hpg="http://wubank.net/cdf/hypotheken/generiek" xmlns:hyp="http://wubank.net/cdf/hypotheken">
+    <hyp:Soort>SFH</hyp:Soort>
+    <hyp:Datum>2011-06-28</hyp:Datum>
+    <hyp:ResultaatCode>00</hyp:ResultaatCode>
+  </hyp:OverigeToetsing>
+  <hyp:OverigeToetsing xmlns:hpg="http://wubank.net/cdf/hypotheken/generiek" xmlns:hyp="http://wubank.net/cdf/hypotheken">
+    <hyp:Soort>VIS</hyp:Soort>
+    <hyp:Datum>2011-07-07</hyp:Datum>
+    <hyp:ResultaatCode>00</hyp:ResultaatCode>
+  </hyp:OverigeToetsing>
+</hyp:Schuldenaar>
+</hyp:cfSchuldenaar>

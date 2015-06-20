@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hyp:cfSchuldenaar xmlns:hpg="http://wubank.net/cdf/hypotheken/generiek" xmlns:hyp="http://wubank.net/cdf/hypotheken">
+<hyp:Schuldenaar xmlns:hyp="http://wubank.net/cdf/hypotheken">
+  <hyp:PartijId>159</hyp:PartijId>
+  <hyp:AanvullendePersoonsgegevens>
+    <hyp:BurgerlijkeStaat>03</hyp:BurgerlijkeStaat>
+    <hyp:EigenPersoneelIndicator>N</hyp:EigenPersoneelIndicator>
+    <hyp:GeboorteLandcode>NL</hyp:GeboorteLandcode>
+    <hyp:Legitimatie>
+      <hyp:Soort>PP</hyp:Soort>
+    </hyp:Legitimatie>
+    <hyp:Gezinssituatie>
+      <hyp:HuwelijkOoitOntbondenIndicator>N</hyp:HuwelijkOoitOntbondenIndicator>
+    </hyp:Gezinssituatie>
+  </hyp:AanvullendePersoonsgegevens>
+  <hyp:Financieel>
+    <hyp:Inkomen xmlns:hpg="http://wubank.net/cdf/hypotheken/generiek" xmlns:hyp="http://wubank.net/cdf/hypotheken">
+      <hpg:VolgNr>1</hpg:VolgNr>
+      <hpg:Code>01</hpg:Code>
+      <hpg:Dienstverband xmlns:hpg="http://wubank.net/cdf/hypotheken/generiek" xmlns:hyp="http://wubank.net/cdf/hypotheken">
+        <hpg:BeroepCode>X100</hpg:BeroepCode>
+        <hpg:BrancheCode>99</hpg:BrancheCode>
+      </hpg:Dienstverband>
+      <hpg:GevalideerdIndicator>N</hpg:GevalideerdIndicator>
+      <hpg:Registratiedatum>1900-01-01</hpg:Registratiedatum>
+      <hpg:InkomenBestandsdeel xmlns:hpg="http://wubank.net/cdf/hypotheken/generiek" xmlns:hyp="http://wubank.net/cdf/hypotheken">
+        <hpg:Code>03</hpg:Code>
+        <hpg:BrutoInkomenPerJaar>40000</hpg:BrutoInkomenPerJaar>
+      </hpg:InkomenBestandsdeel>
+      <hpg:InkomenBestandsdeel xmlns:hpg="http://wubank.net/cdf/hypotheken/generiek" xmlns:hyp="http://wubank.net/cdf/hypotheken">
+        <hpg:Code>29</hpg:Code>
+        <hpg:BrutoInkomenPerJaar>40000</hpg:BrutoInkomenPerJaar>
+      </hpg:InkomenBestandsdeel>
+    </hyp:Inkomen>
+  </hyp:Financieel>
+  <hyp:OverigeToetsing xmlns:hpg="http://wubank.net/cdf/hypotheken/generiek" xmlns:hyp="http://wubank.net/cdf/hypotheken">
+    <hyp:Soort>SFH</hyp:Soort>
+    <hyp:Datum>2009-07-04</hyp:Datum>
+    <hyp:ResultaatCode>00</hyp:ResultaatCode>
+  </hyp:OverigeToetsing>
+</hyp:Schuldenaar>
+</hyp:cfSchuldenaar>

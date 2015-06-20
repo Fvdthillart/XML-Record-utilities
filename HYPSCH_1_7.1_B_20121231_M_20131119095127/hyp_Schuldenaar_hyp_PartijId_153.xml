@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hyp:cfSchuldenaar xmlns:hpg="http://wubank.net/cdf/hypotheken/generiek" xmlns:hyp="http://wubank.net/cdf/hypotheken">
+<hyp:Schuldenaar xmlns:hyp="http://wubank.net/cdf/hypotheken">
+  <hyp:PartijId>153</hyp:PartijId>
+  <hyp:AanvullendePersoonsgegevens>
+    <hyp:BurgerlijkeStaat>03</hyp:BurgerlijkeStaat>
+    <hyp:EigenPersoneelIndicator>N</hyp:EigenPersoneelIndicator>
+    <hyp:GeboorteLandcode>NL</hyp:GeboorteLandcode>
+    <hyp:Legitimatie>
+      <hyp:Soort>PP</hyp:Soort>
+      <hyp:Nr>NXCCL1PF0</hyp:Nr>
+      <hyp:AfgifteDatum>2008-03-31</hyp:AfgifteDatum>
+    </hyp:Legitimatie>
+    <hyp:Gezinssituatie>
+      <hyp:HuwelijkOoitOntbondenIndicator>J</hyp:HuwelijkOoitOntbondenIndicator>
+      <hyp:HuwelijkOntbondenDatum>2009-11-10</hyp:HuwelijkOntbondenDatum>
+    </hyp:Gezinssituatie>
+  </hyp:AanvullendePersoonsgegevens>
+  <hyp:Financieel>
+    <hyp:Inkomen xmlns:hpg="http://wubank.net/cdf/hypotheken/generiek" xmlns:hyp="http://wubank.net/cdf/hypotheken">
+      <hpg:VolgNr>1</hpg:VolgNr>
+      <hpg:Code>01</hpg:Code>
+      <hpg:Ingangsdatum>2001-09-01</hpg:Ingangsdatum>
+      <hpg:Dienstverband xmlns:hpg="http://wubank.net/cdf/hypotheken/generiek" xmlns:hyp="http://wubank.net/cdf/hypotheken">
+        <hpg:BeroepCode>9999</hpg:BeroepCode>
+        <hpg:BeroepOmschrijving>Applicatiespecialist</hpg:BeroepOmschrijving>
+        <hpg:BrancheCode>99</hpg:BrancheCode>
+      </hpg:Dienstverband>
+      <hpg:GevalideerdIndicator>N</hpg:GevalideerdIndicator>
+      <hpg:Registratiedatum>1900-01-01</hpg:Registratiedatum>
+      <hpg:InkomenBestandsdeel xmlns:hpg="http://wubank.net/cdf/hypotheken/generiek" xmlns:hyp="http://wubank.net/cdf/hypotheken">
+        <hpg:Code>01</hpg:Code>
+        <hpg:BrutoInkomenPerJaar>37229.28</hpg:BrutoInkomenPerJaar>
+      </hpg:InkomenBestandsdeel>
+      <hpg:InkomenBestandsdeel xmlns:hpg="http://wubank.net/cdf/hypotheken/generiek" xmlns:hyp="http://wubank.net/cdf/hypotheken">
+        <hpg:Code>03</hpg:Code>
+        <hpg:BrutoInkomenPerJaar>43297.65</hpg:BrutoInkomenPerJaar>
+      </hpg:InkomenBestandsdeel>
+      <hpg:InkomenBestandsdeel xmlns:hpg="http://wubank.net/cdf/hypotheken/generiek" xmlns:hyp="http://wubank.net/cdf/hypotheken">
+        <hpg:Code>07</hpg:Code>
+        <hpg:BrutoInkomenPerJaar>2978.34</hpg:BrutoInkomenPerJaar>
+      </hpg:InkomenBestandsdeel>
+      <hpg:InkomenBestandsdeel xmlns:hpg="http://wubank.net/cdf/hypotheken/generiek" xmlns:hyp="http://wubank.net/cdf/hypotheken">
+        <hpg:Code>08</hpg:Code>
+        <hpg:BrutoInkomenPerJaar>3090.03</hpg:BrutoInkomenPerJaar>
+      </hpg:InkomenBestandsdeel>
+      <hpg:InkomenBestandsdeel xmlns:hpg="http://wubank.net/cdf/hypotheken/generiek" xmlns:hyp="http://wubank.net/cdf/hypotheken">
+        <hpg:Code>29</hpg:Code>
+        <hpg:BrutoInkomenPerJaar>43297.65</hpg:BrutoInkomenPerJaar>
+      </hpg:InkomenBestandsdeel>
+    </hyp:Inkomen>
+    <hyp:Verplichting xmlns:hpg="http://wubank.net/cdf/hypotheken/generiek" xmlns:hyp="http://wubank.net/cdf/hypotheken">
+      <hpg:VolgNr>1</hpg:VolgNr>
+      <hpg:Soort>05</hpg:Soort>
+      <hpg:BrutoJaarbedrag>0</hpg:BrutoJaarbedrag>
+      <hpg:LimietbedragDoorlopendKrediet>25000</hpg:LimietbedragDoorlopendKrediet>
+      <hpg:AfgelostDoorHypotheekIndicator>N</hpg:AfgelostDoorHypotheekIndicator>
+      <hpg:GevalideerdIndicator>N</hpg:GevalideerdIndicator>
+      <hpg:Registratiedatum>1900-01-01</hpg:Registratiedatum>
+    </hyp:Verplichting>
+  </hyp:Financieel>
+  <hyp:BkrToetsing xmlns:hpg="http://wubank.net/cdf/hypotheken/generiek" xmlns:hyp="http://wubank.net/cdf/hypotheken">
+    <hyp:Toetsdatum>2009-12-24</hyp:Toetsdatum>
+    <hyp:AantalContracten>8</hyp:AantalContracten>
+    <hyp:AantalLopendeContracten>0</hyp:AantalLopendeContracten>
+    <hyp:AantalAfgelosteContracten>6</hyp:AantalAfgelosteContracten>
+    <hyp:KredietOvereenkomst xmlns:hpg="http://wubank.net/cdf/hypotheken/generiek" xmlns:hyp="http://wubank.net/cdf/hypotheken">
+      <hyp:VolgNr>1</hyp:VolgNr>
+      <hyp:KredietVorm>RK</hyp:KredietVorm>
+      <hyp:Bedrag>25000</hyp:Bedrag>
+      <hyp:EersteAflossingJaarMaand>2009-08</hyp:EersteAflossingJaarMaand>
+      <hyp:DoorBkrAfgelostIndicator>N</hyp:DoorBkrAfgelostIndicator>
+      <hyp:KredietRegistratieJaarWeek>2009-033</hyp:KredietRegistratieJaarWeek>
+      <hyp:EigenContractIndicator>N</hyp:EigenContractIndicator>
+    </hyp:KredietOvereenkomst>
+    <hyp:KredietOvereenkomst xmlns:hpg="http://wubank.net/cdf/hypotheken/generiek" xmlns:hyp="http://wubank.net/cdf/hypotheken">
+      <hyp:VolgNr>2</hyp:VolgNr>
+      <hyp:KredietVorm>RK</hyp:KredietVorm>
+      <hyp:Bedrag>17500</hyp:Bedrag>
+      <hyp:EersteAflossingJaarMaand>2006-04</hyp:EersteAflossingJaarMaand>
+      <hyp:PraktischLaatsteAflossingJaarMaand>2009-12</hyp:PraktischLaatsteAflossingJaarMaand>
+      <hyp:DoorBkrAfgelostIndicator>N</hyp:DoorBkrAfgelostIndicator>
+      <hyp:KredietRegistratieJaarWeek>2006-010</hyp:KredietRegistratieJaarWeek>
+      <hyp:EigenContractIndicator>N</hyp:EigenContractIndicator>
+    </hyp:KredietOvereenkomst>
+    <hyp:KredietOvereenkomst xmlns:hpg="http://wubank.net/cdf/hypotheken/generiek" xmlns:hyp="http://wubank.net/cdf/hypotheken">
+      <hyp:VolgNr>3</hyp:VolgNr>
+      <hyp:KredietVorm>RK</hyp:KredietVorm>
+      <hyp:Bedrag>5000</hyp:Bedrag>
+      <hyp:EersteAflossingJaarMaand>2005-07</hyp:EersteAflossingJaarMaand>
+      <hyp:PraktischLaatsteAflossingJaarMaand>2009-10</hyp:PraktischLaatsteAflossingJaarMaand>
+      <hyp:DoorBkrAfgelostIndicator>N</hyp:DoorBkrAfgelostIndicator>
+      <hyp:KredietRegistratieJaarWeek>2005-030</hyp:KredietRegistratieJaarWeek>
+      <hyp:EigenContractIndicator>N</hyp:EigenContractIndicator>
+    </hyp:KredietOvereenkomst>
+    <hyp:KredietOvereenkomst xmlns:hpg="http://wubank.net/cdf/hypotheken/generiek" xmlns:hyp="http://wubank.net/cdf/hypotheken">
+      <hyp:VolgNr>4</hyp:VolgNr>
+      <hyp:KredietVorm>TC</hyp:KredietVorm>
+      <hyp:Bedrag>0</hyp:Bedrag>
+      <hyp:EersteAflossingJaarMaand>2004-07</hyp:EersteAflossingJaarMaand>
+      <hyp:DoorBkrAfgelostIndicator>N</hyp:DoorBkrAfgelostIndicator>
+      <hyp:KredietRegistratieJaarWeek>2004-035</hyp:KredietRegistratieJaarWeek>
+      <hyp:EigenContractIndicator>N</hyp:EigenContractIndicator>
+    </hyp:KredietOvereenkomst>
+    <hyp:KredietOvereenkomst xmlns:hpg="http://wubank.net/cdf/hypotheken/generiek" xmlns:hyp="http://wubank.net/cdf/hypotheken">
+      <hyp:VolgNr>5</hyp:VolgNr>
+      <hyp:KredietVorm>RK</hyp:KredietVorm>
+      <hyp:Bedrag>5500</hyp:Bedrag>
+      <hyp:EersteAflossingJaarMaand>2004-02</hyp:EersteAflossingJaarMaand>
+      <hyp:PraktischLaatsteAflossingJaarMaand>2005-07</hyp:PraktischLaatsteAflossingJaarMaand>
+      <hyp:DoorBkrAfgelostIndicator>N</hyp:DoorBkrAfgelostIndicator>
+      <hyp:KredietRegistratieJaarWeek>2004-006</hyp:KredietRegistratieJaarWeek>
+      <hyp:EigenContractIndicator>N</hyp:EigenContractIndicator>
+    </hyp:KredietOvereenkomst>
+    <hyp:KredietOvereenkomst xmlns:hpg="http://wubank.net/cdf/hypotheken/generiek" xmlns:hyp="http://wubank.net/cdf/hypotheken">
+      <hyp:VolgNr>6</hyp:VolgNr>
+      <hyp:KredietVorm>RK</hyp:KredietVorm>
+      <hyp:Bedrag>999</hyp:Bedrag>
+      <hyp:EersteAflossingJaarMaand>2000-01</hyp:EersteAflossingJaarMaand>
+      <hyp:PraktischLaatsteAflossingJaarMaand>2005-06</hyp:PraktischLaatsteAflossingJaarMaand>
+      <hyp:DoorBkrAfgelostIndicator>N</hyp:DoorBkrAfgelostIndicator>
+      <hyp:KredietRegistratieJaarWeek>2002-003</hyp:KredietRegistratieJaarWeek>
+      <hyp:EigenContractIndicator>N</hyp:EigenContractIndicator>
+    </hyp:KredietOvereenkomst>
+    <hyp:KredietOvereenkomst xmlns:hpg="http://wubank.net/cdf/hypotheken/generiek" xmlns:hyp="http://wubank.net/cdf/hypotheken">
+      <hyp:VolgNr>7</hyp:VolgNr>
+      <hyp:KredietVorm>RK</hyp:KredietVorm>
+      <hyp:Bedrag>4000</hyp:Bedrag>
+      <hyp:EersteAflossingJaarMaand>2001-12</hyp:EersteAflossingJaarMaand>
+      <hyp:PraktischLaatsteAflossingJaarMaand>2005-06</hyp:PraktischLaatsteAflossingJaarMaand>
+      <hyp:DoorBkrAfgelostIndicator>N</hyp:DoorBkrAfgelostIndicator>
+      <hyp:KredietRegistratieJaarWeek>2001-052</hyp:KredietRegistratieJaarWeek>
+      <hyp:EigenContractIndicator>N</hyp:EigenContractIndicator>
+    </hyp:KredietOvereenkomst>
+    <hyp:KredietOvereenkomst xmlns:hpg="http://wubank.net/cdf/hypotheken/generiek" xmlns:hyp="http://wubank.net/cdf/hypotheken">
+      <hyp:VolgNr>8</hyp:VolgNr>
+      <hyp:KredietVorm>RK</hyp:KredietVorm>
+      <hyp:Bedrag>3500</hyp:Bedrag>
+      <hyp:EersteAflossingJaarMaand>2000-07</hyp:EersteAflossingJaarMaand>
+      <hyp:PraktischLaatsteAflossingJaarMaand>2005-05</hyp:PraktischLaatsteAflossingJaarMaand>
+      <hyp:DoorBkrAfgelostIndicator>N</hyp:DoorBkrAfgelostIndicator>
+      <hyp:KredietRegistratieJaarWeek>2000-025</hyp:KredietRegistratieJaarWeek>
+      <hyp:EigenContractIndicator>N</hyp:EigenContractIndicator>
+    </hyp:KredietOvereenkomst>
+  </hyp:BkrToetsing>
+  <hyp:OverigeToetsing xmlns:hpg="http://wubank.net/cdf/hypotheken/generiek" xmlns:hyp="http://wubank.net/cdf/hypotheken">
+    <hyp:Soort>SFH</hyp:Soort>
+    <hyp:Datum>2009-12-24</hyp:Datum>
+    <hyp:ResultaatCode>00</hyp:ResultaatCode>
+  </hyp:OverigeToetsing>
+  <hyp:OverigeToetsing xmlns:hpg="http://wubank.net/cdf/hypotheken/generiek" xmlns:hyp="http://wubank.net/cdf/hypotheken">
+    <hyp:Soort>VIS</hyp:Soort>
+    <hyp:Datum>2009-12-24</hyp:Datum>
+    <hyp:ResultaatCode>00</hyp:ResultaatCode>
+  </hyp:OverigeToetsing>
+</hyp:Schuldenaar>
+</hyp:cfSchuldenaar>

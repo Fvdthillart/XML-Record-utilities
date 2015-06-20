@@ -80,8 +80,8 @@ namespace Commandline.AnonymizeXML
                 for (int i = 1; i < args.Length; i++)
                   containerTags.Add(args[i]);
                 //Divide the XML files in XML records and write them to a directory with the same name as the XML file without the extension .xml
-                XMLRecordFile myXMLFile = new XMLRecordFile(args[0], containerTags.ToArray());
-                myXMLFile.Process(XMLRecordFile.ProcessType.Anonymize);
+                XMLRecordFileProcessor myXMLFile = new XMLRecordFileProcessor(args[0], containerTags.ToArray());
+                myXMLFile.Process(XMLRecordFileProcessor.ProcessType.Anonymize);
                 rc = 0; //Success
             }
             catch (ArgumentException e)

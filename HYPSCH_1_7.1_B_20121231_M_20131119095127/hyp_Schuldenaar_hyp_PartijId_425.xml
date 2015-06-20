@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hyp:cfSchuldenaar xmlns:hpg="http://wubank.net/cdf/hypotheken/generiek" xmlns:hyp="http://wubank.net/cdf/hypotheken">
+<hyp:Schuldenaar xmlns:hyp="http://wubank.net/cdf/hypotheken">
+  <hyp:PartijId>425</hyp:PartijId>
+  <hyp:AanvullendePersoonsgegevens>
+    <hyp:BurgerlijkeStaat>01</hyp:BurgerlijkeStaat>
+    <hyp:EigenPersoneelIndicator>N</hyp:EigenPersoneelIndicator>
+    <hyp:Legitimatie>
+      <hyp:Soort>VV</hyp:Soort>
+      <hyp:Nr>IDbewijsnr</hyp:Nr>
+    </hyp:Legitimatie>
+  </hyp:AanvullendePersoonsgegevens>
+</hyp:Schuldenaar>
+</hyp:cfSchuldenaar>

@@ -7,18 +7,18 @@ namespace Commandline.ExtractXMLRecord
     /// This class splits an XML file into the subtrees of an element called the containertag and writes each XML subtree to a directory 
     /// with the same name as the XML file to be split.<br/>
     /// The filenames in the directory are a concatenation of the names and values of elements, determined by socalled identifying tags which together have to uniquely identify the XMLTree otherwise files are overwritten.
-    /// This is a static class with a static main method to provide a commandline interface for the <see cref="Core.XMLRecords.XMLRecordFile"/> class.
+    /// This is a static class with a static main method to provide a commandline interface for the <see cref="Core.XMLRecords.XMLRecordFileProcessor"/> class.
     /// </summary>
     /// <remarks>
     /// <para>
     /// This class splits an XML file into the subtrees of an element called the containertag and writes each XML subtree to a directory 
     /// with the same name as the XML file to be split.<br/>
     /// The filenames in the directory are a concatenation of the names and values of elements, determined by socalled identifying tags which together have to uniquely identify the XMLTree otherwise files are overwritten.
-    /// This is a static class with a static main method to provide a commandline interface for the <see cref="Core.XMLRecords.XMLRecordFile"/> class.
+    /// This is a static class with a static main method to provide a commandline interface for the <see cref="Core.XMLRecords.XMLRecordFileProcessor"/> class.
     /// </para>
     /// <para></para>
     /// <para>
-    /// It evaluates the commandline and translates the parameters to arguments for the constructor of the <see cref="Core.XMLRecords.XMLRecordFile"/> class</para>
+    /// It evaluates the commandline and translates the parameters to arguments for the constructor of the <see cref="Core.XMLRecords.XMLRecordFileProcessor"/> class</para>
     /// <para>Parameters are:</para>
     /// <list type="number">
     /// <item><term>&lt;any name&gt;.xml</term><description>Name of the XML file to be split</description></item>
@@ -33,7 +33,7 @@ namespace Commandline.ExtractXMLRecord
     class extractXMLRecord
     {
         /// <summary>
-        /// Main function that parses the arguments and creates an instance of <see cref="Core.XMLRecords.XMLRecordFile"/>
+        /// Main function that parses the arguments and creates an instance of <see cref="Core.XMLRecords.XMLRecordFileProcessor"/>
         /// </summary>
         /// <param name="args">command line arguments</param>
 	   public static void Main(string[] args)
@@ -60,8 +60,8 @@ namespace Commandline.ExtractXMLRecord
                 }
 				
 				//Divide the XML files in XML records and write them to a directory with the same name as the XML file without the extension .xml
-				XMLRecordFile myXMLFile = new XMLRecordFile(args[0], args[1], IDTags);
-				myXMLFile.Process(XMLRecordFile.ProcessType.ToFile);
+				XMLRecordFileProcessor myXMLFile = new XMLRecordFileProcessor(args[0], args[1], IDTags);
+				myXMLFile.Process(XMLRecordFileProcessor.ProcessType.ToFile);
 				rc = 0; //Success
 			}
 			catch (Exception e) {

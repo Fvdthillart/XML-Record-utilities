@@ -74,23 +74,23 @@ namespace Core.XMLCompare
 			// Console.WriteLine(_identifyingTag);
 			
 			//Process the XML files and make XML recordlists of them
-            DateTime start = DateTime.Now;
-            DateTime startCompare = start;
-			XMLRecordFile firstXMLFile = new XMLRecordFile(_file1, _containerTag, _identifyingTags);
-			firstXMLFile.Process(XMLRecordFile.ProcessType.ToMemory);
-            DateTime stop = DateTime.Now;
-            TimeSpan duration = stop.Subtract(start);
-            if (_perf) Console.WriteLine("Duration of processing file {0}: {1:g}", _file1, duration);
+      DateTime start = DateTime.Now;
+      DateTime startCompare = start;
+			XMLRecordFileProcessor firstXMLFile = new XMLRecordFileProcessor(_file1, _containerTag, _identifyingTags);
+			firstXMLFile.Process(XMLRecordFileProcessor.ProcessType.ToMemory);
+      DateTime stop = DateTime.Now;
+      TimeSpan duration = stop.Subtract(start);
+      if (_perf) Console.WriteLine("Duration of processing file {0}: {1:g}", _file1, duration);
 
-            start = DateTime.Now;
-			XMLRecordFile secondXMLFile = new XMLRecordFile(_file2, _containerTag, _identifyingTags);
-			secondXMLFile.Process(XMLRecordFile.ProcessType.ToMemory);
-            stop = DateTime.Now;
-            duration = stop.Subtract(start);
-            if (_perf) Console.WriteLine("Duration of processing file {0}: {1:g}", _file2, duration);
+      start = DateTime.Now;
+			XMLRecordFileProcessor secondXMLFile = new XMLRecordFileProcessor(_file2, _containerTag, _identifyingTags);
+			secondXMLFile.Process(XMLRecordFileProcessor.ProcessType.ToMemory);
+      stop = DateTime.Now;
+      duration = stop.Subtract(start);
+      if (_perf) Console.WriteLine("Duration of processing file {0}: {1:g}", _file2, duration);
 			
 			//Make a unique list of IDs from both files
-            start = DateTime.Now;
+      start = DateTime.Now;
 			List<string> allIDs = new List<string>();
 			
 			foreach(string ID in firstXMLFile.getIDList()) {
@@ -100,15 +100,15 @@ namespace Core.XMLCompare
 			foreach(string ID in secondXMLFile.getIDList()) {
 				if(allIDs.IndexOf(ID) < 0) allIDs.Add(ID);
 			}
-            stop = DateTime.Now;
-            duration = stop.Subtract(start);
-            if (_perf) Console.WriteLine("Duration of making a unique list of IDs: {0:g}", duration);
+      stop = DateTime.Now;
+      duration = stop.Subtract(start);
+      if (_perf) Console.WriteLine("Duration of making a unique list of IDs: {0:g}", duration);
 
-            start = DateTime.Now;
-            allIDs.Sort();
-            stop = DateTime.Now;
-            duration = stop.Subtract(start);
-            if (_perf) Console.WriteLine("Duration of sorting the unique list of IDs: {0:g}", duration);
+      start = DateTime.Now;
+      allIDs.Sort();
+      stop = DateTime.Now;
+      duration = stop.Subtract(start);
+      if (_perf) Console.WriteLine("Duration of sorting the unique list of IDs: {0:g}", duration);
 			
 			StringBuilder filename = new StringBuilder("");
 			bool found1 = false;
@@ -116,59 +116,62 @@ namespace Core.XMLCompare
 			if (filePrefix.Length > 0) filename.AppendFormat("{0}_",filePrefix);
 			filename.Append("Compare summary.txt");
 
-            start = DateTime.Now;
-            TimeSpan[] durations = new TimeSpan[5];
-            //Initialiseer timespans
-            for (int i=0; i < durations.Length ; i++) {
-                durations[i] = new TimeSpan(0);
-            }
-            using (System.IO.StreamWriter file = new System.IO.StreamWriter(filename.ToString()))
+      start = DateTime.Now;
+      TimeSpan[] durations = new TimeSpan[5];
+      //Initialiseer timespans
+      for (int i=0; i < durations.Length ; i++) {
+          durations[i] = new TimeSpan(0);
+      }
+
+      using (System.IO.StreamWriter file = new System.IO.StreamWriter(filename.ToString()))
 			{
 				foreach(string ID in allIDs) {
-                    start = DateTime.Now;
-                    found1 = (firstXMLFile.getIDList().IndexOf(ID) >= 0);
-                    found2 = (secondXMLFile.getIDList().IndexOf(ID) >= 0);
-                    stop = DateTime.Now;
-                    durations[0] += stop.Subtract(start);
+          start = DateTime.Now;
+          found1 = (firstXMLFile.getIDList().IndexOf(ID) >= 0);
+          found2 = (secondXMLFile.getIDList().IndexOf(ID) >= 0);
+          stop = DateTime.Now;
+          durations[0] += stop.Subtract(start);
 
-                    start = DateTime.Now;
-                    StringBuilder msg = new StringBuilder("");
-                    msg.AppendFormat("{0} => ", _containerTag);
-                    string[] idTagnames = getIDTags().Split(',');
-                    string[] idvalues = ID.Split(',');
-                    for (int i = 0; i < idTagnames.Length; i++)
-                    {
-                        string tag = "";
-                        string value = "";
-                        if (i < idTagnames.Length) tag = idTagnames[i];
-                        if (i < idvalues.Length) value = idvalues[i];
-                        //clean values
-                        if (tag == null) tag = "";
-                        if (value == null) value = "";
+          start = DateTime.Now;
+          StringBuilder msg = new StringBuilder("");
+          msg.AppendFormat("{0} => ", _containerTag);
+          string[] idTagnames = getIDTags().Split(',');
+          string[] idvalues = ID.Split(',');
+          for (int i = 0; i < idTagnames.Length; i++)
+          {
+              string tag = "";
+              string value = "";
+              if (i < idTagnames.Length) tag = idTagnames[i];
+              if (i < idvalues.Length) value = idvalues[i];
+              //clean values
+              if (tag == null) tag = "";
+              if (value == null) value = "";
 
-                        //Neem waarde op als gevuld
-                        if (value.Length > 0)
-                            msg.AppendFormat("{0}:{1}\t", tag, value);
-                    }
+              //Neem waarde op als gevuld
+              if (value.Length > 0)
+                  msg.AppendFormat("{0}:{1}\t", tag, value);
+          }
                         
 					if(found1 && !found2) msg.AppendFormat("Only present in file 1:'{0}'", firstXMLFile.getFilename());
 					if(!found1 && found2) msg.AppendFormat("Only present in file 2:'{0}'", secondXMLFile.getFilename());
-                    stop = DateTime.Now;
-                    durations[1] += stop.Subtract(start);
+          stop = DateTime.Now;
+          durations[1] += stop.Subtract(start);
 
 
-                    start = DateTime.Now;
-                    if (found1 && found2)
-                    {
+          start = DateTime.Now;
+          if (found1 && found2)
+          {
 						msg.AppendFormat("Present in file '{0}' and file '{1}' => ", firstXMLFile.getFilename(), secondXMLFile.getFilename());
 						//Haal XMLRecords op
 						XMLRecord XMLRecord1 = firstXMLFile.getXMLRecord(ID);
-                        XmlDocument doc1 = new XmlDocument();
-                        doc1.LoadXml(String.Concat(firstXMLFile.getNamespaceTag(), XMLRecord1.getXMLRecord(), firstXMLFile.getEndNamespaceTag()));
+            XMLRecord1.MustBeValidatable = true;
+            XmlDocument doc1 = new XmlDocument();
+            doc1.LoadXml(XMLRecord1.getXMLRecord());
                         
-                        XMLRecord XMLRecord2 = secondXMLFile.getXMLRecord(ID);
-                        XmlDocument doc2 = new XmlDocument();
-                        doc2.LoadXml(String.Concat(secondXMLFile.getNamespaceTag(), XMLRecord2.getXMLRecord(), secondXMLFile.getEndNamespaceTag()));
+            XMLRecord XMLRecord2 = secondXMLFile.getXMLRecord(ID);
+            XMLRecord2.MustBeValidatable = true;
+            XmlDocument doc2 = new XmlDocument();
+            doc2.LoadXml(XMLRecord2.getXMLRecord());
 
 
 						bool equal  = false;
@@ -192,17 +195,19 @@ namespace Core.XMLCompare
 							msg.Append(" XML compare failed.");
                             StringBuilder sb = new StringBuilder(getIDTags());
 							sb.AppendFormat("{0}_file1_exception.xml", XMLRecord1.getID());
-							string filename_tmp = XMLRecordFile.cleanFilename(sb.ToString());
-							XMLRecord1.Write(filename_tmp,firstXMLFile.getNamespaceTag(), firstXMLFile.getEndNamespaceTag());
+							string filename_tmp = XMLRecordFileProcessor.cleanFilename(sb.ToString());
+              XMLRecord1.MustBeValidatable = true;
+							XMLRecord1.Write(filename_tmp);
 							msg.AppendFormat("\r\n{0} {1} opgeslagen in bestand {2}",_identifyingTags,XMLRecord1.getID(),filename_tmp);
 							// Console.WriteLine(XMLRecordFile.cleanFilename(sb.ToString()));
 
 							sb.Clear();
-                            sb.Append(getIDTags());
+              sb.Append(getIDTags());
 							sb.AppendFormat("{0}_file2_exception.xml", XMLRecord2.getID());
 							// Console.WriteLine(XMLRecordFile.cleanFilename(sb.ToString()));
-							filename_tmp = XMLRecordFile.cleanFilename(sb.ToString());
-							XMLRecord2.Write(filename_tmp,secondXMLFile.getNamespaceTag(), secondXMLFile.getEndNamespaceTag());
+							filename_tmp = XMLRecordFileProcessor.cleanFilename(sb.ToString());
+              XMLRecord2.MustBeValidatable = true;
+							XMLRecord2.Write(filename_tmp);
 							msg.AppendFormat("\r\n{0} {1} opgeslagen in bestand {2}",_identifyingTags,XMLRecord2.getID(),filename_tmp);
 
 							msg.AppendFormat("\r\nError message:\r\n{0}", e.ToString());

@@ -35,7 +35,7 @@ namespace Core.XMLRecords
     /// </summary>
     public string XmlDecl
     {
-      get { return String.Format("<?XML version=\"1.0\" encoding=\"{0}\"?>", Encoding); }
+      get { return String.Format("<?xml version=\"1.0\" encoding=\"{0}\"?>", Encoding); }
     }
     /// <summary>
     /// This array contain the names of the XML elements whose subtree will be the subtree of the XMLRecord. <br />
@@ -48,15 +48,33 @@ namespace Core.XMLRecords
     /// </summary>
     protected List<String> _IDTags;
     /// <summary>
-    /// Initial element of an XML file. Used to add to the begin and end of an XML Subtree in an XMLRecord to allow 
+    /// member to store initial element of an XML file. Used to add to the begin and end of an XML Subtree in an XMLRecord to allow 
     /// the XML to be validated against the original xsd's and ready to be processed
     /// </summary>
     protected string _namespaceTag = "";
+
+    /// <summary>
+    /// property to expose member <see cref="XMLRecordFileIterator.NamespaceTag"/>
+    /// </summary>
+    public string NamespaceTag
+    {
+      get { return _namespaceTag; }
+      set { _namespaceTag = value; }
+    }
     /// <summary>
     /// Closing tag of initial element of an XML file. Used to add to the begin and end of an XML Subtree in an XMLRecord to allow 
     /// the XML to be validated against the original XSD's and ready to be processed
     /// </summary>
     protected string _endNamespaceTag = "";
+
+    /// <summary>
+    /// property to expose member <see cref="XMLRecordFileIterator.EndNamespaceTag"/>
+    /// </summary>
+    public string EndNamespaceTag
+    {
+      get { return _endNamespaceTag; }
+      set { _endNamespaceTag = value; }
+    }
 
     #endregion
 
@@ -199,7 +217,7 @@ namespace Core.XMLRecords
           XmlNodeType Nodetype = myReader.NodeType; //zie de documentatie voor nodetypes
           int elementAttributeCount = myReader.AttributeCount;
 
-          if (myReader.NodeType == XmlNodeType.Element && _namespaceTag.Length == 0 && myReader.HasAttributes)
+          if (myReader.NodeType == XmlNodeType.Element && NamespaceTag.Length == 0 && myReader.HasAttributes)
           {
 
             StringBuilder sb = new StringBuilder("<");
@@ -209,14 +227,14 @@ namespace Core.XMLRecords
             //get all the attributes. myReader will read the attributes and skip to the next node
             sb.Append(getAttributes(myReader, elementAttributeCount));
             sb.AppendFormat(">");
-            _namespaceTag = sb.ToString();
+            NamespaceTag = sb.ToString();
 
 
             sb.Clear();
             sb.AppendFormat("</{0}>", elementName);
-            _endNamespaceTag = sb.ToString();
-            // Console.WriteLine(_namespaceTag);
-            // Console.WriteLine(_endNamespaceTag);
+            EndNamespaceTag = sb.ToString();
+            // Console.WriteLine(NamespaceTag);
+            // Console.WriteLine(EndNamespaceTag);
           }
 
           //Critical piece of this function: the finding of each container tag
@@ -252,7 +270,7 @@ namespace Core.XMLRecords
             }
 
             //format the XML subtree into something readable and store it in an XML Record
-            yield return new XMLRecord(IDs.ToArray(), PrintXML(doc.OuterXml), XmlDecl, _namespaceTag, _endNamespaceTag);
+            yield return XMLRecord.XMLRecordFactory(IDs, PrintXML(doc.OuterXml), XmlDecl, NamespaceTag, EndNamespaceTag);
 
           }
           canRead = myReader.Read();

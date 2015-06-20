@@ -31,7 +31,7 @@ namespace Commandline.AnonymizeCSV
     /// <para>Parameters are:</para>
     /// <list type="number">
     /// <item><term>form:&lt;any name&gt;.csv</term><description>Name of the CSV file</description></item>
-    /// <item><term>form:seperator="&lt;any single character&gt;"</term>
+    /// <item><term>form:separator="&lt;any single character&gt;"</term>
     /// <description>Indicates the character that separates the values</description></item>
     /// <item><term>form:textindicator=&lt;any single character&gt;</term>
     /// <description>Indicates the start and end of a text string</description></item>
@@ -40,7 +40,7 @@ namespace Commandline.AnonymizeCSV
     /// </remarks>
     /// <example>
     /// <para><strong>Example for a call to the executable:</strong></para>
-    /// <code>AnonymizeCSV.exe test.csv seperator=";" textIndicator=" headerrow=N</code>
+    /// <code>AnonymizeCSV.exe test.csv separator=";" textIndicator=" headerrow=N</code>
     /// </example>
     class AnonymizeCSV
     {
@@ -53,15 +53,15 @@ namespace Commandline.AnonymizeCSV
         /// </summary>
         private const string anonymizePostfix = ".Anonymous.csv";
         /// <summary>
-        /// Constant that is the name of the parameter that contains the seperator
+        /// Constant that is the name of the parameter that contains the separator
         /// </summary>
         private const string parmSeperator = "seperator";
         /// <summary>
-        /// Constant that is the name of the parameter that contains the seperator
+        /// Constant that is the name of the parameter that contains the separator
         /// </summary>
         private const string parmTextIndicator = "textindicator";
         /// <summary>
-        /// Constant that is the name of the parameter that contains the seperator
+        /// Constant that is the name of the parameter that contains the separator
         /// </summary>
         private const string parmheaderRowIndicator = "headerrow";
 
@@ -148,7 +148,7 @@ namespace Commandline.AnonymizeCSV
                     sbarg.Append(value);
                     sbarg.Append(" ");
                 }
-                //then we split the arguments based on a spaces a seperator
+                //then we split the arguments based on a spaces a separator
                 string[] arguments = sbarg.ToString().Trim().Split(' ');
 
                 //then we process the arguments
