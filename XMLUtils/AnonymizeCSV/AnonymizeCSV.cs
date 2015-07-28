@@ -219,9 +219,11 @@ namespace Commandline.AnonymizeCSV
                                 int result = 0;
                                 int pos = 0; // mag niet nul zijn na onderstaand if then statement
                                 msg = "Rule to be processed:\t" + rule.ToString();
-                                msg += "\r\nHeaders:\r\n";
-                                for (int i = 0; i < headers.Count; i++)
-                                    msg += headers[i] + seperator;
+                                if (headers != null) { 
+                                  msg += "\r\nHeaders:\r\n";
+                                  for (int i = 0; i < headers.Count; i++)
+                                      msg += headers[i] + seperator;
+                                }
                                 msg += "\r\nLine:\r\n" + line;
 
                                 if (Int32.TryParse(rule.Location, out result))

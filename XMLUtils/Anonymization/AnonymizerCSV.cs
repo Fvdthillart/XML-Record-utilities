@@ -127,7 +127,7 @@ namespace Core.Anonymization
                 else
                    value = String.Concat(value, token);
 
-                if (i == line.Length - 1 && value.Length > 0)
+                if (i == line.Length - 1 && ( value.Length > 0 || token.Equals(_seperator)))
                     result.Add(value);
             }
             return result;
