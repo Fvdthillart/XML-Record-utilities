@@ -28,7 +28,7 @@
     </TransformComponentArguments>
     <BuildAssemblerVerbosity>OnlyWarningsAndErrors</BuildAssemblerVerbosity>
     <BuildLogFile>..\build.log</BuildLogFile>
-    <HelpFileFormat>HtmlHelp1, MSHelpViewer, Website</HelpFileFormat>
+    <HelpFileFormat>HtmlHelp1, MSHelpViewer</HelpFileFormat>
     <IndentHtml>True</IndentHtml>
     <KeepLogFile>True</KeepLogFile>
     <DisableCodeBlockComponent>False</DisableCodeBlockComponent>
@@ -49,18 +49,19 @@
     </DocumentationSources>
     <NamespaceSummaries>
       <NamespaceSummaryItem name="(global)" isDocumented="False">THis is a test for the global namespace summary</NamespaceSummaryItem>
-<NamespaceSummaryItem name="Commandline.AnonymizeCSV" isDocumented="True">This namespace contains the class that compiles to the executable AnonymizeCSV.exe. It contains an explanation of its purpose and parameters</NamespaceSummaryItem>
-<NamespaceSummaryItem name="Commandline.AnonymizeXML" isDocumented="True">This namespace contains the class that compiles to the executable AnonymizeXML.exe. It contains an explanation of its purpose and parameters</NamespaceSummaryItem>
-<NamespaceSummaryItem name="Commandline.compareXMLRecords" isDocumented="True">This namespace contains the class that compiles to the executable compareXMLRecords.exe. It contains an explanation of its purpose and parameters</NamespaceSummaryItem>
-<NamespaceSummaryItem name="Commandline.ExtractXMLRecord" isDocumented="True">This namespace contains the class that compiles to the executable ExtractXMLRecord.exe. It contains an explanation of its purpose and parameters</NamespaceSummaryItem>
-<NamespaceSummaryItem name="Core.Anonymization" isDocumented="True">This namespace contains all the anonymization classes. The root class contains all the anonymization functions without file handling. The descendants add functionality to anonymize a specific type of file according to a set of rules</NamespaceSummaryItem>
-<NamespaceSummaryItem name="Core.XMLCompare" isDocumented="True">This namespace contains one class that compares 2 lists of XMLRecords, stored in XMLRecordfile instances.
+      <NamespaceSummaryItem name="Commandline.AnonymizeCSV" isDocumented="True">This namespace contains the class that compiles to the executable AnonymizeCSV.exe. It contains an explanation of its purpose and parameters</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Commandline.AnonymizeXML" isDocumented="True">This namespace contains the class that compiles to the executable AnonymizeXML.exe. It contains an explanation of its purpose and parameters</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Commandline.compareXMLRecords" isDocumented="True">This namespace contains the class that compiles to the executable compareXMLRecords.exe. It contains an explanation of its purpose and parameters</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Commandline.ExtractXMLRecord" isDocumented="True">This namespace contains the class that compiles to the executable ExtractXMLRecord.exe. It contains an explanation of its purpose and parameters</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Core.Anonymization" isDocumented="True">This namespace contains all the anonymization classes. The root class contains all the anonymization functions without file handling. The descendants add functionality to anonymize a specific type of file according to a set of rules</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Core.XMLCompare" isDocumented="True">This namespace contains one class that compares 2 lists of XMLRecords, stored in XMLRecordfile instances.
 The class makes use of the XML Diff and Patch classes from Microsoft</NamespaceSummaryItem>
-<NamespaceSummaryItem name="Core.XMLRecords" isDocumented="True">The XMLRecords namespace contains all the classes that work with the concept of XML Records.
+      <NamespaceSummaryItem name="Core.XMLRecords" isDocumented="True">The XMLRecords namespace contains all the classes that work with the concept of XML Records.
 An XMLRecord is an XML subtree which has a containertag as root element and is identified by 1 or more identifying elements.
 The concept was conceived of when a large XML file couldn't be compared and a way was needed to make this possible.</NamespaceSummaryItem>
-<NamespaceSummaryItem name="Core.XMLRecords.Anonymization" isDocumented="True">This namespace contains a derived class from the base Anonymizer class and is XMLRecordfile's interface to the Anonymizer functionality</NamespaceSummaryItem>
-<NamespaceSummaryItem name="XMLUtilsUnitTests" isDocumented="True">Unit tests for the XML Utilities</NamespaceSummaryItem></NamespaceSummaries>
+      <NamespaceSummaryItem name="Core.XMLRecords.Anonymization" isDocumented="True">This namespace contains a derived class from the base Anonymizer class and is XMLRecordfile's interface to the Anonymizer functionality</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="XMLUtilsUnitTests" isDocumented="True">Unit tests for the XML Utilities</NamespaceSummaryItem>
+    </NamespaceSummaries>
     <ProjectSummary>
     </ProjectSummary>
     <MissingTags>Summary, Parameter, AutoDocumentCtors, TypeParameter</MissingTags>
