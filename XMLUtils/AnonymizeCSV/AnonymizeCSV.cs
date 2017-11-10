@@ -79,9 +79,9 @@ namespace Commandline.AnonymizeCSV
             sb.Append("Parameters:\r\n");
             sb.Append("-----------\r\n");
             sb.Append("1. filename of the CSV file to be anonymized\r\n");
-            sb.Append("2.form:seperator=<any char>\tIndicates the character that separates the values\r\n");
-            sb.Append("3.form:textindicator=<any char>.\tIndicates the start and end of a text string\r\n");
-            sb.Append("4.form:headerrow=Y or N\tIndicates if there's a headerrow\r\n");
+            sb.Append("2. format:seperator=<any char>\tIndicates the character that separates the values\r\n");
+            sb.Append("3. format:textindicator=<any char>.\tIndicates the start and end of a text string\r\n");
+            sb.Append("4. format:headerrow=Y or N\tIndicates if there's a headerrow\r\n");
             sb.Append("\r\n");
             sb.Append("Example:\r\n");
             sb.Append("AnonymizeCSV.exe test.csv seperator=\";\" textIndicator=\" headerrow=N\r\n");
@@ -97,8 +97,6 @@ namespace Commandline.AnonymizeCSV
         {
             StringBuilder sb = new StringBuilder("\r\n");
             sb.Append(msg);
-            sb.Append("\r\n");
-            sb.Append("Helptekst:");
             sb.Append("\r\n");
             sb.Append(getHelpMessage());
             sb.Append("System error:");
@@ -117,7 +115,7 @@ namespace Commandline.AnonymizeCSV
             {
                 //check for arguments
                 if (args.Length == 0)
-                    throwException("Geen parameters.");
+                    throwException("No parameters.");
 
                 //check if the anonymizer file exists
                 if (!File.Exists(anonymizeFile))

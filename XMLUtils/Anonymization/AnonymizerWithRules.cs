@@ -271,7 +271,7 @@ namespace Core.Anonymization
         }
 
         /// <summary>
-        /// This function processes special anonymization rules that require parameters and/or filter conditions
+        /// This function processes special anonymization rules that require filters
         /// </summary>
         /// <param name="rule">Anonymization rule to be processed</param>
         /// <param name="value">The value to be anonymized</param>
@@ -286,6 +286,8 @@ namespace Core.Anonymization
 
             if (rule.IsFiltered && filterVariableValue != null)
             {
+                //example rule: file;header;Empty;header3;<;20
+                var compareresult = filterVariableValue.CompareTo(rule.FilterValue);
                 if (rule.FilterOperator == "<" && rule.Method == AnonymizeRule.MethodType.Empty)
                 {
                     result = value;
@@ -293,7 +295,7 @@ namespace Core.Anonymization
                     sb.AppendFormat("Filter rule {0} was correct (filterVariableValue={1}). Value {2} can be anonymized"
                     , rule.Filter, filterVariableValue, value);
                     Console.WriteLine(sb.ToString());
-                    if (filterVariableValue.CompareTo(rule.FilterValue) < 0)
+                    if (compareresult < 0)
                     {
                         Console.WriteLine("and was emptied");
                         result = "";
@@ -301,13 +303,43 @@ namespace Core.Anonymization
                     else
                         Console.WriteLine("but wasn't because it didn't satisfy the filter condition!");
                 }
-            }
-            else
+
+
+      }
+      else
             {
                 Console.WriteLine("Filter rule {0} was incorrect (filterVariableValue={1}). Value {2} was not anonymized!"
                     , rule.Filter, filterVariableValue, value);
             }
             return result;
         }
+    public bool IsFiltered(AnonymizeRule rule, string value, string filterValue)
+    {
+      var compareresult = value.CompareTo(rule.FilterValue);
+
+      if (!rule.IsFiltered)
+        return false;
+
+      if (rule.FilterOperator.Equals("!="))
+      {
+        return (compareresult != 0);
+      }
+      if (rule.FilterOperator.Equals("="))
+      {
+        return (compareresult == 0);
+      }
+      if (rule.FilterOperator.Equals("<"))
+      {
+        return (compareresult < 0);
+      }
+      if (rule.FilterOperator.Equals(">"))
+      {
+        return (compareresult > 0);
+      }
+
+      return false;
     }
+  }
+
+
 }
