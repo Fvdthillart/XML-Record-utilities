@@ -59,11 +59,15 @@ namespace Commandline.AnonymizeCSV
     /// <summary>
     /// Constant that is the name of the parameter that contains the separator
     /// </summary>
-    private const string parmTextIndicator = "textindicator";
+    private const string parmTextQualifier = "textindicator";
     /// <summary>
     /// Constant that is the name of the parameter that contains the separator
     /// </summary>
     private const string parmheaderRowIndicator = "headerrow";
+    /// <summary>
+    /// string constant for the parameter that determines the number of rows skipped
+    /// </summary>
+    private const string parmSkipTopRows = "skiprows";
 
     /// <summary>
     /// Returns a helpmessage
@@ -153,13 +157,14 @@ namespace Commandline.AnonymizeCSV
         string headerrow = "";
         string seperator = "";
         string textQualifier  = "";
+        int skiprows = 0;
         
         for (int i = 0; i < arguments.Length; i++) 
         {
           string [] argvalue = arguments[i].Split('=');
           string arg = argvalue[0].Trim().ToLower();
           string value = "";
-          if (argvalue.Length > 0)
+          if (argvalue.Length > 1)
             value = argvalue[1].Trim().ToLower();
 
           if (arg.Equals(parmheaderRowIndicator))
@@ -172,16 +177,20 @@ namespace Commandline.AnonymizeCSV
           if (seperator.Length == 0)
             seperator = ",";
 
-          if (arg.Equals(parmTextIndicator))
+          if (arg.Equals(parmTextQualifier))
             textQualifier = value;
           if (textQualifier.Length == 0)
             textQualifier = "\"";
+
+          if (arg.Equals(parmSkipTopRows))
+            skiprows = Convert.ToInt32(value);
         }
 
         //Initialize the Anonymizer object
         //Pass the inputfilename to the contructor so the anonymizer can determine
         //which anonymize rules are applicable to the inputfile
         bool header = (headerrow.ToUpper()=="Y");
+        bool skippedrows = false;
         AnonymizerCSV myAnonymizer = new AnonymizerCSV(inputfilename, anonymizeFile,seperator,textQualifier);
 
         // Read the input file and anonymize it
@@ -193,13 +202,25 @@ namespace Commandline.AnonymizeCSV
           using (StreamReader sr = new StreamReader(inputfilename))
           using (StreamWriter writer = File.CreateText(String.Concat(myAnonymizer.Filename, anonymizePostfix)))
           {
-            bool skip_first_row = header;
+            bool headingrow = header;
             while (sr.Peek() >= 0)
             {
+              string line = "";
+              countLines++;
+              //skip specified rows
+              if (skiprows > 0 && !skippedrows)
+              {
+                for (int i = 0; i < skiprows; i++)
+                {
+                  line = sr.ReadLine();
+                  writer.WriteLine(line);
+                }
+                skippedrows = true;
+              }
               //Read the line with the values to be anonymized
-              string line = sr.ReadLine();
+              line = sr.ReadLine();
               //Sla de eerste rij over als er een header is
-              if (skip_first_row)
+              if (headingrow)
               {
                 //process the header row
                 headers = myAnonymizer.split(line);
@@ -207,10 +228,10 @@ namespace Commandline.AnonymizeCSV
                 headers[i] = headers[i].Replace(textQualifier,"");
               }
 
-              countLines ++;
+
               //Split the line in its seperate values (no accounting for " or ')
               List<String> fields = myAnonymizer.split(line);
-              if (!skip_first_row)
+              if (!headingrow)
               {
                 foreach (AnonymizeRule rule in myAnonymizer.AnonymizerRules)
                 {
@@ -245,37 +266,42 @@ namespace Commandline.AnonymizeCSV
                   }
                   else
                   {
-                  //Het is geen numerieke waarde in rule.Location en het bevat geen :
-                  //dus moet het een header zijn
+                    //Het is geen numerieke waarde in rule.Location en het bevat geen :
+                    //dus moet het een header zijn
 
-                  //Bepaal of het een geldige header is en zo ja, zet pos op de index + 1
-                  for (int i = 0; i < headers.Count; i++)
-                  {
-                    if (rule.Location.Replace(textQualifier, "").Equals(headers[i], StringComparison.OrdinalIgnoreCase))
+                    //Bepaal of het een geldige header is en zo ja, zet pos op de index + 1
+                  
+                    for (int i = 0; i < headers.Count; i++)
                     {
-                    pos = i + 1;
-                    break;
+                      if (rule.Location.Replace(textQualifier, "").Equals(headers[i], StringComparison.OrdinalIgnoreCase))
+                      {
+                      pos = i + 1;
+                      break;
+                      }
                     }
-                  }
                   }
                 }
                 //Als pos nu nog kleiner of gelijk aan 0 is dan is het fout
                 if (pos <= 0)
                   rule.Allowed = false;
 
-                 
-                //pos bevat een geldige waarde
-                if (pos <= fields.Count && rule.Allowed)
-                {
-                  string anonymizedValue = myAnonymizer.Anonymize(fields[pos - 1], rule.Method);
-                  fields[pos - 1] = anonymizedValue;
-                }
-                else
-                {
-                  if (rule.Allowed)
-                  Console.WriteLine("{0} has an issue:\r\nPosition {1} is not a valid column index!", rule.ToString(), pos);
-                  rule.Allowed = false;
-                }
+
+                  //pos bevat een geldige waarde
+                  if (pos <= fields.Count && rule.Allowed)
+                  {
+                    if ((rule.IsFiltered && myAnonymizer.IsFiltered(rule, fields[pos - 1]))
+                        || !rule.IsFiltered)
+                    {
+                      string anonymizedValue = myAnonymizer.Anonymize(fields[pos - 1], rule.Method);
+                      fields[pos - 1] = anonymizedValue;
+                    }
+                  }
+                  else
+                  {
+                    if (rule.Allowed && !myAnonymizer.IsFiltered(rule, fields[pos - 1]))
+                      Console.WriteLine("{0} has an issue:\r\nLocation {1} is not a valid column indicator!", rule.ToString(), pos);
+                    rule.Allowed = false;
+                  }
                 }
               }
               //merge fields
@@ -289,10 +315,11 @@ namespace Commandline.AnonymizeCSV
 
               //writeline to file
               writer.WriteLine(sb.ToString());
-              if (skip_first_row)
-                skip_first_row = false;
+              if (headingrow)
+                headingrow = false;
             }
           }
+          if (header) countLines--;
           Console.WriteLine("{0} lines in file {1} anonymized with {2} rules."
             , countLines, inputfilename, myAnonymizer.AnonymizerRules.Count);
         }

@@ -311,32 +311,32 @@ namespace Core.Anonymization
         }
         return result;
       }
-      public bool IsFiltered(AnonymizeRule rule, string value, string filterValue)
-    {
-      var compareresult = value.CompareTo(rule.FilterValue);
+      public bool IsFiltered(AnonymizeRule rule, string value)
+      {
+        var compareresult = value.CompareTo(rule.FilterValue);
 
-      if (!rule.IsFiltered)
+        if (!rule.IsFiltered)
+          return false;
+
+        if (rule.FilterOperator.Equals("!="))
+        {
+          return (compareresult != 0);
+        }
+        if (rule.FilterOperator.Equals("="))
+        {
+          return (compareresult == 0);
+        }
+        if (rule.FilterOperator.Equals("<"))
+        {
+          return (compareresult < 0);
+        }
+        if (rule.FilterOperator.Equals(">"))
+        {
+          return (compareresult > 0);
+        }
+
         return false;
-
-      if (rule.FilterOperator.Equals("!="))
-      {
-        return (compareresult != 0);
       }
-      if (rule.FilterOperator.Equals("="))
-      {
-        return (compareresult == 0);
-      }
-      if (rule.FilterOperator.Equals("<"))
-      {
-        return (compareresult < 0);
-      }
-      if (rule.FilterOperator.Equals(">"))
-      {
-        return (compareresult > 0);
-      }
-
-      return false;
-    }
   }
 
 

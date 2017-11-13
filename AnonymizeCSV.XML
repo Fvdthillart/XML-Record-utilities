@@ -11,7 +11,7 @@
             This is static class with a static main method to provide a commandline interface for 
             the <see cref="T:Core.Anonymization.AnonymizerCSV"/> class.
             <para>
-            <strong>Executable:    </strong><see cref="T:Core.Anonymization.AnonymizerCSV"/>.exe
+            <strong>Executable:  </strong><see cref="T:Core.Anonymization.AnonymizerCSV"/>.exe
             </para>
             </summary>
             <remarks>
@@ -55,7 +55,7 @@
             Constant that is the name of the parameter that contains the separator
             </summary>
         </member>
-        <member name="F:Commandline.AnonymizeCSV.AnonymizeCSV.parmTextIndicator">
+        <member name="F:Commandline.AnonymizeCSV.AnonymizeCSV.parmTextQualifier">
             <summary>
             Constant that is the name of the parameter that contains the separator
             </summary>
@@ -63,6 +63,11 @@
         <member name="F:Commandline.AnonymizeCSV.AnonymizeCSV.parmheaderRowIndicator">
             <summary>
             Constant that is the name of the parameter that contains the separator
+            </summary>
+        </member>
+        <member name="F:Commandline.AnonymizeCSV.AnonymizeCSV.parmSkipTopRows">
+            <summary>
+            string constant for the parameter that determines the number of rows skipped
             </summary>
         </member>
         <member name="M:Commandline.AnonymizeCSV.AnonymizeCSV.getHelpMessage">

@@ -244,24 +244,5 @@ ModelManifest.xml
 *.jfm
 *.jfm
 *.jfm
-/XMLUtilsUnitTests.XML
-/XMLUtilsUnitTests.dll.lastcodeanalysissucceeded
-/XMLUtilsUnitTests.dll.CodeAnalysisLog.xml
-/XMLUtilsUnitTests.dll
-/XMLRecords.XML
-/XMLRecords.dll
-/Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
-/extractXMLRecord.XML
-/extractXMLRecord.exe.config
-/extractXMLRecord.exe
-/compareXMLRecords.XML
-/compareXMLRecords.exe.config
-/compareXMLRecords.exe
-/AnonymizeXML.XML
-/AnonymizeXML.exe.config
-/AnonymizeXML.exe
-/AnonymizeCSV.XML
-/AnonymizeCSV.exe.config
-/AnonymizeCSV.exe
-/Anonymization.XML
-/Anonymization.dll
+
+/*- kopie.*

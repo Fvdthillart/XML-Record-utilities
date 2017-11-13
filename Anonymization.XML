@@ -123,6 +123,13 @@
             </list>
             </remarks>
         </member>
+        <member name="M:Core.Anonymization.Anonymizer.AnonymizeGUID(System.String)">
+            <summary>
+            anonymizes a guid
+            </summary>
+            <param name="value">Value to be anonymized</param>
+            <returns>Anonymized value</returns>
+        </member>
         <member name="M:Core.Anonymization.Anonymizer.AnonymizeNumEqLen(System.String)">
             <summary>
             Anonymizes a number and keeps its length so the data content is useless but its characteristics remain. 
@@ -147,14 +154,14 @@
         </member>
         <member name="M:Core.Anonymization.Anonymizer.AnonymizeMD5Integer(System.String)">
             <summary>
-            Generates a MD5  hash , formatted as an integer
+            Generates a MD5 hash , formatted as an integer
             </summary>
             <param name="value">Value to be anonymized</param>
             <returns>Anonymized value</returns>
         </member>
         <member name="M:Core.Anonymization.Anonymizer.AnonymizeSHA1Integer(System.String)">
             <summary>
-            Generates a SHA1  hash , formatted as an integer
+            Generates a SHA1 hash , formatted as an integer
             </summary>
             <param name="value">Value to be anonymized</param>
             <returns>Anonymized value</returns>
@@ -176,7 +183,7 @@
         <member name="M:Core.Anonymization.Anonymizer.AnonymizeDate(System.String)">
             <summary>
             <para>if the date value has not already been anonymized, a random year is generated which lies 21 to 55 years before this date. Then a random month is chosen and a random day</para>
-            <para>if the date value has already been anonymized by this instance of Anonymizer, the same anonymized value as before  is returned</para>
+            <para>if the date value has already been anonymized by this instance of Anonymizer, the same anonymized value as before is returned</para>
             </summary>
             <param name="value">Value to be anonymized</param>
             <returns>Anonymized value</returns>
@@ -214,12 +221,12 @@
             Column seperator in the CSV file
             </summary>
         </member>
-        <member name="F:Core.Anonymization.AnonymizerCSV._textIndicator">
+        <member name="F:Core.Anonymization.AnonymizerCSV._textQualifier">
             <summary>
             Text qualifier that indicates that a text value starts or ends
             </summary>
         </member>
-        <member name="P:Core.Anonymization.AnonymizerCSV.TextIndicator">
+        <member name="P:Core.Anonymization.AnonymizerCSV.TextQualifier">
             <summary>
             Text qualifier that indicates that a text value starts or ends
             </summary>
@@ -420,7 +427,7 @@
             Determines if an object is equal to this instance of AnonymizeRule
             </summary>
             <param name="obj">Any object</param>
-            <returns>true if equal, false otherwise</returns>        
+            <returns>true if equal, false otherwise</returns>    
         </member>
         <member name="M:Core.Anonymization.AnonymizeRule.Equals(Core.Anonymization.AnonymizeRule)">
             <summary>
@@ -619,7 +626,7 @@
         </member>
         <member name="M:Core.Anonymization.AnonymizerWithRules.ProcessFilter(Core.Anonymization.AnonymizeRule,System.String,System.String)">
             <summary>
-            This function processes special anonymization rules that require parameters and/or filter conditions
+            This function processes special anonymization rules that require filters
             </summary>
             <param name="rule">Anonymization rule to be processed</param>
             <param name="value">The value to be anonymized</param>

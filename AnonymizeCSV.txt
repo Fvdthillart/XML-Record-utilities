@@ -1,6 +1,6 @@
-Agerend;PatientId;Text;PatientId;!=;NVT
-Agerend;AuthorMessageURA;Text
-Agerend;AuthorMessageUZI;Text
-Agerend;AuthorMessageFunction;Text
-Agerend;ResponsibleMessageUZI;Text
-Agerend;ResponsibleMessageFunction;Text
+Agerend;PatientId;GUID;PatientId;!=;NVT
+Agerend;AuthorMessageURA;NumEqLen
+Agerend;AuthorMessageUZI;NumEqLen
+Agerend;AuthorMessageFunction;NumEqLen
+Agerend;ResponsibleMessageUZI;NumEqLen
+Agerend;ResponsibleMessageFunction;NumEqLen
