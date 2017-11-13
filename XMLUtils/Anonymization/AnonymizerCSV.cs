@@ -41,14 +41,14 @@ namespace Core.Anonymization
         /// <summary>
         /// Text qualifier that indicates that a text value starts or ends
         /// </summary>
-        private string _textIndicator = "\"";
+        private string _textQualifier = "\"";
         /// <summary>
         /// Text qualifier that indicates that a text value starts or ends
         /// </summary>
-        public string TextIndicator
+        public string TextQualifier
         {
-            get { return _textIndicator; }
-            set { _textIndicator = value; }
+            get { return _textQualifier; }
+            set { _textQualifier = value; }
         }
 
         /// <summary>
@@ -64,7 +64,7 @@ namespace Core.Anonymization
             base.common_constructor(file_to_be_anonymized);
             _anonymizerFile = rulesFile;
             _seperator = sep;
-            _textIndicator = textInd;
+            _textQualifier = textInd;
             base.ProcessAnonymizerFile();
         }
 
@@ -96,7 +96,7 @@ namespace Core.Anonymization
             {
                 string token = line[i].ToString();
 
-                if (token.Equals(_textIndicator))
+                if (token.Equals(_textQualifier))
                 {
                     if (!text)
                         text = true;
