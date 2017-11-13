@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AnonymizeCSV</name>
+    </assembly>
+    <members>
+        <member name="T:Commandline.AnonymizeCSV.AnonymizeCSV">
+            <summary>
+            This class anonymizes a csv according to the rules in AnonymizeCSV.txt and writes the result
+            to a file with the orginal filename and "_Anonymous" appended to it
+            This is static class with a static main method to provide a commandline interface for 
+            the <see cref="T:Core.Anonymization.AnonymizerCSV"/> class.
+            <para>
+            <strong>Executable:    </strong><see cref="T:Core.Anonymization.AnonymizerCSV"/>.exe
+            </para>
+            </summary>
+            <remarks>
+            <para>
+            This class processes a csv, anonymizes according to the rules in anonymizeCSV.txt and writes the result
+            to a file with the orginal filename and "_Anonymous" appended to it
+            This is static class with a static main method to provide a commandline interface for 
+            the <see cref="T:Core.Anonymization.AnonymizerCSV"/> class.
+            </para>
+            <para></para>
+            <para>
+            It evaluates the commandline and translates the parameters to arguments voor the constructor 
+            of <see cref="T:Core.Anonymization.AnonymizerCSV"/></para>
+            <para>Parameters are:</para>
+            <list type="number">
+            <item><term>form:&lt;any name&gt;.csv</term><description>Name of the CSV file</description></item>
+            <item><term>form:separator="&lt;any single character&gt;"</term>
+            <description>Indicates the character that separates the values</description></item>
+            <item><term>form:textindicator=&lt;any single character&gt;</term>
+            <description>Indicates the start and end of a text string</description></item>
+            <item><term>form:headerrow=Y or N</term><description>Indicates if there's a headerrow</description></item>
+            </list>
+            </remarks>
+            <example>
+            <para><strong>Example for a call to the executable:</strong></para>
+            <code>AnonymizeCSV.exe test.csv separator=";" textIndicator=" headerrow=N</code>
+            </example>
+        </member>
+        <member name="F:Commandline.AnonymizeCSV.AnonymizeCSV.anonymizeFile">
+            <summary>
+            Contains the constant voor the file with the anonymization rules, currently AnonymizeCSV.txt
+            </summary>
+        </member>
+        <member name="F:Commandline.AnonymizeCSV.AnonymizeCSV.anonymizePostfix">
+            <summary>
+            Postfix to add to the original filename to produce the filename of the file with the anonymized data, currently _Anonymous
+            </summary>
+        </member>
+        <member name="F:Commandline.AnonymizeCSV.AnonymizeCSV.parmSeperator">
+            <summary>
+            Constant that is the name of the parameter that contains the separator
+            </summary>
+        </member>
+        <member name="F:Commandline.AnonymizeCSV.AnonymizeCSV.parmTextIndicator">
+            <summary>
+            Constant that is the name of the parameter that contains the separator
+            </summary>
+        </member>
+        <member name="F:Commandline.AnonymizeCSV.AnonymizeCSV.parmheaderRowIndicator">
+            <summary>
+            Constant that is the name of the parameter that contains the separator
+            </summary>
+        </member>
+        <member name="M:Commandline.AnonymizeCSV.AnonymizeCSV.getHelpMessage">
+            <summary>
+            Returns a helpmessage
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Commandline.AnonymizeCSV.AnonymizeCSV.throwException(System.String)">
+            <summary>
+            Function to simplify throwing exceptions
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="M:Commandline.AnonymizeCSV.AnonymizeCSV.Main(System.String[])">
+            <summary>
+            Main function that parses the arguments and creates an instance of <see cref="T:Core.Anonymization.AnonymizerCSV"/>
+            Then it processes the file to be anonymzed.
+            </summary>
+            <param name="args">command line arguments</param>
+        </member>
+    </members>
+</doc>

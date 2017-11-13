@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>XMLUtilsUnitTests</name>
+    </assembly>
+    <members>
+        <member name="T:XMLUtilsUnitTests.XMLRecordTest">
+            <summary>
+            Unit test for class XMLRecord
+            </summary>
+        </member>
+        <member name="M:XMLUtilsUnitTests.XMLRecordTest.XMLRecordSearchConstructor">
+            <summary>
+            Test if a simplified constructor for an indexOf implementation works correctly
+            </summary>
+        </member>
+        <member name="M:XMLUtilsUnitTests.XMLRecordTest.XMLRecordBehaviorInList">
+            <summary>
+            Test to see if all the list functions like IndexOf and Sort function as expected
+            </summary>
+        </member>
+        <member name="M:XMLUtilsUnitTests.XMLRecordTest.XMLRecordfactoryMethodAllArgsAreNull">
+            <summary>
+            Test for factory method <see cref="M:Core.XMLRecords.XMLRecord.XMLRecordFactory(System.Collections.Generic.List{System.String},System.String,System.String,System.String,System.String)"/> 
+            to see if null parameters return a null reference and throw the correct exceptions
+            </summary>
+        </member>
+        <member name="M:XMLUtilsUnitTests.XMLRecordTest.XMLRecordfactoryMethodSuccesfulInstantiation">
+            <summary>
+            Test for factory method <see cref="M:Core.XMLRecords.XMLRecord.XMLRecordFactory(System.Collections.Generic.List{System.String},System.String,System.String,System.String,System.String)"/> 
+            to see if all parameters are correctly handled
+            </summary>
+        </member>
+        <member name="M:XMLUtilsUnitTests.XMLRecordTest.XMLrecordMustBevalidatable">
+            <summary>
+            Test a new feature in the XMLRecord class: property <see cref="P:Core.XMLRecords.XMLRecord.MustBeValidatable"/>
+            If the property is set to true, an xml declaration and a root element are added if they are stored in the XMLRecord. 
+            </summary>
+        </member>
+        <member name="T:XMLUtilsUnitTests.XMLRecordFileProcessorTest">
+            <summary>
+            Unit tests for the XMLRecordFileProcessor
+            </summary>
+        </member>
+        <member name="M:XMLUtilsUnitTests.XMLRecordFileProcessorTest.XMLRecordFileProcessorToMemory">
+            <summary>
+            Test ToMemory processing
+            ToMemory stores the XML Records of a file in a list of type List<![CDATA[<XMLRecord>]]>
+            The <see cref="T:Core.XMLRecords.XMLRecordFileProcessor"/> class exposes this list by means of:
+            <list type="bullet">
+            <item>the public property <see cref="P:Core.XMLRecords.XMLRecordFileProcessor.XMLRecordList"/></item>
+            <item>the method <see cref="M:Core.XMLRecords.XMLRecordFileProcessor.IndexOf(System.String)"/></item>
+            <item>the method <see cref="M:Core.XMLRecords.XMLRecordFileProcessor.getXMLRecord(System.String)"/></item>
+            <item>the method <see cref="M:Core.XMLRecords.XMLRecordFileProcessor.getIDList"/></item>
+            </list>
+            </summary>
+        </member>
+        <member name="M:XMLUtilsUnitTests.XMLRecordFileProcessorTest.XMLRecordFileProcessorToFile">
+            <summary>
+            <strong>Test processing type toFile</strong><br />
+            The original file in filename will be processed and every XMLRecord is written to a file
+            in a compressed directory that has the same name as the file except for ".xml"
+            </summary>
+        </member>
+        <member name="M:XMLUtilsUnitTests.XMLRecordFileProcessorTest.XMLRecordFileProcessorAnonymizeToFile">
+            <summary>
+            <strong>Test processing type AnonymizetoFile</strong><br />
+            The original file in filename will be processed and every XMLRecord is written to a file
+            in a compressed directory that has the same name as the file except for ".xml"
+            The contents of the files will be anonymized according to the anonymization rules in anonymize.text
+            </summary>
+        </member>
+        <member name="T:XMLUtilsUnitTests.XMLRecordFileIteratorTest">
+            <summary>
+            Unit tests for <see cref="T:Core.XMLRecords.XMLRecordFileIterator"/>
+            </summary>
+        </member>
+        <member name="M:XMLUtilsUnitTests.XMLRecordFileIteratorTest.XMLRecordFileIteratorFactoryMethodAllNullArgs">
+            <summary>
+            Test if the correct exception is thrown when all arguments are null
+            </summary>
+        </member>
+        <member name="M:XMLUtilsUnitTests.XMLRecordFileIteratorTest.XMLRecordFileIteratorFactoryMethodListsAreNull">
+            <summary>
+            Test if the correct exception is thrown when either the Containertags list or the IDtags list is null
+            </summary>
+        </member>
+        <member name="M:XMLUtilsUnitTests.XMLRecordFileIteratorTest.XMLRecordFileIteratorFactoryMethodNoItemsInList">
+            <summary>
+            Test if the correct exception is thrown when the lists are not null but contain no elements
+            </summary>
+        </member>
+        <member name="M:XMLUtilsUnitTests.XMLRecordFileIteratorTest.XMLRecordFileIteratorSuccesfulInstantiationAndIteration">
+            <summary>
+            Test if iterator works correctly. The XMLRecords are outputted
+            </summary>
+        </member>
+    </members>
+</doc>

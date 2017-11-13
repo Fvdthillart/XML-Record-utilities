@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AnonymizeXML</name>
+    </assembly>
+    <members>
+        <member name="T:Commandline.AnonymizeXML.AnonymizeXML">
+            <summary>
+            This class anonymizes an XML file according to the rules in Anonymize.txt and writes the result
+            to a file with the orginal filename and "_Anonymous" appended to it
+            This is a static class with a static main method to provide a commandline interface for the <see cref="T:Core.XMLRecords.Anonymization.AnonymizerXML"/> class.
+            </summary>
+            <remarks>
+            <para>
+            This class anonymizes an XML file according to the rules in Anonymize.txt and writes the result
+            to a file with the orginal filename and "_Anonymous" appended to it
+            This is a static class with a static main method to provide a commandline interface for the <see cref="T:Core.XMLRecords.Anonymization.AnonymizerXML"/> class.
+            </para>
+            <para></para>
+            <para>
+            It evaluates the commandline and translates the parameters to arguments for the constructor of the <see cref="T:Core.XMLRecords.Anonymization.AnonymizerXML"/> class</para>
+            <para>Parameters are:</para>
+            <list type="number">
+            <item><term>&lt;any name&gt;.xml</term><description>Name of the file to be anonymized</description></item>
+            <item><term>any XML element(s) without &lt; and &gt;</term><description>The element(s) that define(s) the subtree(s) to be anonymized</description></item>
+            <para>The class can process 1 or more containertags.</para>
+            </list>
+            </remarks>
+            <example>
+            <para><strong>Example for a call to the executable:</strong></para>
+            <code>AnonymizeXML.exe EP_NN-Transactiegegevens_B_M_2014070101011406.xml transaction</code>
+            <para><strong>Example for a call to the executable with multiple tags:</strong></para>
+            <code>AnonymizeXML.exe </code>
+            </example>
+        </member>
+        <member name="F:Commandline.AnonymizeXML.AnonymizeXML.anonymizeFile">
+            <summary>
+            name of the file with the anonymization rules
+            </summary>
+        </member>
+        <member name="M:Commandline.AnonymizeXML.AnonymizeXML.getHelpMessage">
+            <summary>
+            Returns a help text to be used in Exception messages
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Commandline.AnonymizeXML.AnonymizeXML.Main(System.String[])">
+            <summary>
+            Main function that parses the arguments and creates an instance of <see cref="T:Core.XMLRecords.Anonymization.AnonymizerXML"/>
+            </summary>
+            <param name="args">command line arguments</param>
+        </member>
+    </members>
+</doc>

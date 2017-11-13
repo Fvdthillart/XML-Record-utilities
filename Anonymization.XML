@@ -1,0 +1,633 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Anonymization</name>
+    </assembly>
+    <members>
+        <member name="T:Core.Anonymization.AnonymizeCache">
+            <summary>
+            This class contains an original value and its corresponding anonymized value so that one way anonymizations can still 
+            have the same result in the same file.
+            It's compatible with the List<![CDATA[<T>]]> datatype
+            </summary>
+        </member>
+        <member name="F:Core.Anonymization.AnonymizeCache._original_value">
+            <summary>
+            The original unanonymized value
+            </summary>
+        </member>
+        <member name="P:Core.Anonymization.AnonymizeCache.Original_value">
+            <summary>
+            The original unanonymized value
+            </summary>
+        </member>
+        <member name="F:Core.Anonymization.AnonymizeCache._anonymous_value">
+            <summary>
+            The anonymized value
+            </summary>
+        </member>
+        <member name="P:Core.Anonymization.AnonymizeCache.Anonymous_value">
+            <summary>
+            The anonymized value
+            </summary>
+        </member>
+        <member name="M:Core.Anonymization.AnonymizeCache.#ctor">
+            <summary>
+            Intializes original value and Anonymous value to an empty string
+            </summary>
+        </member>
+        <member name="M:Core.Anonymization.AnonymizeCache.#ctor(System.String,System.String)">
+            <summary>
+            Intializes original value and Anonymous value to the value of the parameter
+            </summary>
+            <param name="org">New value for orginal value</param>
+            <param name="ano">New value for anonymous value</param>
+        </member>
+        <member name="M:Core.Anonymization.AnonymizeCache.Equals(System.Object)">
+            <summary>
+            Determines if an object is equal to this instance of AnonymizeCache
+            </summary>
+            <param name="obj">Any object</param>
+            <returns>true if equal, false otherwise</returns>
+        </member>
+        <member name="M:Core.Anonymization.AnonymizeCache.Equals(Core.Anonymization.AnonymizeCache)">
+            <summary>
+            Determines if an object is equal to this instance of AnonymizeCache
+            </summary>
+            <param name="other">the anonymizeCache instance this instance is compared to</param>
+            <returns>true if equal, false otherwise</returns>
+        </member>
+        <member name="M:Core.Anonymization.AnonymizeCache.GetHashCode">
+            <summary>
+            returns the hashcode of the original and the anonymized value, concatenated with a space in between
+            </summary>
+            <returns>a hashcode</returns>
+        </member>
+        <member name="M:Core.Anonymization.AnonymizeCache.CompareTo(Core.Anonymization.AnonymizeCache)">
+            <summary>
+            <para>Compares one Anonymizecache instance to another.</para>
+            <para>Required for implementation in a generic list</para>
+            </summary>
+            <param name="other">the anonymizeCache instance this instance is compared to</param>
+            <returns>return 1 if greater, 0 if equal and -1 if smaller</returns>
+        </member>
+        <member name="T:Core.Anonymization.Anonymizer">
+            <summary>
+            The anonymizer class is used to replace meaningful values with meaningless values.
+            Anonymizing is done to cloak personal information like names, account number and anything that can be used
+            to identify a person and use that information in a way that was not intended by the person, identified by the information
+            </summary>
+        </member>
+        <member name="F:Core.Anonymization.Anonymizer.RNDGen">
+            <summary>
+            Random generator to be used by 1 way anonymizations that replaces characters with random characters like the text method
+            </summary>
+        </member>
+        <member name="F:Core.Anonymization.Anonymizer._dateCache">
+            <summary>
+            Cache to save data anonymizations. This allows that the same date produces the same anonymized value
+            </summary>
+        </member>
+        <member name="M:Core.Anonymization.Anonymizer.#ctor">
+            <summary>
+            Initializes the anonymizer
+            </summary>
+        </member>
+        <member name="M:Core.Anonymization.Anonymizer.common_constructor">
+            <summary>
+            Function that's called in all constructors
+            </summary>
+        </member>
+        <member name="M:Core.Anonymization.Anonymizer.GetHash(System.String,System.String,System.String)">
+            <summary>
+            Function that encapsulates calls to the MD5, SHA1Managed en SHA512Managed classes in <see cref="N:System.Security.Cryptography"/> 
+            </summary>
+            <param name="HashType">String. MD5, SHA1 and SHA512 are legitimate values</param>
+            <param name="input">string that will be hashed</param>
+            <param name="format">output format of the string. See ToString(format) in the .NET documentation for details</param>
+            <returns>returns a string with the hash value. If the hashtype is not recognized, it returns an empty string</returns>
+        </member>
+        <member name="M:Core.Anonymization.Anonymizer.AnonymizeText(System.String)">
+            <summary>
+            anonimizes a random text
+            </summary>
+             <param name="value">Value to be anonymized</param>
+             <returns>Anonymized value</returns>
+            <remarks>
+            <para>AnonymizeText anonymizes the given data according to the rules below:</para>
+            <list type="number">
+            <item>Each number is replaced by a random number but not the same</item>
+            <item>Each whitespace and aspecial character remains as is</item>
+            <item>Each letter is replaced by a random different letter</item>
+            <item>Special characters enclosed in <![CDATA[&]]> and <![CDATA[;]]> like <![CDATA[&quot;]]> will remain intact</item>
+            </list>
+            </remarks>
+        </member>
+        <member name="M:Core.Anonymization.Anonymizer.AnonymizeNumEqLen(System.String)">
+            <summary>
+            Anonymizes a number and keeps its length so the data content is useless but its characteristics remain. 
+            Useful for Id's as the same number yields the same anonymized value without any caching or lookup tables
+            </summary>
+            <param name="value">Value to be anonymized</param>
+            <returns>Anonymized value</returns>
+        </member>
+        <member name="M:Core.Anonymization.Anonymizer.AnonymizeHouseAidVnr(System.String)">
+            <summary>
+            This function allows for numbers that are concatenated with a / and only the first number must be anonymized with the <see cref="F:Core.Anonymization.AnonymizeRule.MethodType.NumEqLen"/> method
+            </summary>
+            <param name="value">Value to be anonymized</param>
+            <returns>Anonymized value</returns>
+        </member>
+        <member name="M:Core.Anonymization.Anonymizer.AnonymizeTrueFalse(System.String)">
+            <summary>
+            This function gives a random true or false
+            </summary>
+            <param name="value">Value to be anonymized</param>
+            <returns>Anonymized value</returns>
+        </member>
+        <member name="M:Core.Anonymization.Anonymizer.AnonymizeMD5Integer(System.String)">
+            <summary>
+            Generates a MD5  hash , formatted as an integer
+            </summary>
+            <param name="value">Value to be anonymized</param>
+            <returns>Anonymized value</returns>
+        </member>
+        <member name="M:Core.Anonymization.Anonymizer.AnonymizeSHA1Integer(System.String)">
+            <summary>
+            Generates a SHA1  hash , formatted as an integer
+            </summary>
+            <param name="value">Value to be anonymized</param>
+            <returns>Anonymized value</returns>
+        </member>
+        <member name="M:Core.Anonymization.Anonymizer.AnonymizeSHA512Integer(System.String)">
+            <summary>
+            Generates a SHA512 hash, formatted as an integer
+            </summary>
+            <param name="value">Value to be anonymized</param>
+            <returns>Anonymized value</returns>
+        </member>
+        <member name="M:Core.Anonymization.Anonymizer.AnonymizeMD5Decimal(System.String)">
+            <summary>
+            Generates a MD5 hash, formatted as a decimal
+            </summary>
+            <param name="value">Value to be anonymized</param>
+            <returns>Anonymized value</returns>
+        </member>
+        <member name="M:Core.Anonymization.Anonymizer.AnonymizeDate(System.String)">
+            <summary>
+            <para>if the date value has not already been anonymized, a random year is generated which lies 21 to 55 years before this date. Then a random month is chosen and a random day</para>
+            <para>if the date value has already been anonymized by this instance of Anonymizer, the same anonymized value as before  is returned</para>
+            </summary>
+            <param name="value">Value to be anonymized</param>
+            <returns>Anonymized value</returns>
+        </member>
+        <member name="M:Core.Anonymization.Anonymizer.Anonymize(System.String,Core.Anonymization.AnonymizeRule.MethodType)">
+            <summary>
+            Generic interface to the specialized protected functions of this class
+            </summary>
+            <param name="value">Value to be anonymized</param>
+            <param name="method">Anonymization Method. See <see cref="T:Core.Anonymization.AnonymizeRule.MethodType"/></param>
+            <returns>Anonymized value</returns>
+        </member>
+        <member name="T:Core.Anonymization.AnonymizerCSV">
+            <summary>
+            This class anonymizes a CSV file, based on a file with Anonymization rules
+            </summary>
+            <remarks>
+            <para>
+            Most of its functionality is already described in the documentation for its ancestor <see cref="T:Core.Anonymization.AnonymizerWithRules"/> class.
+            </para>
+            </remarks>
+        </member>
+        <member name="F:Core.Anonymization.AnonymizerCSV.whitespace">
+            <summary>
+            string with characters that are whitespace
+            </summary>
+        </member>
+        <member name="F:Core.Anonymization.AnonymizerCSV._seperator">
+            <summary>
+            Column seperator in the CSV file
+            </summary>
+        </member>
+        <member name="P:Core.Anonymization.AnonymizerCSV.Seperator">
+            <summary>
+            Column seperator in the CSV file
+            </summary>
+        </member>
+        <member name="F:Core.Anonymization.AnonymizerCSV._textIndicator">
+            <summary>
+            Text qualifier that indicates that a text value starts or ends
+            </summary>
+        </member>
+        <member name="P:Core.Anonymization.AnonymizerCSV.TextIndicator">
+            <summary>
+            Text qualifier that indicates that a text value starts or ends
+            </summary>
+        </member>
+        <member name="M:Core.Anonymization.AnonymizerCSV.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            Constructor with 5 parameters
+            </summary>
+            <param name="file_to_be_anonymized">CSV file to be anonymized</param>
+            <param name="rulesFile">File that contains the anonymization rules. See below for the syntax of these rules</param>
+            <param name="sep">Column seperator in the CSV file</param>
+            <param name="textInd">Text qualifier that indicates that a text value starts or ends and that column seperators
+            witin these text qualifiers should be ignored. Can be empty</param>
+        </member>
+        <member name="M:Core.Anonymization.AnonymizerCSV.split(System.String)">
+            <summary>
+            This function splits a line of comma seperated values according to the stored seperator
+            and text indicator
+            </summary>
+            <param name="line">a text line that contains the comma separated values</param>
+            <returns>the comma separated values as an array</returns>
+            <remarks>
+            <par>The processing algoritm of split is different.</par>
+            <para>Instead of splitting on every occurrence of seperator, the splitter first checks if the seperator is 
+            preceded by a starting text qualifier.
+            If this occurs, it checks if the first non-whitespace after the next text qualifier is a seperator. 
+            If so, it sees the value between the textqualifiers as a column.
+            if not, it searches for the next text qualifier and does the same check.
+            </para><para>
+            This way constructions like "" or \" are avoided. Of course, combinations of seperator and textqualifier 
+            can still pose problems but these can be solved by choosing an exotic qualifier 
+            that isn't used in natural language
+            </para>
+            </remarks>
+        </member>
+        <member name="T:Core.Anonymization.AnonymizeRule">
+            <summary>
+            <para>This class is a value class for storing anonymization rules</para>
+            <para>
+            An anonymization rule consists of a location and a method of anonymization as specified in <see cref="T:Core.Anonymization.AnonymizeRule.MethodType"/>.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Core.Anonymization.AnonymizeRule.MethodType">
+            <summary>
+            Contains all anonymization methods that are provided by class <see cref="T:Core.Anonymization.Anonymizer"/>
+            </summary>
+        </member>
+        <member name="F:Core.Anonymization.AnonymizeRule.MethodType.Unknown">
+            <summary>
+            Default value for any variables of this type
+            </summary>
+        </member>
+        <member name="F:Core.Anonymization.AnonymizeRule.MethodType.Text">
+            <summary>
+            Indicates that values will be anonymized by replacing letters with a random other letter and numbers with a different random number
+            </summary>
+        </member>
+        <member name="F:Core.Anonymization.AnonymizeRule.MethodType.Date">
+            <summary>
+            Replaces the original date with a random date. Uses <see cref="T:Core.Anonymization.AnonymizeCache"/> to produce the same result date with the same input for the
+            same instance of anonymizer
+            </summary>
+        </member>
+        <member name="F:Core.Anonymization.AnonymizeRule.MethodType.MD5Integer">
+            <summary>
+            Makes an MD5 hash of the input value. Unfortunately, it generates a LONG value even when the original value is short (a 4 char string produces a 32 char anonymized value)
+            </summary>
+        </member>
+        <member name="F:Core.Anonymization.AnonymizeRule.MethodType.SHA512Number">
+            <summary>
+            Makes a SHA 512 hash of the input value. Unfortunately, it generates a LONG value even when the original value is short (a 4 char string produces a 32 char anonymized value)
+            </summary>
+        </member>
+        <member name="F:Core.Anonymization.AnonymizeRule.MethodType.SHA1Number">
+            <summary>
+            Makes a SHA 1 hash of the input value. Unfortunately, it generates a LONG value even when the original value is short (a 4 char string produces a 32 char anonymized value)
+            </summary>
+        </member>
+        <member name="F:Core.Anonymization.AnonymizeRule.MethodType.NumEqLen">
+            <summary>
+            A custom algorithm that anonymizes a number while retaining its length
+            </summary>
+        </member>
+        <member name="F:Core.Anonymization.AnonymizeRule.MethodType.HouseAidVnr">
+            <summary>
+            Method specfic to the HOUSE XML anonymization where a key value is concatenatd with a version
+            </summary>
+        </member>
+        <member name="F:Core.Anonymization.AnonymizeRule.MethodType.TrueFalse">
+            <summary>
+            Randomizes a true or false, regardless of the original value
+            </summary>
+        </member>
+        <member name="F:Core.Anonymization.AnonymizeRule.MethodType.Empty">
+            <summary>
+            <para>Returns an empty value, regardless of original value if no filter is supplied</para>
+            <para>When a filter IS supplied in the <see cref="T:Core.Anonymization.AnonymizeRule"/>, this method makes more sense.
+            It's especially useful when needing to eliminate old values from a set. See function <see cref="M:Core.Anonymization.AnonymizerWithRules.ProcessFilter(Core.Anonymization.AnonymizeRule,System.String,System.String)"/>
+            </para>
+            </summary>
+        </member>
+        <member name="F:Core.Anonymization.AnonymizeRule._location">
+            <summary>
+            see <see cref="P:Core.Anonymization.AnonymizeRule.Location"/>
+            </summary>
+        </member>
+        <member name="P:Core.Anonymization.AnonymizeRule.Location">
+            <summary>
+            <para>Location of the value to be anonymized.</para>
+            <para>This can be an xpath expression for XML or the index number of a field in a CSV file</para>
+            </summary>
+            <value>
+            Contains the location of the item to be anonymized
+            </value>
+        </member>
+        <member name="F:Core.Anonymization.AnonymizeRule._method">
+            <summary>
+            See <see cref="P:Core.Anonymization.AnonymizeRule.Method"/>
+            </summary>
+        </member>
+        <member name="P:Core.Anonymization.AnonymizeRule.Method">
+            <summary>
+            Contains the method. See <see cref="T:Core.Anonymization.AnonymizeRule.MethodType"/> for more information
+            </summary>
+        </member>
+        <member name="F:Core.Anonymization.AnonymizeRule._filterLocation">
+            <summary>
+            See <see cref="P:Core.Anonymization.AnonymizeRule.FilterLocation"/>
+            </summary>
+        </member>
+        <member name="P:Core.Anonymization.AnonymizeRule.FilterLocation">
+            <summary>
+            First part of the filter. Contains the data element that's being filtered
+            </summary>
+        </member>
+        <member name="F:Core.Anonymization.AnonymizeRule._filterOperator">
+            <summary>
+            See <see cref="P:Core.Anonymization.AnonymizeRule.FilterOperator"/>
+            </summary>
+        </member>
+        <member name="P:Core.Anonymization.AnonymizeRule.FilterOperator">
+            <summary>
+            Second part of a filter. Contains the operator of the filter like <![CDATA[<]]>
+            </summary>
+        </member>
+        <member name="F:Core.Anonymization.AnonymizeRule._filterValue">
+            <summary>
+            See <see cref="P:Core.Anonymization.AnonymizeRule.FilterValue"/>
+            </summary>
+        </member>
+        <member name="P:Core.Anonymization.AnonymizeRule.FilterValue">
+            <summary>
+            Third part of a filter. Contains the value to which the filter compares the data element, specified in <see cref="P:Core.Anonymization.AnonymizeRule.FilterLocation"/>
+            </summary>
+        </member>
+        <member name="F:Core.Anonymization.AnonymizeRule._allowed">
+            <summary>
+            See <see cref="P:Core.Anonymization.AnonymizeRule.Allowed"/>
+            </summary>
+        </member>
+        <member name="P:Core.Anonymization.AnonymizeRule.Allowed">
+            <summary>
+            Indicates whether a rule is Allowed to be used. This attribute allows for disabling a rule during processing if deemed necessary
+            </summary>
+        </member>
+        <member name="P:Core.Anonymization.AnonymizeRule.IsFiltered">
+            <summary>
+            Indicates that the rule has a filter
+            </summary>
+        </member>
+        <member name="P:Core.Anonymization.AnonymizeRule.Filter">
+            <summary>
+            Read only property that returns the filter of the rule
+            </summary>
+        </member>
+        <member name="M:Core.Anonymization.AnonymizeRule.#ctor">
+            <summary>
+            Intializes the properties with default values
+            </summary>
+        </member>
+        <member name="M:Core.Anonymization.AnonymizeRule.#ctor(System.String,Core.Anonymization.AnonymizeRule.MethodType)">
+            <summary>
+            Initializes method and location with the parameter values
+            </summary>
+            <param name="loc">location of the data element to anonymize</param>
+            <param name="method">Method to use on the data element location points to. See <see cref="T:Core.Anonymization.AnonymizeRule.MethodType"/></param>
+        </member>
+        <member name="M:Core.Anonymization.AnonymizeRule.getMethod(System.String)">
+            <summary>
+            Translates the text version of MethodType to the correspondig value of enumeration <see cref="T:Core.Anonymization.AnonymizeRule.MethodType"/>
+            </summary>
+            <param name="method">string thst contains the value that is to be translated to a value of <see cref="T:Core.Anonymization.AnonymizeRule.MethodType"/></param>
+            <returns>if found, a value of type <see cref="T:Core.Anonymization.AnonymizeRule.MethodType"/>, otherwise the <see cref="T:Core.Anonymization.AnonymizeRule.MethodType"/> value Unknown</returns>
+        </member>
+        <member name="M:Core.Anonymization.AnonymizeRule.Equals(System.Object)">
+            <summary>
+            Determines if an object is equal to this instance of AnonymizeRule
+            </summary>
+            <param name="obj">Any object</param>
+            <returns>true if equal, false otherwise</returns>        
+        </member>
+        <member name="M:Core.Anonymization.AnonymizeRule.Equals(Core.Anonymization.AnonymizeRule)">
+            <summary>
+            Determines if an object is equal to this instance of <see cref="T:Core.Anonymization.AnonymizeRule"/>
+            </summary>
+            <param name="other">the anonymizeCache instance this instance is compared to</param>
+            <returns>true if equal, false otherwise</returns>
+        </member>
+        <member name="M:Core.Anonymization.AnonymizeRule.GetHashCode">
+            <summary>
+            returns the hashcode of the original and the anonymized value, concatenated with a space in between
+            </summary>
+            <returns>a hashcode</returns>
+        </member>
+        <member name="M:Core.Anonymization.AnonymizeRule.CompareTo(Core.Anonymization.AnonymizeRule)">
+            <summary>
+            <para>Compares one anonymization rule instance to another.</para>
+            <para>Required for implementation in a generic list</para>
+            </summary>
+            <param name="other">the anonymizeRule instance this instance is compared to</param>
+            <returns>return 1 if greater, 0 if equal and -1 if smaller</returns>
+        </member>
+        <member name="M:Core.Anonymization.AnonymizeRule.ToString">
+            <summary>
+            String representation of this rule
+            </summary>
+            <returns>returns the rule's location and method and if present its filter</returns>
+        </member>
+        <member name="T:Core.Anonymization.AnonymizerWithRules">
+            <summary>
+            Extension of the Anonymizer class to handle files that contain Anonymizer rules
+            </summary>
+            <remarks>
+            <para>
+            The anonymizer class is used to replace meaningful values with meaningless values.
+            Anonymizing is done to cloak personal information like names, account number and anything that can be used
+            to identify a person and use that information in a way that was not intended by the person, identified by the information.
+            The <see cref="T:Core.Anonymization.AnonymizerWithRules"/> class extends the Anonymizer class by providing functions to import a file with Anonymization rules.
+            These rules provide a filemask and the data elements for instances of the <see cref="T:Core.Anonymization.AnonymizeRule"/> class.
+            </para>
+            <para>
+            A rule file consists of the following elements, seperated by a ; :
+            </para>
+            <list type="number">
+            <listheader>
+            <term>Element</term>
+            <description>Description</description>
+            </listheader>
+            <item>
+            <term>Filemask</term>
+            <description>
+            Part of the name of the file to be anonymized. This way one rules file can apply to multiple files to be anonymized.
+            </description>
+            </item>
+            <item>
+            <term>Location</term>
+            <description>
+            Indicates the element to be anonymized. For a CSV file this is a column name or index. For an XML file, this is an xpath expression
+            </description>
+            </item>
+            <item>
+            <term>FilterLocation</term>
+            <description>
+            <para> First part of a filter.Indicates the element whose value is to be filtered on. For CSV it can be a header name or index. 
+            For XML, it's an xpath expression that identifies 
+            1 XML element</para>
+            <para>Optional when none of the other parts of the filer are empty</para>
+            </description>
+            </item>
+            <item>
+            <term>FilterOperator</term>
+            <description>
+            <para>Second part of the filter. Comparison operator for the filter</para>
+            <para>Optional when none of the other parts of the filer are empty</para>
+            </description>
+            </item>
+            <item>
+            <term>FilterValue</term>
+            <description>
+            <para>Third part of a filter. Contains the value to which the filter compares the data element, specified in <see cref="P:Core.Anonymization.AnonymizeRule.FilterLocation"/></para>
+            <para>Optional when none of the other parts of the filer are empty</para>
+            </description>
+            </item>
+            </list>
+            </remarks>
+            <example>
+            <para><h2>Examples of anonymization rules</h2></para>
+            <para><h3>Example for CSV file (no header)</h3></para>
+            <list type="bullet">
+            <item>House;1;Houseaidvnr</item>
+            <item>test;1;Text</item>
+            </list>
+            <para><h3>Example for an XML file</h3></para>
+            <list type="bullet">
+            <item>House;//hs:Rel_Match/hs:AchterNaam;Text</item>
+            <item>House;//hs:Rel_Match/hs:GeboorteDt;Date</item>
+            </list>
+            </example>
+        </member>
+        <member name="F:Core.Anonymization.AnonymizerWithRules.fnIndicator">
+            <summary>
+            Constant: Value <![CDATA[<filename>]]>
+            </summary>
+        </member>
+        <member name="F:Core.Anonymization.AnonymizerWithRules._AnonymizerRules">
+            <summary>
+            List of anonymization Rules. see <see cref="T:Core.Anonymization.AnonymizeRule"/>. Only accessible to descendants
+            </summary>
+        </member>
+        <member name="P:Core.Anonymization.AnonymizerWithRules.AnonymizerRules">
+            <summary>
+            List of anonymization Rules. see <see cref="T:Core.Anonymization.AnonymizeRule"/>
+            </summary>
+        </member>
+        <member name="F:Core.Anonymization.AnonymizerWithRules._anonymizerRulesFilename">
+            <summary>
+            This list stores the (parts of) the filenames that are stored in the Anonymization rules
+            </summary>
+        </member>
+        <member name="P:Core.Anonymization.AnonymizerWithRules.AnonymizerRulesFilename">
+            <summary>
+            Filename for the files that contains the rules
+            </summary>
+        </member>
+        <member name="F:Core.Anonymization.AnonymizerWithRules._filename">
+            <summary>
+            Contains the file to be anonymized
+            </summary>
+        </member>
+        <member name="P:Core.Anonymization.AnonymizerWithRules.Filename">
+            <summary>
+            read only property for private member _filename
+            </summary>
+        </member>
+        <member name="F:Core.Anonymization.AnonymizerWithRules._filepath">
+            <summary>
+            Contains the directory of the file to be anonymized
+            </summary>
+        </member>
+        <member name="P:Core.Anonymization.AnonymizerWithRules.File_to_be_anonymized">
+            <summary>
+            <para>
+            This property manages two private members: _filename and _filepath.
+            </para><para>
+            When it's set, it's value is split in its directory and filename. If no directory is in the filename, _filepath remains empty
+            </para>
+            </summary>
+        </member>
+        <member name="F:Core.Anonymization.AnonymizerWithRules._anonymizerFile">
+            <summary>
+            Contains the file to be anonymized
+            </summary>
+        </member>
+        <member name="M:Core.Anonymization.AnonymizerWithRules.#ctor(System.String,System.String)">
+            <summary>
+            Constructor. Initializes the AnonymizerWithRules instance with the file to be anonymized and the name of the the file with the rules
+            </summary>
+            <param name="file_to_be_anonymized">name of the file to be anonymized</param>
+            <param name="file_with_anonymizeRules">name of file with anonymization rules</param>
+        </member>
+        <member name="M:Core.Anonymization.AnonymizerWithRules.#ctor(System.String)">
+            <summary>
+            Constructor. Initializes the AnonymizerWithRules instance with the file to be anonymized and the name of the the file with the rules
+            </summary>
+            <param name="file_to_be_anonymized">name of the file to be anonymized</param>
+        </member>
+        <member name="M:Core.Anonymization.AnonymizerWithRules.#ctor">
+            <summary>
+            Constructor. Initializes with default values except for the memeber for file to be anonymized. It will be empty.
+            </summary>
+        </member>
+        <member name="M:Core.Anonymization.AnonymizerWithRules.common_constructor(System.String)">
+            <summary>
+            This is a method that's called by all constructors to initialize members common to all constructors
+            </summary>
+            <param name="file_to_be_anonymized"> file whose data and maybe name will be anonymized</param>
+        </member>
+        <member name="M:Core.Anonymization.AnonymizerWithRules.ProcessAnonymizerFile">
+             <summary>
+            This method reads the rules file and determines which rules are applicable to the file to be anonymized. See remarks in <see cref="T:Core.Anonymization.AnonymizerWithRules"/> for further details
+             </summary>
+        </member>
+        <member name="M:Core.Anonymization.AnonymizerWithRules.ProcessRule(System.String[])">
+            <summary>
+            This method processes a single rule in the anonymization riles file, then adds it to the _AnonymizerRules list.
+            This method is a hook for derived classes to implement their own method and extend the basic handling of this class. see class 
+            Core.XMLRecords.Anonymization.AnonymizerXML  for an example
+            </summary>
+            <param name="fields">The fields that have been extracted from the line to be processed in the rules file</param>
+        </member>
+        <member name="M:Core.Anonymization.AnonymizerWithRules.setAnonymizerFile(System.String)">
+            <summary>
+            Sets the name of the file to be anonymized
+            </summary>
+            <param name="filename">file to be anonymized</param>
+        </member>
+        <member name="M:Core.Anonymization.AnonymizerWithRules.ProcessFilter(Core.Anonymization.AnonymizeRule,System.String,System.String)">
+            <summary>
+            This function processes special anonymization rules that require parameters and/or filter conditions
+            </summary>
+            <param name="rule">Anonymization rule to be processed</param>
+            <param name="value">The value to be anonymized</param>
+            <param name="filterVariableValue">The variabele value that has to satisfy the filter condition</param>
+            <returns>anonymized value</returns>
+            <remarks>
+            This functions checks if a value or its context is filtered. If it is, the value is anonymized
+            </remarks>
+        </member>
+    </members>
+</doc>

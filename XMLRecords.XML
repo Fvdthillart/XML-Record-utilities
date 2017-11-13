@@ -1,0 +1,716 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>XMLRecords</name>
+    </assembly>
+    <members>
+        <member name="T:Core.XMLRecords.Anonymization.AnonymizerXML">
+             <summary>
+             <para>
+             This class uses the functions from the AnonymizerWithRules class and expands them for XML files. It provides namespace handling so Xpath expressions can be resolved properly. 
+             </para>
+             <para>See remarks for guidance on using this class and the AnonymizerWithRules class.</para>
+             </summary>
+             <remarks>
+             <para>To properly resolve XPath expressions in the location property of an AnonymizeRule instance, namespaces are required for resolution.</para>
+             <para>Because the SelectNodes function of XMLdocument and XMLNode is very particular, some guidelines are provided:</para>
+             <list type="bullet">
+             <item><term>Default namespace</term><description>If only a default namespace is provided without a prefix, you MUST assign a prefix of your own choosing and prefix every element in your xpath with this prefix</description></item>
+             <item><term>Prefixed namespaces</term><description>If the namespace has a prefix in the XML declaration, only the root element needs to be prefixed. All elements below do NOT require a prefix</description></item>
+             </list>
+             </remarks>
+             <example>
+            <h1>Standard case: a prefixed namespace</h1>
+             <para>Consider the XML below with a prefixed namespace giadd:</para>
+             <code>
+             <![CDATA[
+             <?xml version="1.0" encoding="UTF-8"?>
+             <giadd:addressMessage xmlns:giadd="http://www.able.eu/epp/interfaces/generic/address" schemaBinding="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.able.eu/epp/interfaces/generic/address">
+             	<party>
+             		<address xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="giadd:structuredAddress">
+             			<id>7545</id>
+             			<postalCode>1522AA</postalCode>
+             			<country>
+             				<id>1</id>
+             			</country>
+             			<usage>
+             				<id>1</id>
+             			</usage>
+             			<number>14</number>
+             			<street>OndernBGSgsweg</street>
+             		</address>
+             		<emailAddress>
+             			<address>testBGSble.eu</address>
+             		</emailAddress>
+             		<homePhone>
+             			<number>0297288547</number>
+             		</homePhone>
+             		<id>
+             			<number>4</number>
+             			<source>EOR</source>
+             		</id>
+             	</party>
+             </giadd:addressMessage>
+             ]]>
+             </code>
+             <para>To get to the street element you first need to declare the namespace above whit its prefix. In this example that's gi add</para>
+             <code>
+             XmlDocument doc = new XmlDocument();
+             doc.LoadXml(outerxml); // contains the xml witht he declaration
+             XmlNamespaceManager nsmgr = new XmlNamespaceManager(doc.NameTable);
+             nsmgr.AddNamespace("giadd", "http://www.able.eu/epp/interfaces/generic/address");
+             </code>
+             <para> Then you have to specify the XPath and call selectnodes:</para>
+             <code>
+             string XPath = "//address/street"; //the full path would be /giadd:addressMessage/partyaddress/street
+             XmlNodeList nodelist = doc.SelectNodes(XPath, nsmgr);
+             </code>
+            <h1>Counterintuitive case: a default namespace</h1>
+             <para>Consider the following piece of XML with a default namespace:</para>
+             <code>
+             <![CDATA[
+             <ExportDWHMessage xmlns="http://www.everest.nl/EMS/ExportDWH">
+             <BatchSize>95</BatchSize> 
+             <BatchSequenceNumber>32</BatchSequenceNumber> 
+             <BatchID>todo</BatchID> 
+             ]]>
+             </code>
+             <para>To get to the batchid element you first need to declare a prefix for the namespace above. In this example that's hs</para>
+             <code>
+             XmlDocument doc = new XmlDocument();
+             doc.LoadXml(outerxml); // contains the xml witht he declaration
+             XmlNamespaceManager nsmgr = new XmlNamespaceManager(doc.NameTable);
+             nsmgr.AddNamespace("hs", "http://www.everest.nl/EMS/ExportDWH");
+             </code>
+             <para> Then you have to specify the XPath and call selectnodes:</para>
+             <code>
+             string XPath = "//hs:BatchID";
+             XmlNodeList nodelist = doc.SelectNodes(XPath, nsmgr);
+             </code>
+             <para>Without the prefix this would return 0 elements even though the prefix appears nowhere in the xml</para>
+             <para> </para>
+             </example>
+        </member>
+        <member name="F:Core.XMLRecords.Anonymization.AnonymizerXML.nsIndicator">
+            <summary>
+            string to recognize if an anonymizer rule applies to namespaces. Value="namespace:"
+            </summary>
+        </member>
+        <member name="F:Core.XMLRecords.Anonymization.AnonymizerXML._namespaces">
+            <summary>
+            See <see cref="P:Core.XMLRecords.Anonymization.AnonymizerXML.Namespaces"/>
+            </summary>
+        </member>
+        <member name="P:Core.XMLRecords.Anonymization.AnonymizerXML.Namespaces">
+            <summary>
+            Returns a list of strings containing all the namespaces, named in the file with the anonymization rules
+            </summary>
+        </member>
+        <member name="M:Core.XMLRecords.Anonymization.AnonymizerXML.#ctor(System.String)">
+            <summary>
+            Initializes the AnonymizerXML. Requires the file to be anonymized to determine which of the anonymization rules apply
+            </summary>
+            <param name="file_to_be_anonymized">the file which is going to be anonymized</param>
+        </member>
+        <member name="M:Core.XMLRecords.Anonymization.AnonymizerXML.#ctor(System.String,System.String)">
+            <summary>
+            Initializes the AnonymizerXML. Requires the file to be anonymized to determine which of the anonymization rules apply
+            </summary>
+            <param name="file_to_be_anonymized">the file which is going to be anonymized</param>
+            <param name="file_with_anonymizeRules">the file that contains the anonymization rules</param>
+        </member>
+        <member name="M:Core.XMLRecords.Anonymization.AnonymizerXML.common_constructor(System.String)">
+            <summary>
+            function that's called in all constructors
+            </summary>
+            <param name="file_to_be_anonymized">the file which is going to be anonymized</param>
+        </member>
+        <member name="M:Core.XMLRecords.Anonymization.AnonymizerXML.ProcessRule(System.String[])">
+            <summary>
+            This function is called from the processAnonymizerfile function and is a hook for derived classes to provide their own custom processing of the lines in the file with anonymization rules
+            </summary>
+            <param name="fields">the different values of a line in the file with anonymization rules. The values are seperated by comma's</param>
+        </member>
+        <member name="T:Core.XMLRecords.XMLRecord">
+            <summary>
+            This class is a data structure for use in a generic List.
+            To this end, interfaces IEquatable and IComparable are implemented so all the function of the List&lt;T&gt; class can be used
+            </summary>
+            <remarks>
+            <para>
+             An XMLRecord describes a part of an XML file that repeats like paragraphs in a document.
+             An XMLrecord consists of the identifying part, a string array of ID's, and the XML subtree identified by a string called the containertag.
+            </para><para>
+             Basically what this class does is take the XML subtree of the XML node identified by container tag and store it in a string. Then it takes the values of all the XML nodes identified by the IDtags in the XML subtree and store these in a string array as the identifier. 
+             and take the  for that ID and store it in an instance of XMLRecord that holds an ID and the XML that the ID refers to
+             </para>
+            </remarks>
+        </member>
+        <member name="F:Core.XMLRecords.XMLRecord._IDs">
+            <summary>
+            member to store the ID values of the XML Record
+            </summary>
+        </member>
+        <member name="F:Core.XMLRecords.XMLRecord._XMLRecord">
+            <summary>
+            member to store the XML part of the XML record
+            </summary>
+        </member>
+        <member name="F:Core.XMLRecords.XMLRecord.mustBeValidatable">
+            <summary>
+            member to store if just the XML part of the XMLPart is returned by <see cref="M:Core.XMLRecords.XMLRecord.getXMLRecord"/> 
+            or if validatable XML is returned if members <see cref="F:Core.XMLRecords.XMLRecord._xmlDecl"/>, <see cref="P:Core.XMLRecords.XMLRecord.NamespaceTag"/>
+            , <see cref="P:Core.XMLRecords.XMLRecord.EndNamespaceTag"/> aren't empty or null
+            </summary>
+        </member>
+        <member name="P:Core.XMLRecords.XMLRecord.MustBeValidatable">
+            <summary>
+            property to expose member <see cref="F:Core.XMLRecords.XMLRecord.mustBeValidatable"/>
+            </summary>
+        </member>
+        <member name="F:Core.XMLRecords.XMLRecord.separator">
+            <summary>
+            To communicate the separator that is used in the constructor that takes a string instead of a string array as argument for the identifying tags
+            </summary>
+        </member>
+        <member name="F:Core.XMLRecords.XMLRecord._xmlDecl">
+            <summary>
+            XML declaration. Default value = "<![CDATA[<?xml version=\"1.0\" encoding=\"UTF-8\"?>]]>"
+            </summary>
+        </member>
+        <member name="F:Core.XMLRecords.XMLRecord._namespaceTag">
+            <summary>
+            Initial element of an XML file. Used to add to the begin and end of an XML Subtree in an XMLRecord to allow 
+            the XML to be validated against the original xsd's and ready to be processed
+            </summary>
+        </member>
+        <member name="P:Core.XMLRecords.XMLRecord.NamespaceTag">
+            <summary>
+            Read only property to expose member <see cref="F:Core.XMLRecords.XMLRecord._namespaceTag"/>
+            </summary>
+        </member>
+        <member name="F:Core.XMLRecords.XMLRecord._endNamespaceTag">
+            <summary>
+            Closing tag of initial element of an XML file. Used to add to the begin and end of an XML Subtree in an XMLRecord to allow 
+            the XML to be validated against the original XSD's and ready to be processed
+            </summary>
+        </member>
+        <member name="P:Core.XMLRecords.XMLRecord.EndNamespaceTag">
+            <summary>
+            Read only property to expose member <see cref="F:Core.XMLRecords.XMLRecord._endNamespaceTag"/>
+            </summary>
+        </member>
+        <member name="F:Core.XMLRecords.XMLRecord._searchOnly">
+            <summary>
+            Default is false but if an XMLRecord is instantiated with only IDs, this is set to true as this only happens
+            to support an indexof operation in a list. For examples, see class <see cref="T:Core.XMLRecords.XMLRecordFileProcessor"/>
+            </summary>
+        </member>
+        <member name="P:Core.XMLRecords.XMLRecord.SearchOnly">
+            <summary>
+            read-only property to expose member <see cref="F:Core.XMLRecords.XMLRecord._searchOnly"/>
+            </summary>
+        </member>
+        <member name="M:Core.XMLRecords.XMLRecord.#ctor(System.Collections.Generic.List{System.String},System.String,System.String,System.String,System.String)">
+            <summary>
+            Constructor: Creates an instance of the XML record class. Fills the members, required for <see cref="F:Core.XMLRecords.XMLRecord.mustBeValidatable"/> 
+            to have effect
+            </summary>
+            <param name="IDs">string array with the identifying values</param>
+            <param name="XMLRecord">string with the XML subtree to be stored</param>
+            <param name="XMLDecl">string with the XML Declaration and encoding</param>
+            <param name="nsTag">Tag that contains the namespace attributes, usually the root element</param>
+            <param name="nsEndTag">Endtag for nsTag</param>
+        </member>
+        <member name="M:Core.XMLRecords.XMLRecord.XMLRecordFactory(System.Collections.Generic.List{System.String},System.String,System.String,System.String,System.String)">
+            <summary>
+            Factory method for generating XMLRecord so the parameters can be tested  whether they are null or empty
+            </summary>
+            <param name="IDs">string array with the identifying values</param>
+            <param name="XMLRecord">string with the XML subtree to be stored</param>
+            <param name="XMLDecl">string with the XML Declaration and encoding</param>
+            <param name="nsTag">Tag that contains the namespace attributes, usually the root element</param>
+            <param name="nsEndTag">Endtag for nsTag</param>
+            <returns>valid XMLRecord if the parameters are valid, else null</returns>
+        </member>
+        <member name="M:Core.XMLRecords.XMLRecord.#ctor(System.String)">
+            <summary>
+            Constructor for an xmlrecord with ids but an empty xml subtree. Used for use in an indexOf search
+            </summary>
+            <param name="ID">CSV string with the IDs of the new XML Tree</param>
+        </member>
+        <member name="M:Core.XMLRecords.XMLRecord.getID">
+            <summary>
+            Makes a csv string of all ID values
+            </summary>
+            <returns>csv string with all IDs</returns>
+        </member>
+        <member name="M:Core.XMLRecords.XMLRecord.getIDs">
+            <summary>
+            returns a string array with all the ID values
+            </summary>
+            <returns>string array with all ID values</returns>
+        </member>
+        <member name="M:Core.XMLRecords.XMLRecord.getIDList">
+            <summary>
+            returns a string list with all the ID values
+            </summary>
+            <returns>string array with all ID values</returns>
+        </member>
+        <member name="M:Core.XMLRecords.XMLRecord.getXMLRecord">
+            <summary>
+            Returns the XML subtree of the XML records. If mustbeValidatable = true, it prefixes the value of member _XMLRecord
+            with an XMLdeclaration and the opening tag of the root element of the XMLfile containing the record. An endtag is appended.
+            </summary>
+            <returns>returns the XML subtree </returns>
+        </member>
+        <member name="M:Core.XMLRecords.XMLRecord.ToString">
+            <summary>
+            Makes a string representation of XMLRecords. Concatenates all ids and the XML subtree
+            </summary>
+            <returns>string representation with IDS and XML subtree seperated by :</returns>
+        </member>
+        <member name="M:Core.XMLRecords.XMLRecord.Equals(System.Object)">
+            <summary>
+            Indicates if an object is equal to this XMLRecord
+            </summary>
+            <param name="obj">pointer to an object that has to be compared to this XMLRecord</param>
+            <returns>true if equal, false if otherwise</returns>
+        </member>
+        <member name="M:Core.XMLRecords.XMLRecord.Equals(Core.XMLRecords.XMLRecord)">
+            <summary>
+            <para>Indicates if the records are equal. ID values are compared.</para>
+            <para>Required for implementation in a generic list</para>
+            </summary>
+            <param name="other">XMLRecord to compare to</param>
+            <returns>true if equal, false if otherwise</returns>
+        </member>
+        <member name="M:Core.XMLRecords.XMLRecord.System#IEquatable{Core#XMLRecords#XMLRecord}#Equals(Core.XMLRecords.XMLRecord)">
+            <summary>
+            Explicit interface implementation for method <see cref="M:Core.XMLRecords.XMLRecord.Equals(Core.XMLRecords.XMLRecord)"/>
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Core.XMLRecords.XMLRecord.GetHashCode">
+            <summary>
+            <para>Generates a hashvalues, based on a csv string of all the IDs of the XMLRecord</para>
+            <para>Required for implementation in a generic list</para>
+            </summary>
+            <returns>a hashcode</returns>
+        </member>
+        <member name="M:Core.XMLRecords.XMLRecord.CompareTo(Core.XMLRecords.XMLRecord)">
+            <summary>
+            <para>Compares one XML record to another. The id values are compared</para>
+            <para>Required for implementation in a generic list</para>
+            </summary>
+            <param name="other">CSV string that contains all the ID values of the other XML record</param>
+            <returns>return 1 if greater, 0 if equal and -1 if smaller</returns>
+        </member>
+        <member name="M:Core.XMLRecords.XMLRecord.Write(System.String,System.String)">
+            <summary>
+            Writes content to a file. Static because it's stateless
+            </summary>
+            <param name="filename">file to write to</param>
+            <param name="content">content to be written. Usually the XML subtree of the XML record</param>
+        </member>
+        <member name="M:Core.XMLRecords.XMLRecord.Write(System.String)">
+            <summary>
+            Writes the XML subtree of the XMLRecord to an XML file, preceded by a begin and end tag
+            </summary>
+            <param name="filename">file to write to</param>
+        </member>
+        <member name="M:Core.XMLRecords.XMLRecord.getIDTagString(System.String[],System.String[])">
+            <summary>
+            Builds a attribute_value string where each id tag is coupled to (a) value(s) for use in creating a filename
+            </summary>
+            <param name="IDTags">Tags that identify the XML elements that contain the ID values</param>
+            <param name="IDs">Values of the XML elements identified by the IDTags</param>
+            <returns>Returns a string where the identifier tag is coupled to the value of the element in the XMLRecord</returns>
+            <remarks>
+            This function is static so it can be used in situations when the IDs are already known and don't need to be retrieved from the XML record
+            </remarks>
+        </member>
+        <member name="M:Core.XMLRecords.XMLRecord.getIDTagString(System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String})">
+            <summary>
+            Overload of method <see cref="M:Core.XMLRecords.XMLRecord.getIDTagString(System.String[],System.String[])"/> to provide support for <![CDATA[list<string>]]> type parameters
+            </summary>
+            <param name="IDTags"></param>
+            <param name="IDs"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Core.XMLRecords.XMLRecordFileIterator">
+            <summary>
+            Iterator implementation of XMLrecordfile
+            </summary>
+        </member>
+        <member name="F:Core.XMLRecords.XMLRecordFileIterator._XMLFilename">
+            <summary>
+            Filename of the XMLFile to be iterated over
+            </summary>
+        </member>
+        <member name="F:Core.XMLRecords.XMLRecordFileIterator._encoding">
+            <summary>
+            Member to store the encoding of the XML
+            </summary>
+        </member>
+        <member name="P:Core.XMLRecords.XMLRecordFileIterator.Encoding">
+            <summary>
+            Property to set the encoding of the XML
+            </summary>
+        </member>
+        <member name="P:Core.XMLRecords.XMLRecordFileIterator.XmlDecl">
+            <summary>
+            Read only property that returns an XML declaration. Default value = "<![CDATA[<?xml version=\"1.0\" encoding=\"UTF-8\"?>]]>"
+            </summary>
+        </member>
+        <member name="F:Core.XMLRecords.XMLRecordFileIterator._containerTags">
+            <summary>
+            This array contain the names of the XML elements whose subtree will be the subtree of the XMLRecord. <br />
+            For most applications, only one containertag is necessary but for anonymizing large files sometimes more than one containertag is
+            required.
+            </summary>
+        </member>
+        <member name="F:Core.XMLRecords.XMLRecordFileIterator._IDTags">
+            <summary>
+            This array contain the names of the XML elements whose values are concatenated to create a unique keyvalue for the XMLTree.
+            </summary>
+        </member>
+        <member name="F:Core.XMLRecords.XMLRecordFileIterator._namespaceTag">
+            <summary>
+            member to store initial element of an XML file. Used to add to the begin and end of an XML Subtree in an XMLRecord to allow 
+            the XML to be validated against the original xsd's and ready to be processed
+            </summary>
+        </member>
+        <member name="P:Core.XMLRecords.XMLRecordFileIterator.NamespaceTag">
+            <summary>
+            property to expose member <see cref="P:Core.XMLRecords.XMLRecordFileIterator.NamespaceTag"/>
+            </summary>
+        </member>
+        <member name="F:Core.XMLRecords.XMLRecordFileIterator._endNamespaceTag">
+            <summary>
+            Closing tag of initial element of an XML file. Used to add to the begin and end of an XML Subtree in an XMLRecord to allow 
+            the XML to be validated against the original XSD's and ready to be processed
+            </summary>
+        </member>
+        <member name="P:Core.XMLRecords.XMLRecordFileIterator.EndNamespaceTag">
+            <summary>
+            property to expose member <see cref="P:Core.XMLRecords.XMLRecordFileIterator.EndNamespaceTag"/>
+            </summary>
+        </member>
+        <member name="M:Core.XMLRecords.XMLRecordFileIterator.#ctor(System.String,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String})">
+            <summary>
+            Constructor: Instantiates the class. Protected because of Factory method
+            </summary>
+            <param name="XMLFilename">the XMLfile that is to be iterated over</param>
+            <param name="Containertags">The ContainerTag list contains all the elements whose subtree is extracted and stored in an XML Record</param>
+            <param name="IDtags"></param>
+        </member>
+        <member name="M:Core.XMLRecords.XMLRecordFileIterator.GetXMLRecordFileIterator(System.String,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String})">
+            <summary>
+            <para>Factory method to get an instance of this class. It tests against the following conditions before instantiating the class:</para>
+            <list type="bullet">
+            <item>if the filename exists</item>
+            <item>if the list Containertags is not null and contains at least 1 item</item>
+            <item>if the list IDtags is not null and contains at least 1 item</item>
+            </list>
+            </summary>
+            <param name="filename">the XMLfile that is to be iterated over</param>
+            <param name="Containertags"></param>
+            <param name="IDtags"></param>
+            <returns>an instance of XMLRecordFileIterator or null if the preconditions are not met</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the conditions for the parameters are not met</exception>
+            
+        </member>
+        <member name="M:Core.XMLRecords.XMLRecordFileIterator.getAttributes(System.Xml.XmlTextReader,System.Int32)">
+            <summary>
+            Returns the attributes of an XML element. Needed for XMLReader to skip over attributes and fill member namespacetag
+            </summary>
+            <param name="reader">Instance of XMLReader</param>
+            <param name="elementAttributeCount">count of the attributes</param>
+            <returns>return string with all atributes</returns>
+        </member>
+        <member name="M:Core.XMLRecords.XMLRecordFileIterator.PrintXML(System.String)">
+            <summary>
+            Pretty prints XML
+            </summary>
+            <param name="XML">XML to be be indented and with line endings</param>
+            <returns>Formatted XML so humans can also read it</returns>
+        </member>
+        <member name="M:Core.XMLRecords.XMLRecordFileIterator.GetEnumerator">
+            <summary>
+            Enumeration method
+            </summary>
+            <returns>Yiels an XMLRecord object to the foreach loop</returns>
+        </member>
+        <member name="T:Core.XMLRecords.XMLRecordFileProcessor">
+            <summary>
+            <para>
+            This class divides an XMLfile in its constituent XML records.
+            </para>
+            </summary>
+            <remarks>
+            <para>
+            An XML record is an XML subtree whose root element is identified by a containertag and is uniqely identified in the source XML file by one or more identifier tags.
+            </para>
+            <para>
+            It implements ways to process XML Records. see <c>XMLRecord.Processtype</c> for details
+            </para>
+            </remarks>    
+        </member>
+        <member name="F:Core.XMLRecords.XMLRecordFileProcessor.tempfile">
+            <summary>
+            name for temporary workfile. Value="temp.xml"
+            </summary>
+        </member>
+        <member name="F:Core.XMLRecords.XMLRecordFileProcessor.trunc">
+            <summary>
+            Postfix for filenames that would otherwise be longer than 259 characters. Value = "_(truncated)"
+            </summary>
+        </member>
+        <member name="F:Core.XMLRecords.XMLRecordFileProcessor.postfix">
+            <summary>
+            Postfix for xml files. Value = ".xml"
+            </summary>
+        </member>
+        <member name="F:Core.XMLRecords.XMLRecordFileProcessor.anonymous">
+            <summary>
+            postfix for the new filename when an XML file is anonymized 
+            </summary>
+        </member>
+        <member name="F:Core.XMLRecords.XMLRecordFileProcessor.maxFilenameLength">
+            <summary>
+            Constant to indicate the maximum length of a filename. Value = 259 because 260 gave an error
+            </summary>
+        </member>
+        <member name="F:Core.XMLRecords.XMLRecordFileProcessor.xmlDecl">
+            <summary>
+            XML declaration. Value = "<![CDATA[<?xml version=\"1.0\" encoding=\"UTF-8\"?>]]>"
+            </summary>
+        </member>
+        <member name="F:Core.XMLRecords.XMLRecordFileProcessor.curDir">
+            <summary>
+            Stores the currentdirectory
+            </summary>
+        </member>
+        <member name="F:Core.XMLRecords.XMLRecordFileProcessor._filename">
+            <summary>
+            Stores the filename part of full filename
+            </summary>
+        </member>
+        <member name="F:Core.XMLRecords.XMLRecordFileProcessor._filepath">
+            <summary>
+            Stores the path part of full filename
+            </summary>
+        </member>
+        <member name="F:Core.XMLRecords.XMLRecordFileProcessor._fileext">
+            <summary>
+            Stores the fileextension part of full filename
+            </summary>
+        </member>
+        <member name="F:Core.XMLRecords.XMLRecordFileProcessor._containerTags">
+            <summary>
+            This array contain the names of the XML elements whose subtree will be the subtree of the XMLRecord. <br />
+            For most applications, only one containertag is necessary but for anonymizeing large files sometimes more than one containertag is
+            required.
+            </summary>
+        </member>
+        <member name="F:Core.XMLRecords.XMLRecordFileProcessor._IDTags">
+            <summary>
+            This array contain the names of the XML elements whose values are concatenated to create a unique keyvalue for the XMLTree.
+            </summary>
+        </member>
+        <member name="F:Core.XMLRecords.XMLRecordFileProcessor._XMLRecords">
+            <summary>
+            List of the XMLrecords in an XMLfile if in memory processing is required
+            </summary>
+        </member>
+        <member name="F:Core.XMLRecords.XMLRecordFileProcessor._anonymized_filename">
+            <summary>
+            If a data element that needs to be anonymized is in the filename, this member stores the filename with the anonymized value
+            </summary>
+        </member>
+        <member name="P:Core.XMLRecords.XMLRecordFileProcessor.XMLRecordList">
+            <summary>
+            Exposes member <see cref="F:Core.XMLRecords.XMLRecordFileProcessor._XMLRecords"/>
+            </summary>
+        </member>
+        <member name="P:Core.XMLRecords.XMLRecordFileProcessor.Anonymized_filename">
+            <summary>
+            Returns an anonymized version of the XML filename. 
+            </summary>
+            <remarks>
+            <para>Sometimes values to be anonymized are included in the filename. The resulting filename must 
+            then also be anonymized as specified by the Anonymize rules </para>
+            </remarks>
+        </member>
+        <member name="T:Core.XMLRecords.XMLRecordFileProcessor.ProcessType">
+            <summary>
+            The ProcessType enumeration determines how an XMLfile is processed.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="F:Core.XMLRecords.XMLRecordFileProcessor.ProcessType.ToMemory">
+            <summary>
+            ToMemory indicates that the XMLRecords are stored in memory 
+            </summary>
+        </member>
+        <member name="F:Core.XMLRecords.XMLRecordFileProcessor.ProcessType.ToFile">
+            <summary>
+            ToFile indicates that the XML File will be split into smaller files where each files contains 1 XML record.
+            </summary>
+        </member>
+        <member name="F:Core.XMLRecords.XMLRecordFileProcessor.ProcessType.AnonymizeToFiles">
+            <summary>
+            This later addition is an expansion on the ToFile processing method and uses the anonymizer class to 
+            anonymize values indicated by rules in a separate file.
+            </summary>
+        </member>
+        <member name="F:Core.XMLRecords.XMLRecordFileProcessor.ProcessType.Anonymize">
+            <summary>
+            Anonymize indicates that the XML file will be anonymized and a copy of the original XML file with the anonymized data 
+            will be stored in a new XML file with _anonymous.xml instead of .xml appended to the filename. If a filename contains a value 
+            that should be anonymized, that will be anonymized if indicated by a filename anonymization rule.
+            </summary>
+        </member>
+        <member name="M:Core.XMLRecords.XMLRecordFileProcessor.#ctor(System.String,System.String)">
+            <summary>
+				Initializes the instance. All checking of parameters is done by the calling class so no checking is done inside the constructor
+			</summary>
+            <param name="file">The XML file to be processed</param>
+            <param name="containerTag">The 'tag' that defines the root element of the XML record. It's supposed to be an element directly under the root element of the file but it can be any element since the processing will not break when this is the case</param>
+        </member>
+        <member name="M:Core.XMLRecords.XMLRecordFileProcessor.#ctor(System.String,System.String[])">
+            <summary>
+            Initializes the instance. All checking of parameters is done by the calling class so no checking is done inside the constructor.
+            This constructor allows for more than one containertag to be passed
+            </summary>
+            <param name="file">The XML file to be processed</param>
+            <param name="containerTags">The tags that define the subtree of the XML record.
+            The tags are meant to be an element directly under the root element of the file 
+            but it can be any element since the processing will not break when this is the case.</param>
+        </member>
+        <member name="M:Core.XMLRecords.XMLRecordFileProcessor.#ctor(System.String,System.String,System.String)">
+            <summary>
+				Initializes the instance. All checking of parameters is done by the calling class so no checking is done inside the constructor
+			</summary>
+            <param name="file">The XML file to be processed</param>
+            <param name="containerTag">The 'tag' that defines the root element of the XML record. It's supposed to be an element directly under the root element of the file but it can be any element since the processing will not break when this is the case</param>
+            <param name="identifyingTag">a comma seperated value list with all the identifying tags that identify the elements 
+            whose value make up the ID part of the XML Record</param>
+        </member>
+        <member name="M:Core.XMLRecords.XMLRecordFileProcessor.#ctor(System.String,System.String,System.String[])">
+            <summary>
+				Initializes the instance. All checking of parameters is done by the calling class so no checking is done inside the constructor
+			</summary>
+            <param name="file">The XML file to be processed</param>
+            <param name="containerTag">The 'tag' that defines the root element of the XML record. It's supposed to be an element directly under the root element of the file but it can be any element since the processing will not break when this is the case</param>
+            <param name="IDTags">a string array with all the identifying tags that identify the elements whose value 
+            make up the ID part of the XML Record</param>
+        </member>
+        <member name="M:Core.XMLRecords.XMLRecordFileProcessor.common_constructor(System.String,System.String[])">
+            <summary>
+				Initializes the instance. All checking of parameters is done by the calling class so no checking is done inside the constructor
+			</summary>
+            <param name="file">The XML file to be processed</param>
+            <param name="containerTags">The tags that define the root element of the subtree for the XML record. 
+            The tags are meant to be an element directly under the root element of the original XML file but 
+            it can be any element since the processing will not break when this is the case</param>
+        </member>
+        <member name="M:Core.XMLRecords.XMLRecordFileProcessor.processFilename(System.String)">
+            <summary>
+            This file takes the filename and splits it into a fixed path, filename and extension
+            </summary>
+            <remarks>
+            The parameter for filename can be a single filename or a relative path or a fully qualified name. This function determines the fully 
+            qualified filename and stores it in 3 members
+            </remarks>
+            <param name="file">The XML file to be processed</param>
+        </member>
+        <member name="M:Core.XMLRecords.XMLRecordFileProcessor.CreateCompressedDir(System.String)">
+            <summary>
+            Creates a directory for which windows compression is activated
+            </summary>
+            <param name="dirname">Directory to be created</param>
+        </member>
+        <member name="M:Core.XMLRecords.XMLRecordFileProcessor.Write(Core.XMLRecords.XMLRecord,Core.XMLRecords.XMLRecordFileProcessor.ProcessType)">
+            <summary>
+            Writes an XMLRecord based on the processtype
+            </summary>
+            <param name="XMLRec"></param>
+            <param name="Type">Processtype. <see cref="T:Core.XMLRecords.XMLRecordFileProcessor.ProcessType"/></param>
+            <returns>the filename of the written file</returns>
+        </member>
+        <member name="M:Core.XMLRecords.XMLRecordFileProcessor.AllTrue(System.Boolean[])">
+            <summary>
+            Determines if the booleans in  boolean array are all true
+            </summary>
+            <param name="test">array to be tested</param>
+            <returns>returns true if all elements are true</returns>
+        </member>
+        <member name="M:Core.XMLRecords.XMLRecordFileProcessor.IsIDTag(System.String)">
+            <summary>
+            Determines if an element is an element whose value is needed for the unique identifier of the XML Record
+            </summary>
+            <param name="element">element that might be an identifying element</param>
+            <returns>true if element is an IDTag</returns>
+        </member>
+        <member name="M:Core.XMLRecords.XMLRecordFileProcessor.getFilename">
+            <summary>
+            Returns the filename without the path
+            </summary>
+            <returns> :the filename + extension but not the full path</returns>
+        </member>
+        <member name="M:Core.XMLRecords.XMLRecordFileProcessor.getFullFilename">
+            <summary>
+            Combines the 3 separate members for the filename, extension and path into a fully qualified filename
+            </summary>
+            <returns> the fully qualified filename</returns>
+        </member>
+        <member name="M:Core.XMLRecords.XMLRecordFileProcessor.getIDList">
+            <summary>
+            This function returns all the ID's in the XMLRecords list if filled by the function Process with processtype ToMemory
+            </summary>
+            <returns>A list of CSV strings containing the ID's of every XMLrecord in the list</returns>
+        </member>
+        <member name="M:Core.XMLRecords.XMLRecordFileProcessor.IndexOf(System.String)">
+            <summary>
+            Searches the list of XMLRecords based on the passed ID
+            </summary>
+            <param name="ID">a CSV string with all the IDs of the XML record to be found</param>
+            <returns>the index of the XMLTree if found else -1</returns>
+        </member>
+        <member name="M:Core.XMLRecords.XMLRecordFileProcessor.getXMLRecord(System.String)">
+            <summary>
+            Searches the list of XMLRecords based on the passed ID
+            </summary>
+            <param name="ID">a CSV string with all the IDs of the XML record to be found</param>
+            <returns>the xml subtree if found, null otherwise</returns>
+        </member>
+        <member name="M:Core.XMLRecords.XMLRecordFileProcessor.cleanFilename(System.String)">
+            <summary>
+            This function removes illegal characters for a filename from a string
+            </summary>
+            <param name="filename">the filename to be cleaned</param>
+            <returns>the cleaned filename</returns>
+            <remarks>
+            <para>The function removes the characters <![CDATA[:,*,/,\,,,=,?,<,>,|, ]]> and replaces __ with _.</para>
+            <para>If the filename is null X is returned</para>
+            <para>If the filename is empty, 0 is returned</para>
+            </remarks>
+        </member>
+        <member name="M:Core.XMLRecords.XMLRecordFileProcessor.AppendAnonymized(System.String)">
+            <summary>
+            Append anonymized text to workfile
+            </summary>
+            <param name="xmlText">The xml to be appended</param>
+        </member>
+        <member name="M:Core.XMLRecords.XMLRecordFileProcessor.Process(Core.XMLRecords.XMLRecordFileProcessor.ProcessType)">
+            <summary>
+             This function processes the given XML file according to the processing type provided. 
+            </summary>
+            <param name="Type">Indicates how the XML file should be processed.see <see cref="T:Core.XMLRecords.XMLRecordFileProcessor.ProcessType"/></param>
+        </member>
+    </members>
+</doc>
