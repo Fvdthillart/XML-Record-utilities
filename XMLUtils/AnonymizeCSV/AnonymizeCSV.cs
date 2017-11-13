@@ -328,7 +328,8 @@ namespace Commandline.AnonymizeCSV
           msg = String.Concat("The file could not be read:\r\n", e.Message,"\r\n", msg);
           Console.WriteLine(msg);
           Debug.Print(msg);
-          }
+        }
+        msg = "";
 
         rc = 0; //Success
         StringBuilder rulesb = new StringBuilder();
