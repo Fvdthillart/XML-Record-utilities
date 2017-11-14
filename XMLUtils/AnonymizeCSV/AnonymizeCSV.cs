@@ -219,6 +219,8 @@ namespace Commandline.AnonymizeCSV
               }
               //Read the line with the values to be anonymized
               line = sr.ReadLine();
+              if (String.IsNullOrWhiteSpace(line))
+                continue;
               //Sla de eerste rij over als er een header is
               if (headingrow)
               {
@@ -351,9 +353,9 @@ namespace Commandline.AnonymizeCSV
       finally
       {
         // Keep the console window open in debug mode.
-        //Console.WriteLine("");
-        //Console.WriteLine("Press any key to exit.");
-        //Console.ReadKey();
+        Console.WriteLine("");
+        Console.WriteLine("Press any key to exit.");
+        Console.ReadKey();
         Environment.Exit(rc);
       }
     }
