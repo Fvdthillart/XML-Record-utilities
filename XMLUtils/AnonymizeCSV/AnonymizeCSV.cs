@@ -353,9 +353,9 @@ namespace Commandline.AnonymizeCSV
       finally
       {
         // Keep the console window open in debug mode.
-        Console.WriteLine("");
-        Console.WriteLine("Press any key to exit.");
-        Console.ReadKey();
+        //Console.WriteLine("");
+        //Console.WriteLine("Press any key to exit.");
+        //Console.ReadKey();
         Environment.Exit(rc);
       }
     }
