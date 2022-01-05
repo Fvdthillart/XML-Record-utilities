@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>compareXMLRecords</name>
+    </assembly>
+    <members>
+        <member name="T:Commandline.compareXMLRecords.compareXMLRecords">
+            <summary>
+            This is static class with a static main method to provide a commandline interface for the XML Compare class.
+            </summary>
+            <remarks>
+            <para>This function compares XML files in 2 directories.</para>
+            <para>It identifies the files to by comparing part of the filename (parameter 1) to the files in each of the directories (parm 2 and 3) and taking the most recent file.</para>
+            <para></para>
+            <para>
+            It evaluates the commandline and translates the parameters to arguments voor the constructor of XML Compare</para>
+            <para>Parameters must be the following formats:</para>
+            <para>Provide 5 or more parameters:</para>
+            <list type="number">
+            <item>Identifying part of XML File</item>
+            <item>directory with xml file to compare</item>
+            <item>the other directory with the XML file to compare</item>
+            <item>the container tag which identifies the XML subtree to be compared</item>
+            <item>1 or more identifying tag(s)</item>
+            </list>
+            </remarks>
+            <example>
+            <para><strong>Example for a call to the executable:</strong></para>
+            <code>compareXMLRecords HYPONP_1_7.1_B_20121231_M P:\ILH\DI\OUT\MONTH C:\TEMP\SVN\BASELINE\MONTH hyp:Onderpand hyp:OnderpandId</code>
+            </example>
+        </member>
+        <member name="M:Commandline.compareXMLRecords.compareXMLRecords.getHelpText">
+            <summary>
+            Returns a helptext that explains the purpose and parameters of this executable
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Commandline.compareXMLRecords.compareXMLRecords.Main(System.String[])">
+            <summary>
+				Main method that's called when the executable is called from the command prompt
+			</summary>
+            <param name="args"> Commandline parameters. If a parameter contains spaces, enclose them in "</param>
+        </member>
+        <member name="T:Core.XMLCompare.XMLCompare">
+            <summary>
+            This class compares two Lists of XMLRecord instances using the <strong>XML Diff and Patch 1.0</strong> from Microsoft.
+            </summary>
+            <remarks>
+            <para>
+            The results of the compare are logged in a file with the 
+            The compare uses the libray from Microsoft to detect if there are changes.
+            However, the Diff diagram it produces isn't usable for logging so the logging is limited
+            </para>
+            </remarks>
+        </member>
+        <member name="M:Core.XMLCompare.XMLCompare.#ctor(System.String,System.String,System.String,System.String[])">
+            <summary>
+            Creates new instance of this class
+            </summary>
+            <param name="file1">first file to be compared</param>
+            <param name="file2">second file to be compared</param>
+            <param name="containerTag">string that indicates the element on which both files will be split</param>
+            <param name="identifyingTags">string that indicates the elements by which a unique identifier is created</param>
+        </member>
+        <member name="M:Core.XMLCompare.XMLCompare.getIDTags">
+            <summary>
+            Translates the identifyingTags array to a string
+            </summary>
+            <returns>comma separated list of the names of the identifying tags</returns>
+        </member>
+        <member name="M:Core.XMLCompare.XMLCompare.compare(System.String)">
+            <summary>
+            Compares the two files stored in members _file1 and _file2
+            </summary>
+            <param name="filePrefix">Used for making the file with the comparison Results</param>
+            <returns>the filename of the file with the comparison results</returns>
+        </member>
+    </members>
+</doc>

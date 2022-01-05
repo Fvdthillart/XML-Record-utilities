@@ -1,24 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
-using System.Data;
-using System.Data.OleDb;
 
 
 namespace Core.Anonymization
 {
-    /// <summary>
-    /// This class anonymizes a CSV file, based on a file with Anonymization rules
-    /// </summary>
-    /// <remarks>
-    /// <para>
-    /// Most of its functionality is already described in the documentation for its ancestor <see cref="Core.Anonymization.AnonymizerWithRules"/> class.
-    /// </para>
-    /// </remarks>
-    
-    public class AnonymizerCSV : AnonymizerWithRules
+  /// <summary>
+  /// This class anonymizes a CSV file, based on a file with Anonymization rules
+  /// </summary>
+  /// <remarks>
+  /// <para>
+  /// Most of its functionality is already described in the documentation for its ancestor <see cref="Core.Anonymization.AnonymizerWithRules"/> class.
+  /// </para>
+  /// </remarks>
+
+  public class AnonymizerCSV : AnonymizerWithRules
     {
         /// <summary>
         /// string with characters that are whitespace
